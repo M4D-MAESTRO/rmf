@@ -281,6 +281,12 @@ var MesasService = /** @class */ (function () {
             responseType: 'json'
         });
     };
+    MesasService.prototype.findMesaInicial2 = function (idMesa) {
+        // console.log( `${API_CONFIG.baseUrl}mesa/inicial/${idMesa}`);
+        return this.http.get(src_app_config_api_config__WEBPACK_IMPORTED_MODULE_4__["API_CONFIG"].baseUrl + "mesa/inicial/" + idMesa, {
+            responseType: 'json'
+        });
+    };
     MesasService.prototype.setIdMesaSelecionada = function (idMesa) {
         this.mesaSelecionada = idMesa;
     };

@@ -118,7 +118,8 @@ let FichaPage = class FichaPage {
         this.loadContent();
     }
     loadContent() {
-        this.mesaService.findMesaInicial()
+        const { idMesa } = this.storageService.getSelectedMesa();
+        this.mesaService.findMesaInicial2(idMesa)
             .subscribe(res => {
             const { nomeRpg, descricaoRpg, historiaRpg, mestre, jogadores, idMesa } = res;
             this.info = {

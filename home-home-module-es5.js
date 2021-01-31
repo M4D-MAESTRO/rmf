@@ -2541,7 +2541,7 @@ var Toast = new ToastPluginWeb();
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br><br><footer>\r\n    2021 <br> \r\n    Ciano, Todos os Direitos Reservados (v 1.0.1)\r\n</footer>"
+module.exports = "<br><br><footer>\r\n    2021 <br> \r\n    Ciano, Todos os Direitos Reservados (v 1.0.2)\r\n</footer>"
 
 /***/ }),
 
@@ -2552,7 +2552,7 @@ module.exports = "<br><br><footer>\r\n    2021 <br> \r\n    Ciano, Todos os Dire
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-menu-button></ion-menu-button>\r\n    </ion-buttons>\r\n    <ion-title>\r\n      Home\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n\r\n  <ion-grid>\r\n\r\n    <ion-row>\r\n      <ion-col size-md=\"6\" size-xs=\"12\">\r\n        <a (click)=\"nav('1')\">\r\n          <ion-card class=\"gerenciador\">\r\n            <img src=\"assets/imgs/round-table.png\" />\r\n            <ion-card-header>\r\n              <ion-card-title>Gerenciar Participações</ion-card-title>\r\n            </ion-card-header>\r\n            <ion-card-content>\r\n              Gerencie suas participações em mesas, tanto como mestre, quanto como jogador\r\n            </ion-card-content>\r\n          </ion-card>\r\n        </a>\r\n      </ion-col>\r\n\r\n      <ion-col size-md=\"6\" size-xs=\"12\">\r\n        <a (click)=\"nav('2')\">\r\n          <ion-card class=\"gerenciador\">\r\n            <img src=\"assets/imgs/sword-smithing.png\" />\r\n            <ion-card-header>\r\n              <ion-card-title>Gerenciar Criações</ion-card-title>\r\n            </ion-card-header>\r\n            <ion-card-content>\r\n              Gerencie suas criações como: inimigos, Mapas e equipamentos\r\n            </ion-card-content>\r\n          </ion-card>\r\n        </a>\r\n      </ion-col>\r\n\r\n\r\n    </ion-row>\r\n  </ion-grid>\r\n\r\n  <ion-grid>\r\n    <ion-row>\r\n\r\n      <ion-col >\r\n        <ion-button size=\"large\" expand=\"block\" (click)=\"nav('3')\">\r\n          <ion-icon name=\"book\"></ion-icon> Referências\r\n        </ion-button>\r\n      </ion-col>\r\n\r\n      <ion-col>\r\n        <ion-button size=\"large\" expand=\"block\" (click)=\"nav('4')\">\r\n          <ion-icon name=\"person\"></ion-icon> Perfil\r\n        </ion-button>\r\n      </ion-col>\r\n\r\n      <ion-col>\r\n        <ion-button size=\"large\" expand=\"block\" (click)=\"nav('5')\">\r\n          <ion-icon name=\"construct\"></ion-icon> Suporte\r\n        </ion-button>\r\n      </ion-col>\r\n\r\n    </ion-row>\r\n  </ion-grid>\r\n  <br><br>\r\n</ion-content>\r\n<app-footer></app-footer>"
+module.exports = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-menu-button></ion-menu-button>\r\n    </ion-buttons>\r\n    <ion-title>\r\n      Home\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content\r\n[style.background-image]=\"'url(' + img + ')'\" \r\n[style.background-size]=\"'cover'\" \r\n[style.background-repeat]=\"'no-repeat'\"\r\n>\r\n\r\n  <ion-grid>\r\n\r\n    <ion-row>\r\n      <ion-col size-md=\"6\" size-xs=\"12\">\r\n        <a (click)=\"nav('1')\">\r\n          <ion-card class=\"gerenciador\">\r\n            <img src=\"assets/imgs/round-table.png\" />\r\n            <ion-card-header>\r\n              <ion-card-title>Gerenciar Participações</ion-card-title>\r\n            </ion-card-header>\r\n            <ion-card-content>\r\n              Gerencie suas participações em mesas, tanto como mestre, quanto como jogador\r\n            </ion-card-content>\r\n          </ion-card>\r\n        </a>\r\n      </ion-col>\r\n\r\n      <ion-col size-md=\"6\" size-xs=\"12\">\r\n        <a (click)=\"nav('2')\">\r\n          <ion-card class=\"gerenciador\">\r\n            <img src=\"assets/imgs/sword-smithing.png\" />\r\n            <ion-card-header>\r\n              <ion-card-title>Gerenciar Criações</ion-card-title>\r\n            </ion-card-header>\r\n            <ion-card-content>\r\n              Gerencie suas criações como: inimigos, Mapas e equipamentos\r\n            </ion-card-content>\r\n          </ion-card>\r\n        </a>\r\n      </ion-col>\r\n\r\n    </ion-row>\r\n  </ion-grid>\r\n\r\n  <ion-grid>\r\n    <ion-row>\r\n\r\n      <ion-col>\r\n        <ion-button size=\"large\" expand=\"block\" (click)=\"nav('4')\">\r\n          <ion-icon name=\"help-circle-outline\"></ion-icon> Ajuda\r\n        </ion-button>\r\n      </ion-col>\r\n\r\n      <ion-col>\r\n        <ion-button size=\"large\" expand=\"block\" (click)=\"nav('3')\">\r\n          <ion-icon name=\"book\"></ion-icon> Referências\r\n        </ion-button>\r\n      </ion-col>\r\n\r\n      <ion-col>\r\n        <ion-button size=\"large\" expand=\"block\" (click)=\"nav('5')\">\r\n          <ion-icon name=\"construct\"></ion-icon> Suporte\r\n        </ion-button>\r\n      </ion-col>\r\n\r\n    </ion-row>\r\n  </ion-grid>\r\n  <br><br>\r\n</ion-content>\r\n<app-footer></app-footer>"
 
 /***/ }),
 
@@ -2701,7 +2701,7 @@ var HomePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".welcome-card img {\n  max-height: 35vh;\n  overflow: hidden;\n}\n\na {\n  text-decoration: none;\n  cursor: pointer;\n}\n\nion-card:hover {\n  --background: rgb(94, 231, 255);\n  --color: black;\n}\n\nion-card-title {\n  color: black;\n}\n\n.gerenciador {\n  align-content: center;\n  -webkit-box-pack: center;\n          justify-content: center;\n  text-align: center;\n  padding: 2px 20px;\n}\n\n.gerenciador img {\n  min-width: 30%;\n  min-height: 50%;\n  max-width: 40%;\n  max-height: 60%;\n  padding: 5px 20px;\n  margin-left: 30%;\n}\n\nion-icon {\n  margin-right: 20px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9DOlxcVXNlcnNcXGxoY2NvXFxEb2N1bWVudHNcXERlc2Vudm9sdmltZW50b1xcVENDXFxGcm9udGVuZFxcUk1GLU1vYmlsZS9zcmNcXGFwcFxcaG9tZVxcaG9tZS5wYWdlLnNjc3MiLCJzcmMvYXBwL2hvbWUvaG9tZS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBQTtFQUNBLGdCQUFBO0FDQ0Y7O0FERUE7RUFDRSxxQkFBQTtFQUNBLGVBQUE7QUNDRjs7QURFQTtFQUNFLCtCQUFBO0VBQ0EsY0FBQTtBQ0NGOztBREVBO0VBQ0UsWUFBQTtBQ0NGOztBREVBO0VBQ0UscUJBQUE7RUFDQSx3QkFBQTtVQUFBLHVCQUFBO0VBQ0Esa0JBQUE7RUFDQSxpQkFBQTtBQ0NGOztBREVBO0VBQ0UsY0FBQTtFQUNBLGVBQUE7RUFFQSxjQUFBO0VBQ0EsZUFBQTtFQUVBLGlCQUFBO0VBQ0EsZ0JBQUE7QUNERjs7QURJQTtFQUNFLGtCQUFBO0FDREYiLCJmaWxlIjoic3JjL2FwcC9ob21lL2hvbWUucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLndlbGNvbWUtY2FyZCBpbWcge1xyXG4gIG1heC1oZWlnaHQ6IDM1dmg7XHJcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcclxufVxyXG5cclxuYXtcclxuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgY3Vyc29yOiBwb2ludGVyO1xyXG59XHJcblxyXG5pb24tY2FyZDpob3ZlcntcclxuICAtLWJhY2tncm91bmQ6IHJnYig5NCwgMjMxLCAyNTUpO1xyXG4gIC0tY29sb3I6IGJsYWNrO1xyXG59XHJcblxyXG5pb24tY2FyZC10aXRsZXtcclxuICBjb2xvcjogYmxhY2s7XHJcbn1cclxuXHJcbi5nZXJlbmNpYWRvcntcclxuICBhbGlnbi1jb250ZW50OiBjZW50ZXI7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIHBhZGRpbmc6IDJweCAyMHB4O1xyXG59XHJcblxyXG4uZ2VyZW5jaWFkb3IgaW1ne1xyXG4gIG1pbi13aWR0aDogMzAlO1xyXG4gIG1pbi1oZWlnaHQ6IDUwJTtcclxuXHJcbiAgbWF4LXdpZHRoOiA0MCU7XHJcbiAgbWF4LWhlaWdodDogNjAlO1xyXG5cclxuICBwYWRkaW5nOiA1cHggMjBweDtcclxuICBtYXJnaW4tbGVmdDogMzAlO1xyXG59XHJcblxyXG5pb24taWNvbntcclxuICBtYXJnaW4tcmlnaHQ6IDIwcHg7XHJcbn1cclxuXHJcblxyXG5cclxuXHJcbiIsIi53ZWxjb21lLWNhcmQgaW1nIHtcbiAgbWF4LWhlaWdodDogMzV2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbn1cblxuYSB7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG5pb24tY2FyZDpob3ZlciB7XG4gIC0tYmFja2dyb3VuZDogcmdiKDk0LCAyMzEsIDI1NSk7XG4gIC0tY29sb3I6IGJsYWNrO1xufVxuXG5pb24tY2FyZC10aXRsZSB7XG4gIGNvbG9yOiBibGFjaztcbn1cblxuLmdlcmVuY2lhZG9yIHtcbiAgYWxpZ24tY29udGVudDogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBwYWRkaW5nOiAycHggMjBweDtcbn1cblxuLmdlcmVuY2lhZG9yIGltZyB7XG4gIG1pbi13aWR0aDogMzAlO1xuICBtaW4taGVpZ2h0OiA1MCU7XG4gIG1heC13aWR0aDogNDAlO1xuICBtYXgtaGVpZ2h0OiA2MCU7XG4gIHBhZGRpbmc6IDVweCAyMHB4O1xuICBtYXJnaW4tbGVmdDogMzAlO1xufVxuXG5pb24taWNvbiB7XG4gIG1hcmdpbi1yaWdodDogMjBweDtcbn0iXX0= */"
+module.exports = ".welcome-card img {\n  max-height: 35vh;\n  overflow: hidden;\n}\n\na {\n  text-decoration: none;\n  cursor: pointer;\n}\n\nion-card:hover {\n  --background: rgb(94, 231, 255);\n  --color: black;\n  color: black;\n}\n\nion-card {\n  --background: rgb(27, 88, 100);\n  --color: rgb(204, 204, 204);\n}\n\nion-card-title {\n  color: #cccccc;\n}\n\n.gerenciador {\n  align-content: center;\n  -webkit-box-pack: center;\n          justify-content: center;\n  text-align: center;\n  padding: 2px 20px;\n}\n\n.gerenciador img {\n  min-width: 30%;\n  min-height: 50%;\n  max-width: 40%;\n  max-height: 60%;\n  padding: 5px 20px;\n  margin-left: 30%;\n}\n\nion-icon {\n  margin-right: 20px;\n}\n\nion-content {\n  --background: none;\n}\n\nion-card {\n  --background: rgb(18, 53, 59);\n  --color: rgb(226, 226, 226);\n}\n\nion-card-title {\n  --color: rgb(226, 226, 226);\n}\n\nion-card:hover {\n  --background: rgb(68, 166, 184);\n  --color: rgba(29, 29, 29, 0.28);\n}\n\nion-card-title:hover {\n  --color: rgba(29, 29, 29, 0.28);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9DOlxcVXNlcnNcXGxoY2NvXFxEb2N1bWVudHNcXERlc2Vudm9sdmltZW50b1xcVENDXFxGcm9udGVuZFxcUk1GLU1vYmlsZS9zcmNcXGFwcFxcaG9tZVxcaG9tZS5wYWdlLnNjc3MiLCJzcmMvYXBwL2hvbWUvaG9tZS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBQTtFQUNBLGdCQUFBO0FDQ0Y7O0FERUE7RUFDRSxxQkFBQTtFQUNBLGVBQUE7QUNDRjs7QURFQTtFQUNFLCtCQUFBO0VBQ0EsY0FBQTtFQUNBLFlBQUE7QUNDRjs7QURFQTtFQUNFLDhCQUFBO0VBQ0EsMkJBQUE7QUNDRjs7QURFQTtFQUNFLGNBQUE7QUNDRjs7QURFQTtFQUNFLHFCQUFBO0VBQ0Esd0JBQUE7VUFBQSx1QkFBQTtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7QUNDRjs7QURFQTtFQUNFLGNBQUE7RUFDQSxlQUFBO0VBRUEsY0FBQTtFQUNBLGVBQUE7RUFFQSxpQkFBQTtFQUNBLGdCQUFBO0FDREY7O0FESUE7RUFDRSxrQkFBQTtBQ0RGOztBRElBO0VBQ0Usa0JBQUE7QUNERjs7QURJQTtFQUNFLDZCQUFBO0VBQ0EsMkJBQUE7QUNERjs7QURJQTtFQUNFLDJCQUFBO0FDREY7O0FESUE7RUFDRSwrQkFBQTtFQUNBLCtCQUFBO0FDREY7O0FESUE7RUFDRSwrQkFBQTtBQ0RGIiwiZmlsZSI6InNyYy9hcHAvaG9tZS9ob21lLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi53ZWxjb21lLWNhcmQgaW1nIHtcclxuICBtYXgtaGVpZ2h0OiAzNXZoO1xyXG4gIG92ZXJmbG93OiBoaWRkZW47XHJcbn1cclxuXHJcbmEge1xyXG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuICBjdXJzb3I6IHBvaW50ZXI7XHJcbn1cclxuXHJcbmlvbi1jYXJkOmhvdmVyIHtcclxuICAtLWJhY2tncm91bmQ6IHJnYig5NCwgMjMxLCAyNTUpO1xyXG4gIC0tY29sb3I6IGJsYWNrO1xyXG4gIGNvbG9yOiBibGFjaztcclxufVxyXG5cclxuaW9uLWNhcmQge1xyXG4gIC0tYmFja2dyb3VuZDogcmdiKDI3LCA4OCwgMTAwKTtcclxuICAtLWNvbG9yOiByZ2IoMjA0LCAyMDQsIDIwNCk7XHJcbn1cclxuXHJcbmlvbi1jYXJkLXRpdGxlIHtcclxuICBjb2xvcjogcmdiKDIwNCwgMjA0LCAyMDQpO1xyXG59XHJcblxyXG4uZ2VyZW5jaWFkb3Ige1xyXG4gIGFsaWduLWNvbnRlbnQ6IGNlbnRlcjtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgcGFkZGluZzogMnB4IDIwcHg7XHJcbn1cclxuXHJcbi5nZXJlbmNpYWRvciBpbWcge1xyXG4gIG1pbi13aWR0aDogMzAlO1xyXG4gIG1pbi1oZWlnaHQ6IDUwJTtcclxuXHJcbiAgbWF4LXdpZHRoOiA0MCU7XHJcbiAgbWF4LWhlaWdodDogNjAlO1xyXG5cclxuICBwYWRkaW5nOiA1cHggMjBweDtcclxuICBtYXJnaW4tbGVmdDogMzAlO1xyXG59XHJcblxyXG5pb24taWNvbiB7XHJcbiAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xyXG59XHJcblxyXG5pb24tY29udGVudCB7XHJcbiAgLS1iYWNrZ3JvdW5kOiBub25lO1xyXG59XHJcblxyXG5pb24tY2FyZCB7XHJcbiAgLS1iYWNrZ3JvdW5kOiByZ2IoMTgsIDUzLCA1OSk7XHJcbiAgLS1jb2xvcjogcmdiKDIyNiwgMjI2LCAyMjYpO1xyXG59XHJcblxyXG5pb24tY2FyZC10aXRsZSB7XHJcbiAgLS1jb2xvcjogcmdiKDIyNiwgMjI2LCAyMjYpO1xyXG59XHJcblxyXG5pb24tY2FyZDpob3ZlciB7XHJcbiAgLS1iYWNrZ3JvdW5kOiByZ2IoNjgsIDE2NiwgMTg0KTtcclxuICAtLWNvbG9yOiByZ2JhKDI5LCAyOSwgMjksIDAuMjgpO1xyXG59XHJcblxyXG5pb24tY2FyZC10aXRsZTpob3ZlciB7XHJcbiAgLS1jb2xvcjogcmdiYSgyOSwgMjksIDI5LCAwLjI4KTtcclxufVxyXG4iLCIud2VsY29tZS1jYXJkIGltZyB7XG4gIG1heC1oZWlnaHQ6IDM1dmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG59XG5cbmEge1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuaW9uLWNhcmQ6aG92ZXIge1xuICAtLWJhY2tncm91bmQ6IHJnYig5NCwgMjMxLCAyNTUpO1xuICAtLWNvbG9yOiBibGFjaztcbiAgY29sb3I6IGJsYWNrO1xufVxuXG5pb24tY2FyZCB7XG4gIC0tYmFja2dyb3VuZDogcmdiKDI3LCA4OCwgMTAwKTtcbiAgLS1jb2xvcjogcmdiKDIwNCwgMjA0LCAyMDQpO1xufVxuXG5pb24tY2FyZC10aXRsZSB7XG4gIGNvbG9yOiAjY2NjY2NjO1xufVxuXG4uZ2VyZW5jaWFkb3Ige1xuICBhbGlnbi1jb250ZW50OiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHBhZGRpbmc6IDJweCAyMHB4O1xufVxuXG4uZ2VyZW5jaWFkb3IgaW1nIHtcbiAgbWluLXdpZHRoOiAzMCU7XG4gIG1pbi1oZWlnaHQ6IDUwJTtcbiAgbWF4LXdpZHRoOiA0MCU7XG4gIG1heC1oZWlnaHQ6IDYwJTtcbiAgcGFkZGluZzogNXB4IDIwcHg7XG4gIG1hcmdpbi1sZWZ0OiAzMCU7XG59XG5cbmlvbi1pY29uIHtcbiAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xufVxuXG5pb24tY29udGVudCB7XG4gIC0tYmFja2dyb3VuZDogbm9uZTtcbn1cblxuaW9uLWNhcmQge1xuICAtLWJhY2tncm91bmQ6IHJnYigxOCwgNTMsIDU5KTtcbiAgLS1jb2xvcjogcmdiKDIyNiwgMjI2LCAyMjYpO1xufVxuXG5pb24tY2FyZC10aXRsZSB7XG4gIC0tY29sb3I6IHJnYigyMjYsIDIyNiwgMjI2KTtcbn1cblxuaW9uLWNhcmQ6aG92ZXIge1xuICAtLWJhY2tncm91bmQ6IHJnYig2OCwgMTY2LCAxODQpO1xuICAtLWNvbG9yOiByZ2JhKDI5LCAyOSwgMjksIDAuMjgpO1xufVxuXG5pb24tY2FyZC10aXRsZTpob3ZlciB7XG4gIC0tY29sb3I6IHJnYmEoMjksIDI5LCAyOSwgMC4yOCk7XG59Il19 */"
 
 /***/ }),
 
@@ -2722,6 +2722,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _capacitor_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @capacitor/core */ "./node_modules/@capacitor/core/dist/esm/index.js");
 /* harmony import */ var _services_user_user_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/user/user.service */ "./src/app/services/user/user.service.ts");
 /* harmony import */ var _services_storage_service_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/storage-service.service */ "./src/app/services/storage-service.service.ts");
+/* harmony import */ var _services_utils_fundo_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../services/utils/fundo.service */ "./src/app/services/utils/fundo.service.ts");
+
 
 
 
@@ -2732,23 +2734,44 @@ __webpack_require__.r(__webpack_exports__);
 
 var PushNotifications = _capacitor_core__WEBPACK_IMPORTED_MODULE_4__["Plugins"].PushNotifications;
 var HomePage = /** @class */ (function () {
-    function HomePage(router, menu, user, storage, plataform) {
+    function HomePage(router, menu, user, storage, plataform, fundoService) {
         this.router = router;
         this.menu = menu;
         this.user = user;
         this.storage = storage;
         this.plataform = plataform;
+        this.fundoService = fundoService;
+        this.img = "assets/Fundos/PC/1.jpg";
     }
     HomePage.prototype.ngOnInit = function () {
-        var _this = this;
-        var localUser = this.storage.getLocalUser();
-        this.user.findByEmail(localUser.email)
-            .subscribe(function (res) {
-            _this.storage.setLocalUserId(res.id);
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var localUser;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        localUser = this.storage.getLocalUser();
+                        this.user.findByEmail(localUser.email)
+                            .subscribe(function (res) {
+                            _this.storage.setLocalUserId(res.id);
+                        });
+                        if (!(this.plataform.is('desktop') || this.plataform.is('mobileweb'))) {
+                            this.setPushConfig();
+                        }
+                        return [4 /*yield*/, this.plataform.ready()
+                                .then(function () {
+                                if (_this.plataform.width() <= 700)
+                                    _this.fundoService.setCurrentPlataform('mobile');
+                                else
+                                    _this.fundoService.setCurrentPlataform('pc');
+                                _this.img = _this.fundoService.changeImg();
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
         });
-        if (!(this.plataform.is('desktop') || this.plataform.is('mobileweb'))) {
-            this.setPushConfig();
-        }
     };
     HomePage.prototype.setPushConfig = function () {
         PushNotifications.requestPermissions().then(function (result) {
@@ -2785,7 +2808,7 @@ var HomePage = /** @class */ (function () {
                 this.router.navigateByUrl('referencia');
                 break;
             case '4':
-                this.router.navigateByUrl('perfil');
+                this.router.navigateByUrl('ajuda');
                 break;
             case '5':
                 this.router.navigateByUrl('suporte');
@@ -2800,7 +2823,8 @@ var HomePage = /** @class */ (function () {
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["MenuController"] },
         { type: _services_user_user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"] },
         { type: _services_storage_service_service__WEBPACK_IMPORTED_MODULE_6__["StorageService"] },
-        { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"] }
+        { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"] },
+        { type: _services_utils_fundo_service__WEBPACK_IMPORTED_MODULE_7__["FundoService"] }
     ]; };
     HomePage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -2809,7 +2833,8 @@ var HomePage = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./home.page.scss */ "./src/app/home/home.page.scss")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["MenuController"],
-            _services_user_user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"], _services_storage_service_service__WEBPACK_IMPORTED_MODULE_6__["StorageService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"]])
+            _services_user_user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"], _services_storage_service_service__WEBPACK_IMPORTED_MODULE_6__["StorageService"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"], _services_utils_fundo_service__WEBPACK_IMPORTED_MODULE_7__["FundoService"]])
     ], HomePage);
     return HomePage;
 }());

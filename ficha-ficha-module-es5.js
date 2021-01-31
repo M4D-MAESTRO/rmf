@@ -122,7 +122,8 @@ var FichaPage = /** @class */ (function () {
     };
     FichaPage.prototype.loadContent = function () {
         var _this = this;
-        this.mesaService.findMesaInicial()
+        var idMesa = this.storageService.getSelectedMesa().idMesa;
+        this.mesaService.findMesaInicial2(idMesa)
             .subscribe(function (res) {
             var nomeRpg = res.nomeRpg, descricaoRpg = res.descricaoRpg, historiaRpg = res.historiaRpg, mestre = res.mestre, jogadores = res.jogadores, idMesa = res.idMesa;
             _this.info = {

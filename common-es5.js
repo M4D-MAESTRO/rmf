@@ -401,6 +401,80 @@ var findCheckedOption = function (el, tagName) {
 
 
 
+/***/ }),
+
+/***/ "./src/app/services/utils/fundo.service.ts":
+/*!*************************************************!*\
+  !*** ./src/app/services/utils/fundo.service.ts ***!
+  \*************************************************/
+/*! exports provided: FundoService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FundoService", function() { return FundoService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var FundoService = /** @class */ (function () {
+    function FundoService() {
+        this.img = "assets/Fundos/PC/1.jpg";
+        this.currentPlataform = '';
+    }
+    FundoService.prototype.setCurrentPlataform = function (plataform) {
+        this.currentPlataform = plataform;
+    };
+    FundoService.prototype.getImg = function () {
+        return this.img;
+    };
+    FundoService.prototype.getFirtsImg = function () {
+        this.changeImg;
+        return this.img;
+    };
+    FundoService.prototype.getImgList = function () {
+        if (this.currentPlataform == "pc") {
+            return [
+                'assets/Fundos/PC/1.jpg',
+                'assets/Fundos/PC/1.jpg',
+                'assets/Fundos/PC/2.jpg',
+                'assets/Fundos/PC/3.jpg',
+                'assets/Fundos/PC/4.jpg',
+                'assets/Fundos/PC/5.jpg',
+                'assets/Fundos/PC/6.jpg',
+                'assets/Fundos/PC/7.jpg',
+            ];
+        }
+        else {
+            return [
+                'assets/Fundos/Mobile/1.jpg',
+                'assets/Fundos/Mobile/1.jpg',
+                'assets/Fundos/Mobile/2.jpg',
+                'assets/Fundos/Mobile/3.jpg',
+                'assets/Fundos/Mobile/4.jpg',
+                'assets/Fundos/Mobile/5.jpg',
+                'assets/Fundos/Mobile/6.jpg',
+                'assets/Fundos/Mobile/4.jpg',
+            ];
+        }
+    };
+    FundoService.prototype.changeImg = function () {
+        var index = Math.floor(Math.random() * 7) + 1;
+        var img = this.getImgList()[index];
+        this.img = img;
+        return img;
+    };
+    FundoService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], FundoService);
+    return FundoService;
+}());
+
+
+
 /***/ })
 
 }]);

@@ -1897,6 +1897,7 @@ var AuthService = /** @class */ (function () {
             .subscribe(function (res) { user.id = res.id; });
     };
     AuthService.prototype.logout = function () {
+        this.storage.setNull();
         this.storage.setLocalUser(null);
     };
     AuthService.prototype.requestRecovery = function (email) {

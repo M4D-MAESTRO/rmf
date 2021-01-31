@@ -1897,6 +1897,7 @@ let AuthService = class AuthService {
             .subscribe(res => { user.id = res.id; });
     }
     logout() {
+        this.storage.setNull();
         this.storage.setLocalUser(null);
     }
     requestRecovery(email) {

@@ -29,6 +29,7 @@ var map = {
 		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92",
 		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23",
 		"default~contmesa-contmesa-module~fichamodelo-fichamodelo-module~gercapitulos-gercapitulos-module~ger~beaf627b",
+		"common",
 		"gercriacoes-gercriacoes-module"
 	],
 	"./gerequipamentos/gerequipamentos.module": [
@@ -79,11 +80,13 @@ var map = {
 	],
 	"./home/home.module": [
 		"./src/app/home/home.module.ts",
+		"common",
 		"home-home-module"
 	],
 	"./login/login.module": [
 		"./src/app/login/login.module.ts",
 		"default~login-login-module~logout-logout-module~recovery-recovery-module",
+		"common",
 		"login-login-module"
 	],
 	"./novinimigo/novinimigo.module": [
@@ -93,6 +96,7 @@ var map = {
 	"./perfil/perfil.module": [
 		"./src/app/perfil/perfil.module.ts",
 		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0",
+		"common",
 		"perfil-perfil-module"
 	],
 	"./registrar/registrar.module": [
@@ -557,7 +561,18 @@ module.exports = webpackAsyncContext;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-app>\r\n  <ion-split-pane when=\"(max-width: 0px)\">\r\n    <ion-menu type=\"overlay\">\r\n      <ion-header>\r\n        <ion-toolbar>\r\n          <ion-title>Menu</ion-title>\r\n        </ion-toolbar>\r\n      </ion-header>\r\n      <ion-content>\r\n        <ion-list>\r\n          <ion-menu-toggle auto-hide=\"false\" *ngFor=\"let p of appPages\">\r\n            <ion-item [routerDirection]=\"'root'\" [routerLink]=\"[p.url]\">\r\n              <ion-icon slot=\"start\" [name]=\"p.icon\"></ion-icon>\r\n              <ion-label>\r\n                {{p.title}}\r\n              </ion-label>\r\n            </ion-item>\r\n          </ion-menu-toggle>\r\n        </ion-list>\r\n      </ion-content>\r\n    </ion-menu>\r\n    <ion-router-outlet main></ion-router-outlet>\r\n  </ion-split-pane>\r\n</ion-app>\r\n"
+module.exports = "<ion-app>\r\n  <ion-split-pane when=\"(max-width: 0px)\">\r\n    <ion-menu type=\"overlay\">\r\n      <ion-header> \r\n        <ion-toolbar>\r\n          <ion-title>Menu</ion-title>\r\n        </ion-toolbar>\r\n      </ion-header>\r\n      <ion-content>\r\n        <ion-list>\r\n          <ion-menu-toggle auto-hide=\"false\" *ngFor=\"let p of appPages\">\r\n            <ion-item [routerDirection]=\"'root'\" [routerLink]=\"[p.url]\">\r\n              <ion-icon slot=\"start\" [name]=\"p.icon\"></ion-icon>\r\n              <ion-label>\r\n                {{p.title}}\r\n              </ion-label>\r\n            </ion-item>\r\n          </ion-menu-toggle>\r\n        </ion-list>\r\n      </ion-content>\r\n    </ion-menu>\r\n    <ion-router-outlet main></ion-router-outlet>\r\n  </ion-split-pane>\r\n</ion-app>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/components/fundo/fundo.component.html":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/components/fundo/fundo.component.html ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!--\n<div [ngStyle]=\"{background: 'url(/img/' + item.img + ')', width: '200px', height: '150px'\"></div>\n-->"
 
 /***/ }),
 
@@ -654,11 +669,11 @@ const routes = [
     },
     {
         path: 'gerrpg',
-        loadChildren: () => Promise.all(/*! import() | gerrpg-gerrpg-module */[__webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23"), __webpack_require__.e("default~contmesa-contmesa-module~fichamodelo-fichamodelo-module~gercapitulos-gercapitulos-module~ger~beaf627b"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~gercapitulos-gercapitulos-module~gerequipamentos~a17afce2"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerequipamentos-gerequipamentos-mo~0f284ca8"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~gerequipamentos-gerequipamentos-module~gerinimig~dc9172e7"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerfaccoes-gerfaccoes-module~germa~86bb7768"), __webpack_require__.e("default~contmesa-contmesa-module~gerequipamentos-gerequipamentos-module~gerinimigos-gerinimigos-modu~9709502c"), __webpack_require__.e("default~contmesa-contmesa-module~gerrpg-gerrpg-module"), __webpack_require__.e("gerrpg-gerrpg-module")]).then(__webpack_require__.bind(null, /*! ./gerrpg/gerrpg.module */ "./src/app/gerrpg/gerrpg.module.ts")).then(m => m.GerrpgPageModule)
+        loadChildren: () => Promise.all(/*! import() | gerrpg-gerrpg-module */[__webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23"), __webpack_require__.e("default~contmesa-contmesa-module~fichamodelo-fichamodelo-module~gercapitulos-gercapitulos-module~ger~beaf627b"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~gercapitulos-gercapitulos-module~gerequipamentos~a17afce2"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerequipamentos-gerequipamentos-mo~0f284ca8"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~gerequipamentos-gerequipamentos-module~gerinimig~dc9172e7"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerfaccoes-gerfaccoes-module~germa~86bb7768"), __webpack_require__.e("default~contmesa-contmesa-module~gerequipamentos-gerequipamentos-module~gerinimigos-gerinimigos-modu~9709502c"), __webpack_require__.e("default~ajuda-ajuda-module~contmesa-contmesa-module~gerrpg-gerrpg-module"), __webpack_require__.e("default~contmesa-contmesa-module~gerrpg-gerrpg-module"), __webpack_require__.e("gerrpg-gerrpg-module")]).then(__webpack_require__.bind(null, /*! ./gerrpg/gerrpg.module */ "./src/app/gerrpg/gerrpg.module.ts")).then(m => m.GerrpgPageModule)
     },
     {
         path: 'contmesa',
-        loadChildren: () => Promise.all(/*! import() | contmesa-contmesa-module */[__webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23"), __webpack_require__.e("default~contmesa-contmesa-module~fichamodelo-fichamodelo-module~gercapitulos-gercapitulos-module~ger~beaf627b"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~gercapitulos-gercapitulos-module~gerequipamentos~a17afce2"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerequipamentos-gerequipamentos-mo~0f284ca8"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~gerequipamentos-gerequipamentos-module~gerinimig~dc9172e7"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerfaccoes-gerfaccoes-module~germa~86bb7768"), __webpack_require__.e("default~contmesa-contmesa-module~gerequipamentos-gerequipamentos-module~gerinimigos-gerinimigos-modu~9709502c"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~germesas-germesas-module~teste-teste-module"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~referencia-referencia-module"), __webpack_require__.e("default~contmesa-contmesa-module~gerrpg-gerrpg-module"), __webpack_require__.e("contmesa-contmesa-module")]).then(__webpack_require__.bind(null, /*! ./contmesa/contmesa.module */ "./src/app/contmesa/contmesa.module.ts")).then(m => m.ContmesaPageModule)
+        loadChildren: () => Promise.all(/*! import() | contmesa-contmesa-module */[__webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23"), __webpack_require__.e("default~contmesa-contmesa-module~fichamodelo-fichamodelo-module~gercapitulos-gercapitulos-module~ger~beaf627b"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~gercapitulos-gercapitulos-module~gerequipamentos~a17afce2"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerequipamentos-gerequipamentos-mo~0f284ca8"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~gerequipamentos-gerequipamentos-module~gerinimig~dc9172e7"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerfaccoes-gerfaccoes-module~germa~86bb7768"), __webpack_require__.e("default~contmesa-contmesa-module~gerequipamentos-gerequipamentos-module~gerinimigos-gerinimigos-modu~9709502c"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~germesas-germesas-module~teste-teste-module"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~referencia-referencia-module"), __webpack_require__.e("default~ajuda-ajuda-module~contmesa-contmesa-module~gerrpg-gerrpg-module"), __webpack_require__.e("default~contmesa-contmesa-module~gerrpg-gerrpg-module"), __webpack_require__.e("common"), __webpack_require__.e("contmesa-contmesa-module")]).then(__webpack_require__.bind(null, /*! ./contmesa/contmesa.module */ "./src/app/contmesa/contmesa.module.ts")).then(m => m.ContmesaPageModule)
     },
     {
         path: 'suporte',
@@ -671,6 +686,10 @@ const routes = [
     {
         path: 'recovery',
         loadChildren: () => Promise.all(/*! import() | recovery-recovery-module */[__webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92"), __webpack_require__.e("default~recovery-recovery-module~referencia-referencia-module~registrar-registrar-module~suporte-sup~e116757c"), __webpack_require__.e("default~login-login-module~logout-logout-module~recovery-recovery-module"), __webpack_require__.e("recovery-recovery-module")]).then(__webpack_require__.bind(null, /*! ./recovery/recovery.module */ "./src/app/recovery/recovery.module.ts")).then(m => m.RecoveryPageModule)
+    },
+    {
+        path: 'ajuda',
+        loadChildren: () => Promise.all(/*! import() | ajuda-ajuda-module */[__webpack_require__.e("default~ajuda-ajuda-module~contmesa-contmesa-module~gerrpg-gerrpg-module"), __webpack_require__.e("ajuda-ajuda-module")]).then(__webpack_require__.bind(null, /*! ./ajuda/ajuda.module */ "./src/app/ajuda/ajuda.module.ts")).then(m => m.AjudaPageModule)
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -804,6 +823,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./interceptors/error-interceptor */ "./src/app/interceptors/error-interceptor.ts");
 /* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/fesm2015/angular-fire.js");
 /* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/fesm2015/angular-fire-firestore.js");
+/* harmony import */ var _components_fundo_fundo_module__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/fundo/fundo.module */ "./src/app/components/fundo/fundo.module.ts");
+
 
 
 
@@ -846,6 +867,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["IonicModule"].forRoot(),
             _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["AppRoutingModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"],
+            _components_fundo_fundo_module__WEBPACK_IMPORTED_MODULE_16__["FundoModule"]
         ],
         providers: [
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_9__["StatusBar"],
@@ -861,6 +883,85 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 ], AppModule);
 
 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
+
+
+/***/ }),
+
+/***/ "./src/app/components/fundo/fundo.component.scss":
+/*!*******************************************************!*\
+  !*** ./src/app/components/fundo/fundo.component.scss ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZnVuZG8vZnVuZG8uY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/components/fundo/fundo.component.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/components/fundo/fundo.component.ts ***!
+  \*****************************************************/
+/*! exports provided: FundoComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FundoComponent", function() { return FundoComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let FundoComponent = class FundoComponent {
+    constructor() {
+        this.img = "assets/Fundos/PC/1.jpg";
+    }
+    ngOnInit() { }
+};
+FundoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-fundo',
+        template: __webpack_require__(/*! raw-loader!./fundo.component.html */ "./node_modules/raw-loader/index.js!./src/app/components/fundo/fundo.component.html"),
+        styles: [__webpack_require__(/*! ./fundo.component.scss */ "./src/app/components/fundo/fundo.component.scss")]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+], FundoComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/fundo/fundo.module.ts":
+/*!**************************************************!*\
+  !*** ./src/app/components/fundo/fundo.module.ts ***!
+  \**************************************************/
+/*! exports provided: FundoModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FundoModule", function() { return FundoModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _fundo_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./fundo.component */ "./src/app/components/fundo/fundo.component.ts");
+
+
+
+
+let FundoModule = class FundoModule {
+};
+FundoModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        declarations: [_fundo_component__WEBPACK_IMPORTED_MODULE_3__["FundoComponent"]],
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]
+        ],
+        entryComponents: [_fundo_component__WEBPACK_IMPORTED_MODULE_3__["FundoComponent"]],
+        exports: [_fundo_component__WEBPACK_IMPORTED_MODULE_3__["FundoComponent"]]
+    })
+], FundoModule);
+
 
 
 /***/ }),
@@ -1120,7 +1221,29 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let StorageService = class StorageService {
-    constructor() { }
+    constructor() {
+        this.selectedMesa = {
+            idMesa: "",
+            idJogador: "",
+            tipo: ""
+        };
+    }
+    getSelectedMesa() {
+        this.selectedMesa = JSON.parse(localStorage.getItem('mesa'));
+        return this.selectedMesa;
+    }
+    setSelectedMesa(idMesa, idJogador, tipo) {
+        this.selectedMesa = {
+            idJogador,
+            idMesa,
+            tipo
+        };
+        localStorage.setItem('mesa', JSON.stringify(this.selectedMesa));
+    }
+    setNull() {
+        localStorage.removeItem('mesa');
+        this.selectedMesa = null;
+    }
     getLocalUser() {
         let user = localStorage.getItem(_config_storage_keys_config__WEBPACK_IMPORTED_MODULE_2__["STORAGE_KEYS"].localUser);
         if (user == null) {

@@ -280,6 +280,12 @@ let MesasService = class MesasService {
             responseType: 'json'
         });
     }
+    findMesaInicial2(idMesa) {
+        // console.log( `${API_CONFIG.baseUrl}mesa/inicial/${idMesa}`);
+        return this.http.get(`${src_app_config_api_config__WEBPACK_IMPORTED_MODULE_4__["API_CONFIG"].baseUrl}mesa/inicial/${idMesa}`, {
+            responseType: 'json'
+        });
+    }
     setIdMesaSelecionada(idMesa) {
         this.mesaSelecionada = idMesa;
     }

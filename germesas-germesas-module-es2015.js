@@ -264,7 +264,7 @@ RadioButtonModule = __decorate([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br><br><footer>\r\n    2021 <br> \r\n    Ciano, Todos os Direitos Reservados (v 1.0.1)\r\n</footer>"
+module.exports = "<br><br><footer>\r\n    2021 <br> \r\n    Ciano, Todos os Direitos Reservados (v 1.0.2)\r\n</footer>"
 
 /***/ }),
 
@@ -275,7 +275,7 @@ module.exports = "<br><br><footer>\r\n    2021 <br> \r\n    Ciano, Todos os Dire
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-menu-button></ion-menu-button>\r\n    </ion-buttons>\r\n    <ion-title>\r\n      Gerencie suas mesas\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content fullscreen>\r\n  <ion-list>\r\n    <ion-list-header>\r\n      <h1>Lista de mesas participante</h1>\r\n    </ion-list-header>\r\n\r\n    <ion-item class=\"item\" *ngFor=\"let mesa of mesas\">\r\n      <ion-avatar slot=\"start\">\r\n        <img [src]=\"setImg(mesa.tipoRPG)\" alt=\"rpg\" />\r\n      </ion-avatar>\r\n      <ion-label style=\"opacity: 1; cursor: pointer;\">\r\n        <h3>Mesa: <span class=\"mestre\">{{mesa.idMesa}}</span> </h3>\r\n        <h2>Mestre <span class=\"mestre\">{{mesa.apelidoMestre}}</span> </h2>\r\n        <h3>Data de criação: <ion-datetime displayFormat=\"DD/MM/YYYY\" value={{mesa.dataDeCriacao}} disabled=\"true\">\r\n          </ion-datetime>\r\n        </h3>\r\n        <p>{{mesa.descricaoRPG}}</p>\r\n        <ion-button size=\"small\" (click)=\"acessar(mesa)\">Acessar</ion-button>\r\n\r\n      </ion-label>\r\n\r\n\r\n\r\n    </ion-item>\r\n  </ion-list>\r\n\r\n  <div *ngIf=\"mesas.length === 0\">\r\n    <h3 class=\"vazio\">Poxa, você não está em nenhuma mesa.</h3>\r\n    <p class=\"vazio\">Crie uma nova, ou junte-se à uma com seus amigos!</p>\r\n  </div>\r\n\r\n  <ion-button expand=\"block\" placeholder=\"Crie uma nova mesa!\" (click)=\"novaMesa()\">Nova mesa</ion-button>\r\n  <ion-button expand=\"block\" placeholder=\"Crie uma nova mesa!\" (click)=\"juntar()\">Juntar-se à mesa</ion-button>\r\n\r\n  <app-invitation-form (notifyParent)=\"getNotification($event)\" *ngIf=\"showForm\"></app-invitation-form>\r\n  <br><br>\r\n</ion-content>\r\n\r\n<app-load-spinner [loading]=\"loading\"></app-load-spinner>\r\n\r\n<p-toast position=\"top-center\" life=\"5000\"></p-toast>\r\n\r\n<app-footer></app-footer>\r\n"
+module.exports = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-menu-button></ion-menu-button>\r\n    </ion-buttons>\r\n    <ion-title>\r\n      Gerencie suas mesas\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content fullscreen>\r\n  <ion-list>\r\n    <ion-list-header>\r\n      <h1>Lista de mesas participante</h1>\r\n    </ion-list-header>\r\n\r\n    <ion-item class=\"item\" *ngFor=\"let mesa of mesas\">\r\n      <ion-avatar slot=\"start\">\r\n        <img [src]=\"setImg(mesa.tipoRPG)\" alt=\"rpg\" />\r\n      </ion-avatar>\r\n      <ion-label style=\"opacity: 1; cursor: pointer;\">\r\n        <h3>Mesa: <span class=\"mestre\">{{mesa.idMesa}}</span> </h3>\r\n        <h2>Mestre <span class=\"mestre\">{{mesa.apelidoMestre}}</span> </h2>\r\n        <h3>Data de criação: <ion-datetime displayFormat=\"DD/MM/YYYY\" value={{mesa.dataDeCriacao}} disabled=\"true\">\r\n          </ion-datetime>\r\n        </h3>\r\n        <p>{{mesa.descricaoRPG}}</p>\r\n        <ion-button size=\"small\" (click)=\"acessar(mesa)\">Acessar</ion-button>\r\n\r\n      </ion-label>\r\n\r\n\r\n\r\n    </ion-item>\r\n  </ion-list>\r\n\r\n  <div *ngIf=\"mesas.length === 0\">\r\n    <h3 class=\"vazio\">Poxa, você não está em nenhuma mesa.</h3>\r\n    <p class=\"vazio\">Crie uma nova, ou junte-se à uma com seus amigos!</p>\r\n  </div>\r\n\r\n  <ion-button expand=\"block\" placeholder=\"Crie uma nova mesa!\" (click)=\"novaMesa()\">Nova mesa</ion-button>\r\n  <ion-button expand=\"block\" placeholder=\"Crie uma nova mesa!\" (click)=\"juntar()\">Juntar-se à mesa</ion-button>\r\n\r\n  <app-invitation-form (notifyParent)=\"getNotification($event)\" *ngIf=\"showForm\"></app-invitation-form>\r\n  <br><br>\r\n</ion-content>\r\n\r\n<app-load-spinner [loading]=\"loading\"></app-load-spinner>\r\n\r\n<p-toast position=\"top-center\" life=\"5000\"></p-toast>\r\n\r\n<app-footer></app-footer>"
 
 /***/ }),
 
@@ -431,7 +431,7 @@ GermesasPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "ion-datetime {\n  color: black;\n  opacity: 1;\n  --opacity: 1;\n}\n\n.vazio {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-pack: center;\n          justify-content: center;\n  flex-wrap: wrap;\n  text-align: center;\n}\n\n.mestre {\n  color: #02485a;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2VybWVzYXMvQzpcXFVzZXJzXFxsaGNjb1xcRG9jdW1lbnRzXFxEZXNlbnZvbHZpbWVudG9cXFRDQ1xcRnJvbnRlbmRcXFJNRi1Nb2JpbGUvc3JjXFxhcHBcXGdlcm1lc2FzXFxnZXJtZXNhcy5wYWdlLnNjc3MiLCJzcmMvYXBwL2dlcm1lc2FzL2dlcm1lc2FzLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFlBQUE7RUFDQSxVQUFBO0VBQ0EsWUFBQTtBQ0NKOztBREVBO0VBQ0ksb0JBQUE7RUFBQSxhQUFBO0VBQ0Esd0JBQUE7VUFBQSx1QkFBQTtFQUNBLGVBQUE7RUFDQSxrQkFBQTtBQ0NKOztBREVBO0VBQ0ksY0FBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvZ2VybWVzYXMvZ2VybWVzYXMucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWRhdGV0aW1le1xyXG4gICAgY29sb3I6IGJsYWNrO1xyXG4gICAgb3BhY2l0eTogMTtcclxuICAgIC0tb3BhY2l0eTogMTtcclxuIH1cclxuIFxyXG4udmF6aW97XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBmbGV4LXdyYXA6IHdyYXA7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbi5tZXN0cmV7XHJcbiAgICBjb2xvcjogcmdiKDIsIDcyLCA5MCk7XHJcbn1cclxuIiwiaW9uLWRhdGV0aW1lIHtcbiAgY29sb3I6IGJsYWNrO1xuICBvcGFjaXR5OiAxO1xuICAtLW9wYWNpdHk6IDE7XG59XG5cbi52YXppbyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBmbGV4LXdyYXA6IHdyYXA7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLm1lc3RyZSB7XG4gIGNvbG9yOiAjMDI0ODVhO1xufSJdfQ== */"
+module.exports = "ion-datetime {\n  color: black;\n  opacity: 1;\n  --opacity: 1;\n}\n\n.vazio {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-pack: center;\n          justify-content: center;\n  flex-wrap: wrap;\n  text-align: center;\n}\n\n.mestre {\n  color: #02485a;\n}\n\nion-content {\n  --background: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2VybWVzYXMvQzpcXFVzZXJzXFxsaGNjb1xcRG9jdW1lbnRzXFxEZXNlbnZvbHZpbWVudG9cXFRDQ1xcRnJvbnRlbmRcXFJNRi1Nb2JpbGUvc3JjXFxhcHBcXGdlcm1lc2FzXFxnZXJtZXNhcy5wYWdlLnNjc3MiLCJzcmMvYXBwL2dlcm1lc2FzL2dlcm1lc2FzLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFlBQUE7RUFDQSxVQUFBO0VBQ0EsWUFBQTtBQ0NKOztBREVBO0VBQ0ksb0JBQUE7RUFBQSxhQUFBO0VBQ0Esd0JBQUE7VUFBQSx1QkFBQTtFQUNBLGVBQUE7RUFDQSxrQkFBQTtBQ0NKOztBREVBO0VBQ0ksY0FBQTtBQ0NKOztBREVBO0VBQ0ksa0JBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL2dlcm1lc2FzL2dlcm1lc2FzLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1kYXRldGltZXtcclxuICAgIGNvbG9yOiBibGFjaztcclxuICAgIG9wYWNpdHk6IDE7XHJcbiAgICAtLW9wYWNpdHk6IDE7XHJcbiB9XHJcbiBcclxuLnZhemlve1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgZmxleC13cmFwOiB3cmFwO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4ubWVzdHJle1xyXG4gICAgY29sb3I6IHJnYigyLCA3MiwgOTApO1xyXG59XHJcblxyXG5pb24tY29udGVudCB7XHJcbiAgICAtLWJhY2tncm91bmQ6IG5vbmU7XHJcbiAgfSIsImlvbi1kYXRldGltZSB7XG4gIGNvbG9yOiBibGFjaztcbiAgb3BhY2l0eTogMTtcbiAgLS1vcGFjaXR5OiAxO1xufVxuXG4udmF6aW8ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZmxleC13cmFwOiB3cmFwO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5tZXN0cmUge1xuICBjb2xvcjogIzAyNDg1YTtcbn1cblxuaW9uLWNvbnRlbnQge1xuICAtLWJhY2tncm91bmQ6IG5vbmU7XG59Il19 */"
 
 /***/ }),
 
@@ -481,7 +481,9 @@ let GermesasPage = class GermesasPage {
         this.showForm = false;
     }
     ngOnInit() {
-        this.consultar();
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            this.consultar();
+        });
     }
     setImg(opcao) {
         switch (opcao) {
@@ -503,9 +505,11 @@ let GermesasPage = class GermesasPage {
         this.mesaService.setIdMesaSelecionada(mesa.idMesa);
         const idJogador = this.storageService.getLocalUserId();
         if (mesa.idMestre == idJogador) {
+            this.storageService.setSelectedMesa(mesa.idMesa, idJogador, 'mestre');
             this.router.navigateByUrl('contmesa');
         }
         else {
+            this.storageService.setSelectedMesa(mesa.idMesa, idJogador, 'jogador');
             this.router.navigateByUrl('ficha');
         }
     }
