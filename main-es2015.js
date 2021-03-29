@@ -14,68 +14,74 @@ var map = {
 	],
 	"./ficha/ficha.module": [
 		"./src/app/ficha/ficha.module.ts",
-		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0",
-		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~04356d04",
 		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23",
-		"default~contmesa-contmesa-module~ficha-ficha-module~gercapitulos-gercapitulos-module~gerequipamentos~a17afce2",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~b414090c",
 		"default~contmesa-contmesa-module~ficha-ficha-module~gerequipamentos-gerequipamentos-module~gerinimig~dc9172e7",
 		"default~contmesa-contmesa-module~ficha-ficha-module~germesas-germesas-module~teste-teste-module",
-		"default~contmesa-contmesa-module~ficha-ficha-module~referencia-referencia-module",
 		"ficha-ficha-module"
 	],
 	"./gercriacoes/gercriacoes.module": [
 		"./src/app/gercriacoes/gercriacoes.module.ts",
-		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0",
-		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b",
 		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23",
-		"default~contmesa-contmesa-module~fichamodelo-fichamodelo-module~gercapitulos-gercapitulos-module~ger~beaf627b",
 		"common",
 		"gercriacoes-gercriacoes-module"
 	],
 	"./gerequipamentos/gerequipamentos.module": [
 		"./src/app/gerequipamentos/gerequipamentos.module.ts",
-		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0",
-		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~04356d04",
 		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23",
-		"default~contmesa-contmesa-module~fichamodelo-fichamodelo-module~gercapitulos-gercapitulos-module~ger~beaf627b",
-		"default~contmesa-contmesa-module~ficha-ficha-module~gercapitulos-gercapitulos-module~gerequipamentos~a17afce2",
-		"default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerequipamentos-gerequipamentos-mo~0f284ca8",
 		"default~contmesa-contmesa-module~ficha-ficha-module~gerequipamentos-gerequipamentos-module~gerinimig~dc9172e7",
 		"default~contmesa-contmesa-module~gerequipamentos-gerequipamentos-module~gerinimigos-gerinimigos-modu~9709502c",
+		"common",
 		"gerequipamentos-gerequipamentos-module"
 	],
 	"./gerinimigos/gerinimigos.module": [
 		"./src/app/gerinimigos/gerinimigos.module.ts",
-		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0",
-		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~04356d04",
 		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23",
-		"default~contmesa-contmesa-module~fichamodelo-fichamodelo-module~gercapitulos-gercapitulos-module~ger~beaf627b",
-		"default~contmesa-contmesa-module~ficha-ficha-module~gercapitulos-gercapitulos-module~gerequipamentos~a17afce2",
-		"default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerequipamentos-gerequipamentos-mo~0f284ca8",
 		"default~contmesa-contmesa-module~ficha-ficha-module~gerequipamentos-gerequipamentos-module~gerinimig~dc9172e7",
 		"default~contmesa-contmesa-module~gerequipamentos-gerequipamentos-module~gerinimigos-gerinimigos-modu~9709502c",
+		"common",
 		"gerinimigos-gerinimigos-module"
 	],
 	"./germapas/germapas.module": [
 		"./src/app/germapas/germapas.module.ts",
-		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0",
-		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~04356d04",
 		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23",
-		"default~contmesa-contmesa-module~fichamodelo-fichamodelo-module~gercapitulos-gercapitulos-module~ger~beaf627b",
-		"default~contmesa-contmesa-module~ficha-ficha-module~gercapitulos-gercapitulos-module~gerequipamentos~a17afce2",
-		"default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerequipamentos-gerequipamentos-mo~0f284ca8",
 		"default~contmesa-contmesa-module~ficha-ficha-module~gerequipamentos-gerequipamentos-module~gerinimig~dc9172e7",
 		"default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerfaccoes-gerfaccoes-module~germa~86bb7768",
+		"common",
 		"germapas-germapas-module"
 	],
 	"./germesas/germesas.module": [
 		"./src/app/germesas/germesas.module.ts",
-		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0",
-		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b",
 		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23",
-		"default~contmesa-contmesa-module~fichamodelo-fichamodelo-module~gercapitulos-gercapitulos-module~ger~beaf627b",
 		"default~contmesa-contmesa-module~ficha-ficha-module~germesas-germesas-module~teste-teste-module",
 		"default~germesas-germesas-module~teste-teste-module",
+		"common",
 		"germesas-germesas-module"
 	],
 	"./home/home.module": [
@@ -85,7 +91,7 @@ var map = {
 	],
 	"./login/login.module": [
 		"./src/app/login/login.module.ts",
-		"default~login-login-module~logout-logout-module~recovery-recovery-module",
+		"default~hall-hall-module~login-login-module~logout-logout-module~recovery-recovery-module",
 		"common",
 		"login-login-module"
 	],
@@ -95,25 +101,25 @@ var map = {
 	],
 	"./perfil/perfil.module": [
 		"./src/app/perfil/perfil.module.ts",
-		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d",
 		"common",
 		"perfil-perfil-module"
 	],
 	"./registrar/registrar.module": [
 		"./src/app/registrar/registrar.module.ts",
-		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0",
-		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8",
 		"default~recovery-recovery-module~referencia-referencia-module~registrar-registrar-module~suporte-sup~e116757c",
 		"registrar-registrar-module"
 	],
 	"./teste/teste.module": [
 		"./src/app/teste/teste.module.ts",
-		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0",
-		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0",
+		"default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~04356d04",
 		"default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23",
-		"default~contmesa-contmesa-module~fichamodelo-fichamodelo-module~gercapitulos-gercapitulos-module~ger~beaf627b",
-		"default~contmesa-contmesa-module~ficha-ficha-module~gercapitulos-gercapitulos-module~gerequipamentos~a17afce2",
-		"default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerequipamentos-gerequipamentos-mo~0f284ca8",
 		"default~contmesa-contmesa-module~ficha-ficha-module~gerequipamentos-gerequipamentos-module~gerinimig~dc9172e7",
 		"default~contmesa-contmesa-module~gerequipamentos-gerequipamentos-module~gerinimigos-gerinimigos-modu~9709502c",
 		"default~contmesa-contmesa-module~ficha-ficha-module~germesas-germesas-module~teste-teste-module",
@@ -595,7 +601,7 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     {
         path: '',
-        redirectTo: 'login',
+        redirectTo: 'hall',
         pathMatch: 'full'
     },
     {
@@ -649,47 +655,91 @@ const routes = [
     { path: 'teste', loadChildren: './teste/teste.module#TestePageModule' },
     {
         path: 'logout',
-        loadChildren: () => Promise.all(/*! import() | logout-logout-module */[__webpack_require__.e("default~login-login-module~logout-logout-module~recovery-recovery-module"), __webpack_require__.e("logout-logout-module")]).then(__webpack_require__.bind(null, /*! ./logout/logout.module */ "./src/app/logout/logout.module.ts")).then(m => m.LogoutPageModule)
+        loadChildren: () => Promise.all(/*! import() | logout-logout-module */[__webpack_require__.e("default~hall-hall-module~login-login-module~logout-logout-module~recovery-recovery-module"), __webpack_require__.e("logout-logout-module")]).then(__webpack_require__.bind(null, /*! ./logout/logout.module */ "./src/app/logout/logout.module.ts")).then(m => m.LogoutPageModule)
     },
     {
         path: 'fichamodelo',
-        loadChildren: () => Promise.all(/*! import() | fichamodelo-fichamodelo-module */[__webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23"), __webpack_require__.e("default~contmesa-contmesa-module~fichamodelo-fichamodelo-module~gercapitulos-gercapitulos-module~ger~beaf627b"), __webpack_require__.e("fichamodelo-fichamodelo-module")]).then(__webpack_require__.bind(null, /*! ./fichamodelo/fichamodelo.module */ "./src/app/fichamodelo/fichamodelo.module.ts")).then(m => m.FichamodeloPageModule)
+        loadChildren: () => Promise.all(/*! import() | fichamodelo-fichamodelo-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23"), __webpack_require__.e("common"), __webpack_require__.e("fichamodelo-fichamodelo-module")]).then(__webpack_require__.bind(null, /*! ./fichamodelo/fichamodelo.module */ "./src/app/fichamodelo/fichamodelo.module.ts")).then(m => m.FichamodeloPageModule)
     },
     {
         path: 'germissoes',
-        loadChildren: () => Promise.all(/*! import() | germissoes-germissoes-module */[__webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23"), __webpack_require__.e("default~contmesa-contmesa-module~fichamodelo-fichamodelo-module~gercapitulos-gercapitulos-module~ger~beaf627b"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~gercapitulos-gercapitulos-module~gerequipamentos~a17afce2"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerequipamentos-gerequipamentos-mo~0f284ca8"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerfaccoes-gerfaccoes-module~germa~86bb7768"), __webpack_require__.e("germissoes-germissoes-module")]).then(__webpack_require__.bind(null, /*! ./germissoes/germissoes.module */ "./src/app/germissoes/germissoes.module.ts")).then(m => m.GermissoesPageModule)
+        loadChildren: () => Promise.all(/*! import() | germissoes-germissoes-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerfaccoes-gerfaccoes-module~germa~86bb7768"), __webpack_require__.e("common"), __webpack_require__.e("germissoes-germissoes-module")]).then(__webpack_require__.bind(null, /*! ./germissoes/germissoes.module */ "./src/app/germissoes/germissoes.module.ts")).then(m => m.GermissoesPageModule)
     },
     {
         path: 'gercapitulos',
-        loadChildren: () => Promise.all(/*! import() | gercapitulos-gercapitulos-module */[__webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23"), __webpack_require__.e("default~contmesa-contmesa-module~fichamodelo-fichamodelo-module~gercapitulos-gercapitulos-module~ger~beaf627b"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~gercapitulos-gercapitulos-module~gerequipamentos~a17afce2"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerequipamentos-gerequipamentos-mo~0f284ca8"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerfaccoes-gerfaccoes-module~germa~86bb7768"), __webpack_require__.e("gercapitulos-gercapitulos-module")]).then(__webpack_require__.bind(null, /*! ./gercapitulos/gercapitulos.module */ "./src/app/gercapitulos/gercapitulos.module.ts")).then(m => m.GercapitulosPageModule)
+        loadChildren: () => Promise.all(/*! import() | gercapitulos-gercapitulos-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerfaccoes-gerfaccoes-module~germa~86bb7768"), __webpack_require__.e("common"), __webpack_require__.e("gercapitulos-gercapitulos-module")]).then(__webpack_require__.bind(null, /*! ./gercapitulos/gercapitulos.module */ "./src/app/gercapitulos/gercapitulos.module.ts")).then(m => m.GercapitulosPageModule)
     },
     {
         path: 'gerfaccoes',
-        loadChildren: () => Promise.all(/*! import() | gerfaccoes-gerfaccoes-module */[__webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23"), __webpack_require__.e("default~contmesa-contmesa-module~fichamodelo-fichamodelo-module~gercapitulos-gercapitulos-module~ger~beaf627b"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~gercapitulos-gercapitulos-module~gerequipamentos~a17afce2"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerequipamentos-gerequipamentos-mo~0f284ca8"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerfaccoes-gerfaccoes-module~germa~86bb7768"), __webpack_require__.e("gerfaccoes-gerfaccoes-module")]).then(__webpack_require__.bind(null, /*! ./gerfaccoes/gerfaccoes.module */ "./src/app/gerfaccoes/gerfaccoes.module.ts")).then(m => m.GerfaccoesPageModule)
+        loadChildren: () => Promise.all(/*! import() | gerfaccoes-gerfaccoes-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerfaccoes-gerfaccoes-module~germa~86bb7768"), __webpack_require__.e("common"), __webpack_require__.e("gerfaccoes-gerfaccoes-module")]).then(__webpack_require__.bind(null, /*! ./gerfaccoes/gerfaccoes.module */ "./src/app/gerfaccoes/gerfaccoes.module.ts")).then(m => m.GerfaccoesPageModule)
     },
     {
         path: 'gerrpg',
-        loadChildren: () => Promise.all(/*! import() | gerrpg-gerrpg-module */[__webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23"), __webpack_require__.e("default~contmesa-contmesa-module~fichamodelo-fichamodelo-module~gercapitulos-gercapitulos-module~ger~beaf627b"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~gercapitulos-gercapitulos-module~gerequipamentos~a17afce2"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerequipamentos-gerequipamentos-mo~0f284ca8"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~gerequipamentos-gerequipamentos-module~gerinimig~dc9172e7"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerfaccoes-gerfaccoes-module~germa~86bb7768"), __webpack_require__.e("default~contmesa-contmesa-module~gerequipamentos-gerequipamentos-module~gerinimigos-gerinimigos-modu~9709502c"), __webpack_require__.e("default~ajuda-ajuda-module~contmesa-contmesa-module~gerrpg-gerrpg-module"), __webpack_require__.e("default~contmesa-contmesa-module~gerrpg-gerrpg-module"), __webpack_require__.e("gerrpg-gerrpg-module")]).then(__webpack_require__.bind(null, /*! ./gerrpg/gerrpg.module */ "./src/app/gerrpg/gerrpg.module.ts")).then(m => m.GerrpgPageModule)
+        loadChildren: () => Promise.all(/*! import() | gerrpg-gerrpg-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~04356d04"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~gerequipamentos-gerequipamentos-module~gerinimig~dc9172e7"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerfaccoes-gerfaccoes-module~germa~86bb7768"), __webpack_require__.e("default~contmesa-contmesa-module~gerequipamentos-gerequipamentos-module~gerinimigos-gerinimigos-modu~9709502c"), __webpack_require__.e("default~ajuda-ajuda-module~contmesa-contmesa-module~gerrpg-gerrpg-module"), __webpack_require__.e("default~contmesa-contmesa-module~gerrpg-gerrpg-module"), __webpack_require__.e("gerrpg-gerrpg-module")]).then(__webpack_require__.bind(null, /*! ./gerrpg/gerrpg.module */ "./src/app/gerrpg/gerrpg.module.ts")).then(m => m.GerrpgPageModule)
     },
     {
         path: 'contmesa',
-        loadChildren: () => Promise.all(/*! import() | contmesa-contmesa-module */[__webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23"), __webpack_require__.e("default~contmesa-contmesa-module~fichamodelo-fichamodelo-module~gercapitulos-gercapitulos-module~ger~beaf627b"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~gercapitulos-gercapitulos-module~gerequipamentos~a17afce2"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerequipamentos-gerequipamentos-mo~0f284ca8"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~gerequipamentos-gerequipamentos-module~gerinimig~dc9172e7"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerfaccoes-gerfaccoes-module~germa~86bb7768"), __webpack_require__.e("default~contmesa-contmesa-module~gerequipamentos-gerequipamentos-module~gerinimigos-gerinimigos-modu~9709502c"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~germesas-germesas-module~teste-teste-module"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~referencia-referencia-module"), __webpack_require__.e("default~ajuda-ajuda-module~contmesa-contmesa-module~gerrpg-gerrpg-module"), __webpack_require__.e("default~contmesa-contmesa-module~gerrpg-gerrpg-module"), __webpack_require__.e("common"), __webpack_require__.e("contmesa-contmesa-module")]).then(__webpack_require__.bind(null, /*! ./contmesa/contmesa.module */ "./src/app/contmesa/contmesa.module.ts")).then(m => m.ContmesaPageModule)
+        loadChildren: () => Promise.all(/*! import() | contmesa-contmesa-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~04356d04"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~51cbcb23"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~b414090c"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~gerequipamentos-gerequipamentos-module~gerinimig~dc9172e7"), __webpack_require__.e("default~contmesa-contmesa-module~gercapitulos-gercapitulos-module~gerfaccoes-gerfaccoes-module~germa~86bb7768"), __webpack_require__.e("default~contmesa-contmesa-module~gerequipamentos-gerequipamentos-module~gerinimigos-gerinimigos-modu~9709502c"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~germesas-germesas-module~teste-teste-module"), __webpack_require__.e("default~ajuda-ajuda-module~contmesa-contmesa-module~gerrpg-gerrpg-module"), __webpack_require__.e("default~contmesa-contmesa-module~gerrpg-gerrpg-module"), __webpack_require__.e("common"), __webpack_require__.e("contmesa-contmesa-module")]).then(__webpack_require__.bind(null, /*! ./contmesa/contmesa.module */ "./src/app/contmesa/contmesa.module.ts")).then(m => m.ContmesaPageModule)
     },
     {
         path: 'suporte',
-        loadChildren: () => Promise.all(/*! import() | suporte-suporte-module */[__webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92"), __webpack_require__.e("default~recovery-recovery-module~referencia-referencia-module~registrar-registrar-module~suporte-sup~e116757c"), __webpack_require__.e("suporte-suporte-module")]).then(__webpack_require__.bind(null, /*! ./suporte/suporte.module */ "./src/app/suporte/suporte.module.ts")).then(m => m.SuportePageModule)
+        loadChildren: () => Promise.all(/*! import() | suporte-suporte-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~recovery-recovery-module~referencia-referencia-module~registrar-registrar-module~suporte-sup~e116757c"), __webpack_require__.e("common"), __webpack_require__.e("suporte-suporte-module")]).then(__webpack_require__.bind(null, /*! ./suporte/suporte.module */ "./src/app/suporte/suporte.module.ts")).then(m => m.SuportePageModule)
     },
     {
         path: 'referencia',
-        loadChildren: () => Promise.all(/*! import() | referencia-referencia-module */[__webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92"), __webpack_require__.e("default~recovery-recovery-module~referencia-referencia-module~registrar-registrar-module~suporte-sup~e116757c"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~referencia-referencia-module"), __webpack_require__.e("referencia-referencia-module")]).then(__webpack_require__.bind(null, /*! ./referencia/referencia.module */ "./src/app/referencia/referencia.module.ts")).then(m => m.ReferenciaPageModule)
+        loadChildren: () => Promise.all(/*! import() | referencia-referencia-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~b414090c"), __webpack_require__.e("default~recovery-recovery-module~referencia-referencia-module~registrar-registrar-module~suporte-sup~e116757c"), __webpack_require__.e("referencia-referencia-module")]).then(__webpack_require__.bind(null, /*! ./referencia/referencia.module */ "./src/app/referencia/referencia.module.ts")).then(m => m.ReferenciaPageModule)
     },
     {
         path: 'recovery',
-        loadChildren: () => Promise.all(/*! import() | recovery-recovery-module */[__webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~a4da42f0"), __webpack_require__.e("default~contmesa-contmesa-module~ficha-ficha-module~fichamodelo-fichamodelo-module~gercapitulos-gerc~f299db92"), __webpack_require__.e("default~recovery-recovery-module~referencia-referencia-module~registrar-registrar-module~suporte-sup~e116757c"), __webpack_require__.e("default~login-login-module~logout-logout-module~recovery-recovery-module"), __webpack_require__.e("recovery-recovery-module")]).then(__webpack_require__.bind(null, /*! ./recovery/recovery.module */ "./src/app/recovery/recovery.module.ts")).then(m => m.RecoveryPageModule)
+        loadChildren: () => Promise.all(/*! import() | recovery-recovery-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~hall-hall-module~login-login-module~logout-logout-module~recovery-recovery-module"), __webpack_require__.e("default~recovery-recovery-module~referencia-referencia-module~registrar-registrar-module~suporte-sup~e116757c"), __webpack_require__.e("recovery-recovery-module")]).then(__webpack_require__.bind(null, /*! ./recovery/recovery.module */ "./src/app/recovery/recovery.module.ts")).then(m => m.RecoveryPageModule)
     },
     {
         path: 'ajuda',
-        loadChildren: () => Promise.all(/*! import() | ajuda-ajuda-module */[__webpack_require__.e("default~ajuda-ajuda-module~contmesa-contmesa-module~gerrpg-gerrpg-module"), __webpack_require__.e("ajuda-ajuda-module")]).then(__webpack_require__.bind(null, /*! ./ajuda/ajuda.module */ "./src/app/ajuda/ajuda.module.ts")).then(m => m.AjudaPageModule)
+        loadChildren: () => Promise.all(/*! import() | ajuda-ajuda-module */[__webpack_require__.e("default~ajuda-ajuda-module~contmesa-contmesa-module~gerrpg-gerrpg-module"), __webpack_require__.e("common"), __webpack_require__.e("ajuda-ajuda-module")]).then(__webpack_require__.bind(null, /*! ./ajuda/ajuda.module */ "./src/app/ajuda/ajuda.module.ts")).then(m => m.AjudaPageModule)
+    },
+    {
+        path: 'hall',
+        loadChildren: () => Promise.all(/*! import() | hall-hall-module */[__webpack_require__.e("default~hall-hall-module~login-login-module~logout-logout-module~recovery-recovery-module"), __webpack_require__.e("hall-hall-module")]).then(__webpack_require__.bind(null, /*! ./hall/hall.module */ "./src/app/hall/hall.module.ts")).then(m => m.HallPageModule)
+    },
+    {
+        path: 'explore-npc',
+        loadChildren: () => Promise.all(/*! import() | explorar-explore-npc-explore-npc-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~04356d04"), __webpack_require__.e("default~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-faccao-explore-faccao-mod~eaa1d9f1"), __webpack_require__.e("default~explorar-explore-npc-explore-npc-module~explorar-explore-rpg-explore-rpg-module"), __webpack_require__.e("explorar-explore-npc-explore-npc-module")]).then(__webpack_require__.bind(null, /*! ./explorar/explore-npc/explore-npc.module */ "./src/app/explorar/explore-npc/explore-npc.module.ts")).then(m => m.ExploreNpcPageModule)
+    },
+    {
+        path: 'explore-faccao',
+        loadChildren: () => Promise.all(/*! import() | explorar-explore-faccao-explore-faccao-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~04356d04"), __webpack_require__.e("default~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-faccao-explore-faccao-mod~eaa1d9f1"), __webpack_require__.e("explorar-explore-faccao-explore-faccao-module")]).then(__webpack_require__.bind(null, /*! ./explorar/explore-faccao/explore-faccao.module */ "./src/app/explorar/explore-faccao/explore-faccao.module.ts")).then(m => m.ExploreFaccaoPageModule)
+    },
+    {
+        path: 'explore-missao',
+        loadChildren: () => Promise.all(/*! import() | explorar-explore-missao-explore-missao-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~04356d04"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~b414090c"), __webpack_require__.e("default~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-faccao-explore-faccao-mod~eaa1d9f1"), __webpack_require__.e("explorar-explore-missao-explore-missao-module")]).then(__webpack_require__.bind(null, /*! ./explorar/explore-missao/explore-missao.module */ "./src/app/explorar/explore-missao/explore-missao.module.ts")).then(m => m.ExploreMissaoPageModule)
+    },
+    {
+        path: 'explore-capitulo',
+        loadChildren: () => Promise.all(/*! import() | explorar-explore-capitulo-explore-capitulo-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~04356d04"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~b414090c"), __webpack_require__.e("default~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-faccao-explore-faccao-mod~eaa1d9f1"), __webpack_require__.e("explorar-explore-capitulo-explore-capitulo-module")]).then(__webpack_require__.bind(null, /*! ./explorar/explore-capitulo/explore-capitulo.module */ "./src/app/explorar/explore-capitulo/explore-capitulo.module.ts")).then(m => m.ExploreCapituloPageModule)
+    },
+    {
+        path: 'explore-mapa',
+        loadChildren: () => Promise.all(/*! import() | explorar-explore-mapa-explore-mapa-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~04356d04"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~b414090c"), __webpack_require__.e("default~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-faccao-explore-faccao-mod~eaa1d9f1"), __webpack_require__.e("explorar-explore-mapa-explore-mapa-module")]).then(__webpack_require__.bind(null, /*! ./explorar/explore-mapa/explore-mapa.module */ "./src/app/explorar/explore-mapa/explore-mapa.module.ts")).then(m => m.ExploreMapaPageModule)
+    },
+    {
+        path: 'explore-modelo-ficha',
+        loadChildren: () => Promise.all(/*! import() | explorar-explore-modelo-ficha-explore-modelo-ficha-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~04356d04"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~b414090c"), __webpack_require__.e("default~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-faccao-explore-faccao-mod~eaa1d9f1"), __webpack_require__.e("explorar-explore-modelo-ficha-explore-modelo-ficha-module")]).then(__webpack_require__.bind(null, /*! ./explorar/explore-modelo-ficha/explore-modelo-ficha.module */ "./src/app/explorar/explore-modelo-ficha/explore-modelo-ficha.module.ts")).then(m => m.ExploreModeloFichaPageModule)
+    },
+    {
+        path: 'explore-rpg',
+        loadChildren: () => Promise.all(/*! import() | explorar-explore-rpg-explore-rpg-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~04356d04"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~b414090c"), __webpack_require__.e("default~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-faccao-explore-faccao-mod~eaa1d9f1"), __webpack_require__.e("default~explorar-explore-npc-explore-npc-module~explorar-explore-rpg-explore-rpg-module"), __webpack_require__.e("common"), __webpack_require__.e("explorar-explore-rpg-explore-rpg-module")]).then(__webpack_require__.bind(null, /*! ./explorar/explore-rpg/explore-rpg.module */ "./src/app/explorar/explore-rpg/explore-rpg.module.ts")).then(m => m.ExploreRpgPageModule)
+    },
+    {
+        path: 'explore-item-ataque',
+        loadChildren: () => Promise.all(/*! import() | explorar-explore-item-ataque-explore-item-ataque-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~04356d04"), __webpack_require__.e("default~explorar-explore-item-ataque-explore-item-ataque-module~explorar-explore-item-defesa-explore~e9d0f86f"), __webpack_require__.e("explorar-explore-item-ataque-explore-item-ataque-module")]).then(__webpack_require__.bind(null, /*! ./explorar/explore-item-ataque/explore-item-ataque.module */ "./src/app/explorar/explore-item-ataque/explore-item-ataque.module.ts")).then(m => m.ExploreItemAtaquePageModule)
+    },
+    {
+        path: 'explore-item-defesa',
+        loadChildren: () => Promise.all(/*! import() | explorar-explore-item-defesa-explore-item-defesa-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~04356d04"), __webpack_require__.e("default~explorar-explore-item-ataque-explore-item-ataque-module~explorar-explore-item-defesa-explore~e9d0f86f"), __webpack_require__.e("explorar-explore-item-defesa-explore-item-defesa-module")]).then(__webpack_require__.bind(null, /*! ./explorar/explore-item-defesa/explore-item-defesa.module */ "./src/app/explorar/explore-item-defesa/explore-item-defesa.module.ts")).then(m => m.ExploreItemDefesaPageModule)
+    },
+    {
+        path: 'explore-item-utilizavel',
+        loadChildren: () => Promise.all(/*! import() | explorar-explore-item-utilizavel-explore-item-utilizavel-module */[__webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~1f72f94d"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~816164c8"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~aa69e00b"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~e53c79d0"), __webpack_require__.e("default~contmesa-contmesa-module~explorar-explore-capitulo-explore-capitulo-module~explorar-explore-~04356d04"), __webpack_require__.e("default~explorar-explore-item-ataque-explore-item-ataque-module~explorar-explore-item-defesa-explore~e9d0f86f"), __webpack_require__.e("explorar-explore-item-utilizavel-explore-item-utilizavel-module")]).then(__webpack_require__.bind(null, /*! ./explorar/explore-item-utilizavel/explore-item-utilizavel.module */ "./src/app/explorar/explore-item-utilizavel/explore-item-utilizavel.module.ts")).then(m => m.ExploreItemUtilizavelPageModule)
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -747,6 +797,11 @@ let AppComponent = class AppComponent {
                 title: 'Criações',
                 url: '/gercriacoes',
                 icon: 'create'
+            },
+            {
+                title: 'Hall',
+                url: '/hall',
+                icon: 'rocket'
             },
             {
                 title: 'Perfil',
@@ -817,13 +872,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/ngx/index.js");
 /* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _interceptors_auth_interceptor__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./interceptors/auth-interceptor */ "./src/app/interceptors/auth-interceptor.ts");
-/* harmony import */ var _interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./interceptors/error-interceptor */ "./src/app/interceptors/error-interceptor.ts");
-/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/fesm2015/angular-fire.js");
-/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/fesm2015/angular-fire-firestore.js");
-/* harmony import */ var _components_fundo_fundo_module__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/fundo/fundo.module */ "./src/app/components/fundo/fundo.module.ts");
+/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm2015/angular-fontawesome.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var _fortawesome_free_regular_svg_icons__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons */ "./node_modules/@fortawesome/free-regular-svg-icons/index.es.js");
+/* harmony import */ var _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @fortawesome/free-brands-svg-icons */ "./node_modules/@fortawesome/free-brands-svg-icons/index.es.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _interceptors_auth_interceptor__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./interceptors/auth-interceptor */ "./src/app/interceptors/auth-interceptor.ts");
+/* harmony import */ var _interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./interceptors/error-interceptor */ "./src/app/interceptors/error-interceptor.ts");
+/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/fesm2015/angular-fire.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/fesm2015/angular-fire-firestore.js");
+/* harmony import */ var _components_fundo_fundo_module__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/fundo/fundo.module */ "./src/app/components/fundo/fundo.module.ts");
+
+
+
+
 
 
 
@@ -853,33 +916,43 @@ const firebase = {
     measurementId: "G-32RN3GVG94"
 };
 let AppModule = class AppModule {
+    constructor(library) {
+        library.addIconPacks(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_11__["fas"]);
+        library.addIconPacks(_fortawesome_free_regular_svg_icons__WEBPACK_IMPORTED_MODULE_12__["far"]);
+        library.addIconPacks(_fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_13__["fab"]);
+    }
 };
+AppModule.ctorParameters = () => [
+    { type: _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_10__["FaIconLibrary"] }
+];
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"],],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_14__["AppComponent"],],
         entryComponents: [],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
-            _angular_fire__WEBPACK_IMPORTED_MODULE_14__["AngularFireModule"].initializeApp(firebase),
+            _angular_fire__WEBPACK_IMPORTED_MODULE_18__["AngularFireModule"].initializeApp(firebase),
             _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["IonicModule"].forRoot(),
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["AppRoutingModule"],
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_15__["AppRoutingModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"],
-            _components_fundo_fundo_module__WEBPACK_IMPORTED_MODULE_16__["FundoModule"]
+            _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_10__["FontAwesomeModule"],
+            _components_fundo_fundo_module__WEBPACK_IMPORTED_MODULE_20__["FundoModule"]
         ],
         providers: [
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_9__["StatusBar"],
             _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_8__["SplashScreen"],
             { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["IonicRouteStrategy"] },
-            _interceptors_auth_interceptor__WEBPACK_IMPORTED_MODULE_12__["AuthInterceptorProvider"],
-            _interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_13__["ErrorInterceptorProvider"],
-            _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__["AngularFirestore"],
+            _interceptors_auth_interceptor__WEBPACK_IMPORTED_MODULE_16__["AuthInterceptorProvider"],
+            _interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_17__["ErrorInterceptorProvider"],
+            _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_19__["AngularFirestore"],
         ],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]],
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_14__["AppComponent"]],
         exports: [],
-    })
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_10__["FaIconLibrary"]])
 ], AppModule);
 
 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
@@ -977,7 +1050,7 @@ FundoModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "API_CONFIG", function() { return API_CONFIG; });
 const API_CONFIG = {
-    baseUrl: "https://www.rmf-api.com/",
+    baseUrl: "http://localhost:5000/",
     bucketBaseUrl: "aqui ficará o caminho base para acessar as imagens no S3 da Amazon"
 };
 
@@ -1123,11 +1196,14 @@ let ErrorInterceptor = class ErrorInterceptor {
     createAlert(error) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
             let titulo = error.error;
+            let message = error.msg;
             if (!titulo)
                 titulo = "Falha";
+            if (!message)
+                message = error.message;
             let alert = yield this.alertContr.create({
                 header: error.status + ": " + titulo,
-                message: error.msg,
+                message,
                 backdropDismiss: false,
                 buttons: [
                     {
@@ -1140,10 +1216,13 @@ let ErrorInterceptor = class ErrorInterceptor {
     }
     handle401(e) {
         let error = JSON.parse(e);
+        console.log(error);
         this.createAlert(error);
     }
     handle404(e) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            if (!e)
+                return;
             let alert = yield this.alertContr.create({
                 header: e.status + ": Não encontrado",
                 message: e.msg,
@@ -1268,6 +1347,15 @@ let StorageService = class StorageService {
         let obj = this.getLocalUser();
         obj.id = id;
         this.setLocalUser(obj);
+    }
+    isLogedIn() {
+        const user = JSON.parse(localStorage.getItem(_config_storage_keys_config__WEBPACK_IMPORTED_MODULE_2__["STORAGE_KEYS"].localUser));
+        if (user) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 };
 StorageService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

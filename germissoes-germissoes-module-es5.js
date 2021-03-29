@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-menu-button></ion-menu-button>\r\n    </ion-buttons>\r\n    <ion-title>\r\n      Gerencie missões criadas por você\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <app-missao [menu]=\"false\" [cancelarBTN]=\"false\"></app-missao>\r\n</ion-content>"
+module.exports = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-menu-button></ion-menu-button>\r\n    </ion-buttons>\r\n    <ion-title>\r\n      Gerencie missões criadas por você\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content [style.background-image]=\"'url(' + img + ')'\" [style.background-size]=\"'cover'\"\r\n  [style.background-repeat]=\"'no-repeat'\">\r\n  <app-missao [menu]=\"false\" [cancelarBTN]=\"false\"></app-missao>\r\n</ion-content>"
 
 /***/ }),
 
@@ -71,6 +71,113 @@ var MissaoUpdateModule = /** @class */ (function () {
     return MissaoUpdateModule;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/config/rpg.config.ts":
+/*!**************************************!*\
+  !*** ./src/app/config/rpg.config.ts ***!
+  \**************************************/
+/*! exports provided: MedievalRPG, CyberpunkRPG, SteampunkRPG, HorrorRPG, tipoRPG, tipoArrayRPG, Arma_Ataque, Armadura_Defesa, Utilizavel, tipoITEM, TipoItem, Corte, Esmagamento, Perfuacao, tipoARMA, Cabeca, Tronco, Bracos, Pernas, Escudo, tipoDEFESA, Consumivel, Aplicavel, Equipavel, tipoUTILIZAVEL, PRINCIPAL, SECUNDARIA, ATIVIDADE, EVENTO, TipoMissao */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MedievalRPG", function() { return MedievalRPG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CyberpunkRPG", function() { return CyberpunkRPG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SteampunkRPG", function() { return SteampunkRPG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HorrorRPG", function() { return HorrorRPG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tipoRPG", function() { return tipoRPG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tipoArrayRPG", function() { return tipoArrayRPG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Arma_Ataque", function() { return Arma_Ataque; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Armadura_Defesa", function() { return Armadura_Defesa; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Utilizavel", function() { return Utilizavel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tipoITEM", function() { return tipoITEM; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TipoItem", function() { return TipoItem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Corte", function() { return Corte; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Esmagamento", function() { return Esmagamento; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Perfuacao", function() { return Perfuacao; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tipoARMA", function() { return tipoARMA; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Cabeca", function() { return Cabeca; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Tronco", function() { return Tronco; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Bracos", function() { return Bracos; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Pernas", function() { return Pernas; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Escudo", function() { return Escudo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tipoDEFESA", function() { return tipoDEFESA; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Consumivel", function() { return Consumivel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Aplicavel", function() { return Aplicavel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Equipavel", function() { return Equipavel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tipoUTILIZAVEL", function() { return tipoUTILIZAVEL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PRINCIPAL", function() { return PRINCIPAL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SECUNDARIA", function() { return SECUNDARIA; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ATIVIDADE", function() { return ATIVIDADE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EVENTO", function() { return EVENTO; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TipoMissao", function() { return TipoMissao; });
+/*TIPOS RPG*/
+var MedievalRPG = 0;
+var CyberpunkRPG = 1;
+var SteampunkRPG = 2;
+var HorrorRPG = 3;
+var tipoRPG = { MedievalRPG: MedievalRPG, CyberpunkRPG: CyberpunkRPG, SteampunkRPG: SteampunkRPG, HorrorRPG: HorrorRPG };
+var tipoArrayRPG = ['Medieval', 'Cyberpunk', 'Steampunk', 'Horror'];
+/*TIPOS ITENS*/
+var Arma_Ataque = 0;
+var Armadura_Defesa = 1;
+var Utilizavel = 2;
+var tipoITEM = { Arma_Ataque: Arma_Ataque, Armadura_Defesa: Armadura_Defesa, Utilizavel: Utilizavel };
+var TipoItem = [{
+        value: Arma_Ataque,
+        template: 'Ataque'
+    },
+    {
+        value: Armadura_Defesa,
+        template: 'Defesa'
+    },
+    {
+        value: Utilizavel,
+        template: 'Utilizavel'
+    }
+];
+/*TIPOS ARMAS*/
+var Corte = 0;
+var Esmagamento = 1;
+var Perfuacao = 2;
+var tipoARMA = { Corte: Corte, Esmagamento: Esmagamento, Perfuacao: Perfuacao };
+/*TIPOS DEFESA*/
+var Cabeca = 0;
+var Tronco = 1;
+var Bracos = 2;
+var Pernas = 3;
+var Escudo = 4;
+var tipoDEFESA = { Cabeca: Cabeca, Tronco: Tronco, Bracos: Bracos, Pernas: Pernas, Escudo: Escudo };
+/*TIPOS Utilizavel*/
+var Consumivel = 0;
+var Aplicavel = 1;
+var Equipavel = 2;
+var tipoUTILIZAVEL = { Consumivel: Consumivel, Aplicavel: Aplicavel, Equipavel: Equipavel };
+/*TIPOS MISSAO*/
+var PRINCIPAL = 0;
+var SECUNDARIA = 1;
+var ATIVIDADE = 2;
+var EVENTO = 3;
+var TipoMissao = [{
+        value: PRINCIPAL,
+        template: 'Principal'
+    },
+    {
+        value: SECUNDARIA,
+        template: 'Secundária'
+    },
+    {
+        value: ATIVIDADE,
+        template: 'Atividade'
+    },
+    {
+        value: EVENTO,
+        template: 'Evento'
+    },
+];
 
 
 /***/ }),
@@ -176,7 +283,7 @@ var GermissoesPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2dlcm1pc3NvZXMvZ2VybWlzc29lcy5wYWdlLnNjc3MifQ== */"
+module.exports = "ion-content {\n  --background: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2VybWlzc29lcy9DOlxcVXNlcnNcXGxoY2NvXFxEb2N1bWVudHNcXERlc2Vudm9sdmltZW50b1xcVENDXFxGcm9udGVuZFxcUk1GLU1vYmlsZS9zcmNcXGFwcFxcZ2VybWlzc29lc1xcZ2VybWlzc29lcy5wYWdlLnNjc3MiLCJzcmMvYXBwL2dlcm1pc3NvZXMvZ2VybWlzc29lcy5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxrQkFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvZ2VybWlzc29lcy9nZXJtaXNzb2VzLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1jb250ZW50IHtcclxuICAgIC0tYmFja2dyb3VuZDogbm9uZTtcclxufVxyXG5cclxuIiwiaW9uLWNvbnRlbnQge1xuICAtLWJhY2tncm91bmQ6IG5vbmU7XG59Il19 */"
 
 /***/ }),
 
@@ -192,20 +299,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GermissoesPage", function() { return GermissoesPage; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _services_utils_fundo_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/utils/fundo.service */ "./src/app/services/utils/fundo.service.ts");
+
+
 
 
 var GermissoesPage = /** @class */ (function () {
-    function GermissoesPage() {
+    function GermissoesPage(plataform, fundoService) {
+        this.plataform = plataform;
+        this.fundoService = fundoService;
+        this.img = '';
     }
     GermissoesPage.prototype.ngOnInit = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.plataform.ready()
+                            .then(function () {
+                            if (_this.plataform.width() <= 700)
+                                _this.fundoService.setCurrentPlataform('mobile');
+                            else
+                                _this.fundoService.setCurrentPlataform('pc');
+                            _this.img = _this.fundoService.changeImg();
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
     };
+    GermissoesPage.ctorParameters = function () { return [
+        { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"] },
+        { type: _services_utils_fundo_service__WEBPACK_IMPORTED_MODULE_3__["FundoService"] }
+    ]; };
     GermissoesPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-germissoes',
             template: __webpack_require__(/*! raw-loader!./germissoes.page.html */ "./node_modules/raw-loader/index.js!./src/app/germissoes/germissoes.page.html"),
             styles: [__webpack_require__(/*! ./germissoes.page.scss */ "./src/app/germissoes/germissoes.page.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"],
+            _services_utils_fundo_service__WEBPACK_IMPORTED_MODULE_3__["FundoService"]])
     ], GermissoesPage);
     return GermissoesPage;
 }());

@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>\n      Ajuda\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n\n  <app-help-rpg [hasNext]=\"false\" (prosseguir)=\"monitor($event)\"></app-help-rpg>\n\n</ion-content>\n"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>\n      Ajuda\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content [style.background-image]=\"'url(' + img + ')'\" [style.background-size]=\"'cover'\"\n  [style.background-repeat]=\"'no-repeat'\">\n\n  <app-help-rpg [hasNext]=\"false\" (prosseguir)=\"monitor($event)\"></app-help-rpg>\n\n</ion-content>\n"
 
 /***/ }),
 
@@ -106,7 +106,7 @@ var AjudaPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FqdWRhL2FqdWRhLnBhZ2Uuc2NzcyJ9 */"
+module.exports = "ion-content {\n  --background: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWp1ZGEvQzpcXFVzZXJzXFxsaGNjb1xcRG9jdW1lbnRzXFxEZXNlbnZvbHZpbWVudG9cXFRDQ1xcRnJvbnRlbmRcXFJNRi1Nb2JpbGUvc3JjXFxhcHBcXGFqdWRhXFxhanVkYS5wYWdlLnNjc3MiLCJzcmMvYXBwL2FqdWRhL2FqdWRhLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9hanVkYS9hanVkYS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tY29udGVudCB7XHJcbiAgICAtLWJhY2tncm91bmQ6IG5vbmU7XHJcbn1cclxuIiwiaW9uLWNvbnRlbnQge1xuICAtLWJhY2tncm91bmQ6IG5vbmU7XG59Il19 */"
 
 /***/ }),
 
@@ -122,20 +122,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AjudaPage", function() { return AjudaPage; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _services_utils_fundo_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/utils/fundo.service */ "./src/app/services/utils/fundo.service.ts");
+
+
 
 
 var AjudaPage = /** @class */ (function () {
-    function AjudaPage() {
+    function AjudaPage(plataform, fundoService) {
+        this.plataform = plataform;
+        this.fundoService = fundoService;
+        this.img = '';
     }
     AjudaPage.prototype.ngOnInit = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.plataform.ready()
+                            .then(function () {
+                            if (_this.plataform.width() <= 700)
+                                _this.fundoService.setCurrentPlataform('mobile');
+                            else
+                                _this.fundoService.setCurrentPlataform('pc');
+                            _this.img = _this.fundoService.changeImg();
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
     };
+    AjudaPage.ctorParameters = function () { return [
+        { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"] },
+        { type: _services_utils_fundo_service__WEBPACK_IMPORTED_MODULE_3__["FundoService"] }
+    ]; };
     AjudaPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-ajuda',
             template: __webpack_require__(/*! raw-loader!./ajuda.page.html */ "./node_modules/raw-loader/index.js!./src/app/ajuda/ajuda.page.html"),
             styles: [__webpack_require__(/*! ./ajuda.page.scss */ "./src/app/ajuda/ajuda.page.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"],
+            _services_utils_fundo_service__WEBPACK_IMPORTED_MODULE_3__["FundoService"]])
     ], AjudaPage);
     return AjudaPage;
 }());

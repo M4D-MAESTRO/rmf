@@ -18,7 +18,7 @@ module.exports = "<p-dialog [visible]=\"display.show\" [modal]=\"true\" [draggab
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-row>\r\n  <ion-col>\r\n    <ion-select (ionChange)=\"atualiza($event)\" placeholder=\"Tipo de RPG\">\r\n      <ion-select-option value=\"0\">Medieval</ion-select-option>\r\n      <ion-select-option value=\"1\">Cyberpunk</ion-select-option>\r\n      <ion-select-option value=\"2\">Steampunk</ion-select-option>\r\n      <ion-select-option value=\"3\">Horror</ion-select-option>\r\n    </ion-select>\r\n  </ion-col>\r\n  <ion-col>\r\n\r\n    <ion-button (click)=\"consultar()\">Listar</ion-button>\r\n\r\n  </ion-col>\r\n</ion-row>\r\n<ng-container *ngIf=\"flag\">\r\n  <app-paginacao [emptyMessage]=\"'Não foi encontrado nenhum item'\" [paginaAtual]=\"paginaAtual\"\r\n    (notifyParent)=\"getNotification($event)\" [add]=\"true\" (getSelectedObj)=\"getSelectedObj($event)\" [id]=\"'idRpg'\"\r\n    [nome]=\"'nome'\" [descricao]=\"'descricao'\" [tipo]=\"'tipoRPG'\" [imgURL]=\"'imgURL'\"></app-paginacao>\r\n</ng-container>\r\n<ion-button color=\"danger\" expand=\"block\" fill=\"solid\" (click)=\"close()\">Fechar</ion-button>\r\n\r\n<p-toast position=\"center\" key=\"c\" (onClose)=\"onReject()\" [baseZIndex]=\"5000\">\r\n  <ng-template pTemplate=\"message\">\r\n    <div style=\"text-align: center\">\r\n      <i class=\"pi pi-exclamation-triangle\" style=\"font-size: 3em\"></i>\r\n      <h3>Deseja mesmo criar uma nova mesa?</h3>\r\n      <p>Confirme</p>\r\n    </div>\r\n    <div class=\"ui-g ui-fluid\">\r\n      <div class=\"ui-g-6\">\r\n        <button type=\"button\" pButton (click)=\"onConfirm()\" label=\"Sim\" class=\"ui-button-success\"></button>\r\n      </div>\r\n      <div class=\"ui-g-6\">\r\n        <button type=\"button\" pButton (click)=\"onReject()\" label=\"Não\" class=\"ui-button-secondary\"></button>\r\n      </div>\r\n    </div>\r\n  </ng-template>\r\n</p-toast>"
+module.exports = "<ion-content>\r\n  <ion-grid>\r\n\r\n    <ion-row>\r\n      <ion-col size=4>\r\n        <ion-item color=\"dark\">\r\n          <ion-select color=\"tertiary\" (ionChange)=\"atualiza($event)\" placeholder=\"Tipo de RPG\">\r\n            <ion-select-option value=\"0\">Medieval</ion-select-option>\r\n            <ion-select-option value=\"1\">Cyberpunk</ion-select-option>\r\n            <ion-select-option value=\"2\">Steampunk</ion-select-option>\r\n            <ion-select-option value=\"3\">Horror</ion-select-option>\r\n          </ion-select>\r\n        </ion-item>\r\n      </ion-col>\r\n      <ion-col size=8>\r\n        <ion-button color=\"light\" (click)=\"consultar()\">Listar</ion-button>\r\n      </ion-col>\r\n    </ion-row>\r\n\r\n    <ion-row>\r\n      <ion-col>\r\n        <ng-container *ngIf=\"flag\">\r\n          <app-paginacao [emptyMessage]=\"'Não foi encontrado nenhum item'\" [paginaAtual]=\"paginaAtual\"\r\n            (notifyParent)=\"getNotification($event)\" [add]=\"true\" (getSelectedObj)=\"getSelectedObj($event)\"\r\n            [id]=\"'idRpg'\" [nome]=\"'nome'\" [descricao]=\"'descricao'\" [tipo]=\"'tipoRPG'\" [imgURL]=\"'imgURL'\">\r\n          </app-paginacao>\r\n        </ng-container>\r\n      </ion-col>\r\n    </ion-row>\r\n\r\n    <ion-row>\r\n      <ion-col>\r\n        <ion-button color=\"danger\" expand=\"block\" fill=\"solid\" (click)=\"close()\">Fechar</ion-button>\r\n      </ion-col>\r\n    </ion-row>\r\n\r\n  </ion-grid>\r\n</ion-content>\r\n<p-toast position=\"center\" key=\"c\" (onClose)=\"onReject()\" [baseZIndex]=\"5000\">\r\n  <ng-template pTemplate=\"message\">\r\n    <div style=\"text-align: center\">\r\n      <i class=\"pi pi-exclamation-triangle\" style=\"font-size: 3em\"></i>\r\n      <h3>Deseja mesmo criar uma nova mesa?</h3>\r\n      <p>Confirme</p>\r\n    </div>\r\n    <div class=\"ui-g ui-fluid\">\r\n      <div class=\"ui-g-6\">\r\n        <button type=\"button\" pButton (click)=\"onConfirm()\" label=\"Sim\" class=\"ui-button-success\"></button>\r\n      </div>\r\n      <div class=\"ui-g-6\">\r\n        <button type=\"button\" pButton (click)=\"onReject()\" label=\"Não\" class=\"ui-button-secondary\"></button>\r\n      </div>\r\n    </div>\r\n  </ng-template>\r\n</p-toast>\r\n\r\n<app-load-spinner [loading]=\"loading\"></app-load-spinner>"
 
 /***/ }),
 
@@ -264,7 +264,7 @@ NovaMesaModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvY3JpYWNvZXMvbm92YS1tZXNhL25vdmEtbWVzYS5jb21wb25lbnQuc2NzcyJ9 */"
+module.exports = "ion-content {\n  --background: rgb(122, 122, 122) !important;\n}\n\nion-item {\n  --border-radius: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9jcmlhY29lcy9ub3ZhLW1lc2EvQzpcXFVzZXJzXFxsaGNjb1xcRG9jdW1lbnRzXFxEZXNlbnZvbHZpbWVudG9cXFRDQ1xcRnJvbnRlbmRcXFJNRi1Nb2JpbGUvc3JjXFxhcHBcXGNvbXBvbmVudHNcXGNyaWFjb2VzXFxub3ZhLW1lc2FcXG5vdmEtbWVzYS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy9jcmlhY29lcy9ub3ZhLW1lc2Evbm92YS1tZXNhLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksMkNBQUE7QUNDSjs7QURFQTtFQUNJLHFCQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2NyaWFjb2VzL25vdmEtbWVzYS9ub3ZhLW1lc2EuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tY29udGVudCB7XHJcbiAgICAtLWJhY2tncm91bmQ6IHJnYigxMjIsIDEyMiwgMTIyKSAhaW1wb3J0YW50O1xyXG59XHJcblxyXG5pb24taXRlbSB7XHJcbiAgICAtLWJvcmRlci1yYWRpdXM6IDEwcHg7XHJcbn0iLCJpb24tY29udGVudCB7XG4gIC0tYmFja2dyb3VuZDogcmdiKDEyMiwgMTIyLCAxMjIpICFpbXBvcnRhbnQ7XG59XG5cbmlvbi1pdGVtIHtcbiAgLS1ib3JkZXItcmFkaXVzOiAxMHB4O1xufSJdfQ== */"
 
 /***/ }),
 
@@ -307,6 +307,7 @@ let NovaMesaComponent = class NovaMesaComponent {
         this.tipoRPG = '0';
         this.flag = false;
         this.cancelOp = true;
+        this.loading = false;
     }
     ngOnInit() {
         //this.consultar();
@@ -323,9 +324,11 @@ let NovaMesaComponent = class NovaMesaComponent {
         }
     }
     consultar() {
+        this.loading = true;
         this.flag = true;
         const p = this.rpgService.findPageByTipoRPG(this.tipoRPG, this.paginaAtual.toString());
         this.paginaService.setPromisse(p);
+        this.loading = false;
     }
     atualiza(event) {
         this.flag = false;
@@ -336,6 +339,7 @@ let NovaMesaComponent = class NovaMesaComponent {
         this.toastService.add({ key: 'c', sticky: true, severity: 'warn', summary: 'Are you sure?', detail: 'Confirm to proceed' });
     }
     onConfirm() {
+        this.loading = true;
         const dto = {
             idMestre: this.storageService.getLocalUserId(),
             idSistema: this.idRpg
@@ -344,14 +348,18 @@ let NovaMesaComponent = class NovaMesaComponent {
             .subscribe(res => {
             const { idMesa } = res;
             this.callToast('success', 'Mesa criada com sucesso!', 'Mesa: ' + idMesa);
+            this.loading = false;
             this.modalController.dismiss(true);
         }, error => {
+            console.log(error);
+            this.loading = false;
         });
     }
     onReject() {
         this.toastService.clear();
     }
     callToast(severity, summary, detail) {
+        this.toastService.clear();
         this.toastService.add({
             severity: severity,
             summary: summary,
@@ -429,7 +437,6 @@ let NotifyService = class NotifyService {
         });
     }
     contact(dto) {
-        dto.email = this.storage.getLocalUser().email;
         console.log(dto);
         return this.http.post(`${src_app_config_api_config__WEBPACK_IMPORTED_MODULE_4__["API_CONFIG"].baseUrl}notify/contatoJogador`, dto, {
             responseType: 'json',
@@ -476,6 +483,7 @@ let RpgService = class RpgService {
     constructor(http, storage) {
         this.http = http;
         this.storage = storage;
+        this.doUpdate = true;
         this.newRpg = {
             descricao: undefined,
             historia: undefined,
@@ -493,6 +501,18 @@ let RpgService = class RpgService {
             tipoRPG: undefined,
             imgURL: undefined
         };
+    }
+    getStaticID() {
+        return this.staticID;
+    }
+    setStaticID(id) {
+        this.staticID = id;
+    }
+    getDoUpdate() {
+        return this.doUpdate;
+    }
+    setDoUpdate(doUpdate) {
+        this.doUpdate = doUpdate;
     }
     insertInfo(obj) {
         this.newRpg.nome = obj.nome;
@@ -551,6 +571,31 @@ let RpgService = class RpgService {
             params,
             observe: 'body',
         });
+    }
+    doCopy(idRPG) {
+        const params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]()
+            .set('idUser', this.storage.getLocalUserId())
+            .set('idRPG', idRPG);
+        return this.http.get(`${src_app_config_api_config__WEBPACK_IMPORTED_MODULE_4__["API_CONFIG"].baseUrl}rpg/copiar`, {
+            params,
+            observe: 'body',
+        });
+    }
+    findById(id) {
+        return this.http.get(`${src_app_config_api_config__WEBPACK_IMPORTED_MODULE_4__["API_CONFIG"].baseUrl}rpg/${id}`);
+    }
+    findPageByCriador(page = '0', linesPerPage = '10') {
+        const params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]()
+            .set('idCriador', this.storage.getLocalUserId())
+            .set('page', page)
+            .set('linesPerPage', linesPerPage);
+        return this.http.get(`${src_app_config_api_config__WEBPACK_IMPORTED_MODULE_4__["API_CONFIG"].baseUrl}rpg/criador`, {
+            params,
+            observe: 'body',
+        });
+    }
+    updateBasic(dto) {
+        return this.http.put(`${src_app_config_api_config__WEBPACK_IMPORTED_MODULE_4__["API_CONFIG"].baseUrl}rpg`, dto);
     }
 };
 RpgService.ctorParameters = () => [

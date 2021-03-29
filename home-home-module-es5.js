@@ -4,7 +4,7 @@
 /*!**************************************************************************!*\
   !*** ./node_modules/@capacitor/core/dist/esm/core-plugin-definitions.js ***!
   \**************************************************************************/
-/*! exports provided: CameraSource, CameraDirection, CameraResultType, FilesystemDirectory, FilesystemEncoding, HapticsImpactStyle, HapticsNotificationType, KeyboardStyle, KeyboardResize, ActionSheetOptionStyle, PermissionType, PhotosAlbumType, StatusBarStyle */
+/*! exports provided: CameraSource, CameraDirection, CameraResultType, FilesystemDirectory, FilesystemEncoding, HapticsImpactStyle, HapticsNotificationType, KeyboardStyle, KeyboardResize, ActionSheetOptionStyle, PermissionType, PhotosAlbumType, StatusBarStyle, StatusBarAnimation */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,6 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PermissionType", function() { return PermissionType; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PhotosAlbumType", function() { return PhotosAlbumType; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StatusBarStyle", function() { return StatusBarStyle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StatusBarAnimation", function() { return StatusBarAnimation; });
 var CameraSource;
 (function (CameraSource) {
     CameraSource["Prompt"] = "PROMPT";
@@ -42,27 +43,45 @@ var CameraResultType;
 var FilesystemDirectory;
 (function (FilesystemDirectory) {
     /**
-     * The Application directory
-     */
-    FilesystemDirectory["Application"] = "APPLICATION";
-    /**
      * The Documents directory
+     * On iOS it's the app's documents directory.
+     * Use this directory to store user-generated content.
+     * On Android it's the Public Documents folder, so it's accessible from other apps.
+     * It's not accesible on Android 10 unless the app enables legacy External Storage
+     * by adding `android:requestLegacyExternalStorage="true"` in the `application` tag
+     * in the `AndroidManifest.xml`
      */
     FilesystemDirectory["Documents"] = "DOCUMENTS";
     /**
      * The Data directory
+     * On iOS it will use the Documents directory
+     * On Android it's the directory holding application files.
+     * Files will be deleted when the application is uninstalled.
      */
     FilesystemDirectory["Data"] = "DATA";
     /**
      * The Cache directory
+     * Can be deleted in cases of low memory, so use this directory to write app-specific files
+     * that your app can re-create easily.
      */
     FilesystemDirectory["Cache"] = "CACHE";
     /**
-     * The external directory (Android only)
+     * The external directory
+     * On iOS it will use the Documents directory
+     * On Android it's the directory on the primary shared/external
+     * storage device where the application can place persistent files it owns.
+     * These files are internal to the applications, and not typically visible
+     * to the user as media.
+     * Files will be deleted when the application is uninstalled.
      */
     FilesystemDirectory["External"] = "EXTERNAL";
     /**
-     * The external storage directory (Android only)
+     * The external storage directory
+     * On iOS it will use the Documents directory
+     * On Android it's the primary shared/external storage directory.
+     * It's not accesible on Android 10 unless the app enables legacy External Storage
+     * by adding `android:requestLegacyExternalStorage="true"` in the `application` tag
+     * in the `AndroidManifest.xml`
      */
     FilesystemDirectory["ExternalStorage"] = "EXTERNAL_STORAGE";
 })(FilesystemDirectory || (FilesystemDirectory = {}));
@@ -111,6 +130,7 @@ var PermissionType;
     PermissionType["Notifications"] = "notifications";
     PermissionType["ClipboardRead"] = "clipboard-read";
     PermissionType["ClipboardWrite"] = "clipboard-write";
+    PermissionType["Microphone"] = "microphone";
 })(PermissionType || (PermissionType = {}));
 var PhotosAlbumType;
 (function (PhotosAlbumType) {
@@ -138,6 +158,21 @@ var StatusBarStyle;
      */
     StatusBarStyle["Light"] = "LIGHT";
 })(StatusBarStyle || (StatusBarStyle = {}));
+var StatusBarAnimation;
+(function (StatusBarAnimation) {
+    /**
+     * No animation during show/hide.
+     */
+    StatusBarAnimation["None"] = "NONE";
+    /**
+     * Slide animation during show/hide.
+     */
+    StatusBarAnimation["Slide"] = "SLIDE";
+    /**
+     * Fade animation during show/hide.
+     */
+    StatusBarAnimation["Fade"] = "FADE";
+})(StatusBarAnimation || (StatusBarAnimation = {}));
 //# sourceMappingURL=core-plugin-definitions.js.map
 
 /***/ }),
@@ -176,7 +211,7 @@ var Plugins = Capacitor.Plugins;
 /*!********************************************************!*\
   !*** ./node_modules/@capacitor/core/dist/esm/index.js ***!
   \********************************************************/
-/*! exports provided: CameraSource, CameraDirection, CameraResultType, FilesystemDirectory, FilesystemEncoding, HapticsImpactStyle, HapticsNotificationType, KeyboardStyle, KeyboardResize, ActionSheetOptionStyle, PermissionType, PhotosAlbumType, StatusBarStyle, Capacitor, Plugins, registerWebPlugin, WebPluginRegistry, WebPlugins, WebPlugin, mergeWebPlugins, mergeWebPlugin, AccessibilityPluginWeb, Accessibility, AppPluginWeb, App, BrowserPluginWeb, Browser, CameraPluginWeb, Camera, ClipboardPluginWeb, Clipboard, FilesystemPluginWeb, Filesystem, GeolocationPluginWeb, Geolocation, DevicePluginWeb, Device, LocalNotificationsPluginWeb, LocalNotifications, SharePluginWeb, Share, ModalsPluginWeb, Modals, MotionPluginWeb, Motion, NetworkPluginWeb, Network, PermissionsPluginWeb, Permissions, SplashScreenPluginWeb, SplashScreen, StoragePluginWeb, Storage, ToastPluginWeb, Toast */
+/*! exports provided: CameraSource, CameraDirection, CameraResultType, FilesystemDirectory, FilesystemEncoding, HapticsImpactStyle, HapticsNotificationType, KeyboardStyle, KeyboardResize, ActionSheetOptionStyle, PermissionType, PhotosAlbumType, StatusBarStyle, StatusBarAnimation, Capacitor, Plugins, registerWebPlugin, WebPluginRegistry, WebPlugins, WebPlugin, mergeWebPlugins, mergeWebPlugin, AccessibilityPluginWeb, Accessibility, AppPluginWeb, App, BrowserPluginWeb, Browser, CameraPluginWeb, Camera, ClipboardPluginWeb, Clipboard, FilesystemPluginWeb, Filesystem, GeolocationPluginWeb, Geolocation, DevicePluginWeb, Device, LocalNotificationsPluginWeb, LocalNotifications, SharePluginWeb, Share, ModalsPluginWeb, Modals, MotionPluginWeb, Motion, NetworkPluginWeb, Network, PermissionsPluginWeb, Permissions, SplashScreenPluginWeb, SplashScreen, StoragePluginWeb, Storage, ToastPluginWeb, Toast */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -207,6 +242,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PhotosAlbumType", function() { return _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_0__["PhotosAlbumType"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StatusBarStyle", function() { return _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_0__["StatusBarStyle"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StatusBarAnimation", function() { return _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_0__["StatusBarAnimation"]; });
 
 /* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./global */ "./node_modules/@capacitor/core/dist/esm/global.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Capacitor", function() { return _global__WEBPACK_IMPORTED_MODULE_1__["Capacitor"]; });
@@ -482,28 +519,33 @@ var CapacitorWeb = /** @class */ (function () {
         // Need to assign here to avoid having to define every plugin but still
         // get the typed benefits of the provided plugins in PluginRegistry
         this.Plugins = {};
-        // Build a proxy for the Plugins object that returns the "Noop Plugin"
-        // if a plugin isn't available
-        this.Plugins = new Proxy(this.Plugins, {
-            get: function (target, prop) {
-                if (typeof target[prop] === 'undefined') {
-                    var thisRef_1 = _this;
-                    return new Proxy({}, {
-                        get: function (_target, _prop) {
-                            if (typeof _target[_prop] === 'undefined') {
-                                return thisRef_1.pluginMethodNoop.bind(thisRef_1, _target, _prop, prop);
+        // Gracefully degrade in non-Proxy supporting engines, e.g. IE11. This
+        // effectively means that trying to access an unavailable plugin will
+        // locally throw, but this is still better than throwing a syntax error.
+        if (typeof Proxy !== 'undefined') {
+            // Build a proxy for the Plugins object that returns the "Noop Plugin"
+            // if a plugin isn't available
+            this.Plugins = new Proxy(this.Plugins, {
+                get: function (target, prop) {
+                    if (typeof target[prop] === 'undefined') {
+                        var thisRef_1 = _this;
+                        return new Proxy({}, {
+                            get: function (_target, _prop) {
+                                if (typeof _target[_prop] === 'undefined') {
+                                    return thisRef_1.pluginMethodNoop.bind(thisRef_1, _target, _prop, prop);
+                                }
+                                else {
+                                    return _target[_prop];
+                                }
                             }
-                            else {
-                                return _target[_prop];
-                            }
-                        }
-                    });
+                        });
+                    }
+                    else {
+                        return target[prop];
+                    }
                 }
-                else {
-                    return target[prop];
-                }
-            }
-        });
+            });
+        }
     }
     CapacitorWeb.prototype.pluginMethodNoop = function (_target, _prop, pluginName) {
         return Promise.reject(pluginName + " does not have web implementation.");
@@ -612,6 +654,9 @@ var AppPluginWeb = /** @class */ (function (_super) {
     AppPluginWeb.prototype.getLaunchUrl = function () {
         return Promise.resolve({ url: '' });
     };
+    AppPluginWeb.prototype.getState = function () {
+        return Promise.resolve({ isActive: document.hidden !== true });
+    };
     AppPluginWeb.prototype.handleVisibilityChange = function () {
         var data = {
             isActive: document.hidden !== true
@@ -712,19 +757,26 @@ var CameraPluginWeb = /** @class */ (function (_super) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
             var _this = this;
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
-                options;
                 return [2 /*return*/, new Promise(function (resolve, reject) { return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, function () {
-                        var cameraModal;
+                        var cameraModal_1, e_1;
                         var _this = this;
                         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
                             switch (_a.label) {
                                 case 0:
-                                    cameraModal = document.createElement('pwa-camera-modal');
-                                    document.body.appendChild(cameraModal);
-                                    return [4 /*yield*/, cameraModal.componentOnReady()];
+                                    if (!options.webUseInput) return [3 /*break*/, 1];
+                                    this.fileInputExperience(options, resolve);
+                                    return [3 /*break*/, 7];
                                 case 1:
+                                    if (!customElements.get('pwa-camera-modal')) return [3 /*break*/, 6];
+                                    cameraModal_1 = document.createElement('pwa-camera-modal');
+                                    document.body.appendChild(cameraModal_1);
+                                    _a.label = 2;
+                                case 2:
+                                    _a.trys.push([2, 4, , 5]);
+                                    return [4 /*yield*/, cameraModal_1.componentOnReady()];
+                                case 3:
                                     _a.sent();
-                                    cameraModal.addEventListener('onPhoto', function (e) { return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, function () {
+                                    cameraModal_1.addEventListener('onPhoto', function (e) { return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, function () {
                                         var photo, _a;
                                         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_b) {
                                             switch (_b.label) {
@@ -744,19 +796,90 @@ var CameraPluginWeb = /** @class */ (function (_super) {
                                                     _a.apply(void 0, [_b.sent()]);
                                                     _b.label = 4;
                                                 case 4:
-                                                    cameraModal.dismiss();
-                                                    document.body.removeChild(cameraModal);
+                                                    cameraModal_1.dismiss();
+                                                    document.body.removeChild(cameraModal_1);
                                                     return [2 /*return*/];
                                             }
                                         });
                                     }); });
-                                    cameraModal.present();
-                                    return [2 /*return*/];
+                                    cameraModal_1.present();
+                                    return [3 /*break*/, 5];
+                                case 4:
+                                    e_1 = _a.sent();
+                                    this.fileInputExperience(options, resolve);
+                                    return [3 /*break*/, 5];
+                                case 5: return [3 /*break*/, 7];
+                                case 6:
+                                    console.error("Unable to load PWA Element 'pwa-camera-modal'. See the docs: https://capacitorjs.com/docs/pwa-elements.");
+                                    this.fileInputExperience(options, resolve);
+                                    _a.label = 7;
+                                case 7: return [2 /*return*/];
                             }
                         });
                     }); })];
             });
         });
+    };
+    CameraPluginWeb.prototype.fileInputExperience = function (options, resolve) {
+        var input = document.querySelector('#_capacitor-camera-input');
+        var cleanup = function () {
+            input.parentNode && input.parentNode.removeChild(input);
+        };
+        if (!input) {
+            input = document.createElement('input');
+            input.id = '_capacitor-camera-input';
+            input.type = 'file';
+            document.body.appendChild(input);
+        }
+        input.accept = 'image/*';
+        input.capture = true;
+        if (options.source === _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_2__["CameraSource"].Photos || options.source === _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_2__["CameraSource"].Prompt) {
+            input.removeAttribute('capture');
+        }
+        else if (options.direction === _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_2__["CameraDirection"].Front) {
+            input.capture = 'user';
+        }
+        else if (options.direction === _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_2__["CameraDirection"].Rear) {
+            input.capture = 'environment';
+        }
+        input.addEventListener('change', function (_e) {
+            var file = input.files[0];
+            var format = 'jpeg';
+            if (file.type === 'image/png') {
+                format = 'png';
+            }
+            else if (file.type === 'image/gif') {
+                format = 'gif';
+            }
+            if (options.resultType === _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_2__["CameraResultType"].DataUrl || options.resultType === _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_2__["CameraResultType"].Base64) {
+                var reader_1 = new FileReader();
+                reader_1.addEventListener('load', function () {
+                    if (options.resultType === _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_2__["CameraResultType"].DataUrl) {
+                        resolve({
+                            dataUrl: reader_1.result,
+                            format: format
+                        });
+                    }
+                    else if (options.resultType === _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_2__["CameraResultType"].Base64) {
+                        var b64 = reader_1.result.split(',')[1];
+                        resolve({
+                            base64String: b64,
+                            format: format
+                        });
+                    }
+                    cleanup();
+                });
+                reader_1.readAsDataURL(file);
+            }
+            else {
+                resolve({
+                    webPath: URL.createObjectURL(file),
+                    format: format
+                });
+                cleanup();
+            }
+        });
+        input.click();
     };
     CameraPluginWeb.prototype._getCameraPhoto = function (photo, options) {
         return new Promise(function (resolve, reject) {
@@ -825,54 +948,113 @@ var ClipboardPluginWeb = /** @class */ (function (_super) {
     }
     ClipboardPluginWeb.prototype.write = function (options) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        if (!navigator.clipboard) {
-                            return [2 /*return*/, Promise.reject('Clipboard API not available in this browser')];
-                        }
-                        if (!(options.string !== undefined || options.url)) return [3 /*break*/, 2];
-                        return [4 /*yield*/, navigator.clipboard.writeText(options.string !== undefined ? options.string : options.url)];
-                    case 1:
-                        _a.sent();
-                        return [3 /*break*/, 3];
-                    case 2:
-                        if (options.image) {
-                            return [2 /*return*/, Promise.reject('Setting images not supported on the web')];
-                        }
-                        _a.label = 3;
-                    case 3: return [2 /*return*/, Promise.resolve()];
-                }
-            });
-        });
-    };
-    ClipboardPluginWeb.prototype.read = function (_options) {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
-            var text, data, _i, _a, item;
+            var blob, clipboardItemInput, err_1;
+            var _a;
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_b) {
                 switch (_b.label) {
                     case 0:
                         if (!navigator.clipboard) {
                             return [2 /*return*/, Promise.reject('Clipboard API not available in this browser')];
                         }
-                        if (!(_options.type === 'string' || _options.type === 'url')) return [3 /*break*/, 2];
-                        return [4 /*yield*/, navigator.clipboard.readText()];
-                    case 1:
-                        text = _b.sent();
-                        return [2 /*return*/, Promise.resolve({ value: text })];
-                    case 2: return [4 /*yield*/, navigator.clipboard.read()];
-                    case 3:
-                        data = _b.sent();
-                        for (_i = 0, _a = data.items; _i < _a.length; _i++) {
-                            item = _a[_i];
-                            if (item.type === 'text/plain') {
-                                return [2 /*return*/, Promise.resolve({ value: item.getAs('text/plain') })];
-                            }
+                        if (!(options.string !== undefined || options.url)) return [3 /*break*/, 2];
+                        if (!navigator.clipboard.writeText) {
+                            return [2 /*return*/, Promise.reject('Writting to clipboard not supported in this browser')];
                         }
-                        _b.label = 4;
-                    case 4: return [2 /*return*/, Promise.reject('Unable to get data from clipboard')];
+                        return [4 /*yield*/, navigator.clipboard.writeText(options.string !== undefined ? options.string : options.url)];
+                    case 1:
+                        _b.sent();
+                        return [3 /*break*/, 10];
+                    case 2:
+                        if (!options.image) return [3 /*break*/, 9];
+                        if (!navigator.clipboard.write) {
+                            return [2 /*return*/, Promise.reject('Setting images not supported in this browser')];
+                        }
+                        _b.label = 3;
+                    case 3:
+                        _b.trys.push([3, 7, , 8]);
+                        return [4 /*yield*/, fetch(options.image)];
+                    case 4: return [4 /*yield*/, (_b.sent()).blob()];
+                    case 5:
+                        blob = _b.sent();
+                        clipboardItemInput = new ClipboardItem((_a = {}, _a[blob.type] = blob, _a));
+                        return [4 /*yield*/, navigator.clipboard.write([clipboardItemInput])];
+                    case 6:
+                        _b.sent();
+                        return [3 /*break*/, 8];
+                    case 7:
+                        err_1 = _b.sent();
+                        return [2 /*return*/, Promise.reject('Failed to write image')];
+                    case 8: return [3 /*break*/, 10];
+                    case 9: return [2 /*return*/, Promise.reject('Nothing to write')];
+                    case 10: return [2 /*return*/, Promise.resolve()];
                 }
             });
+        });
+    };
+    ClipboardPluginWeb.prototype.read = function () {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
+            var clipboardItems, type, clipboardBlob, data, err_2;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!navigator.clipboard) {
+                            return [2 /*return*/, Promise.reject('Clipboard API not available in this browser')];
+                        }
+                        if (!!navigator.clipboard.read) return [3 /*break*/, 1];
+                        if (!navigator.clipboard.readText) {
+                            return [2 /*return*/, Promise.reject('Reading from clipboard not supported in this browser')];
+                        }
+                        return [2 /*return*/, this.readText()];
+                    case 1:
+                        _a.trys.push([1, 5, , 6]);
+                        return [4 /*yield*/, navigator.clipboard.read()];
+                    case 2:
+                        clipboardItems = _a.sent();
+                        type = clipboardItems[0].types[0];
+                        return [4 /*yield*/, clipboardItems[0].getType(type)];
+                    case 3:
+                        clipboardBlob = _a.sent();
+                        return [4 /*yield*/, this._getBlobData(clipboardBlob, type)];
+                    case 4:
+                        data = _a.sent();
+                        return [2 /*return*/, Promise.resolve({ value: data, type: type })];
+                    case 5:
+                        err_2 = _a.sent();
+                        return [2 /*return*/, this.readText()];
+                    case 6: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ClipboardPluginWeb.prototype.readText = function () {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
+            var text;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, navigator.clipboard.readText()];
+                    case 1:
+                        text = _a.sent();
+                        return [2 /*return*/, Promise.resolve({ value: text, type: 'text/plain' })];
+                }
+            });
+        });
+    };
+    ClipboardPluginWeb.prototype._getBlobData = function (clipboardBlob, type) {
+        return new Promise(function (resolve, reject) {
+            var reader = new FileReader();
+            if (type.includes('image')) {
+                reader.readAsDataURL(clipboardBlob);
+            }
+            else {
+                reader.readAsText(clipboardBlob);
+            }
+            reader.onloadend = function () {
+                var r = reader.result;
+                resolve(r);
+            };
+            reader.onerror = function (e) {
+                reject(e);
+            };
         });
     };
     return ClipboardPluginWeb;
@@ -911,12 +1093,32 @@ var DevicePluginWeb = /** @class */ (function (_super) {
     }
     DevicePluginWeb.prototype.getInfo = function () {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
-            var ua, uaFields, battery, e_1;
+            var ua, uaFields;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
+                ua = navigator.userAgent;
+                uaFields = this.parseUa(ua);
+                return [2 /*return*/, Promise.resolve({
+                        model: uaFields.model,
+                        platform: 'web',
+                        appVersion: '',
+                        appBuild: '',
+                        appId: '',
+                        appName: '',
+                        operatingSystem: uaFields.operatingSystem,
+                        osVersion: uaFields.osVersion,
+                        manufacturer: navigator.vendor,
+                        isVirtual: false,
+                        uuid: this.getUid()
+                    })];
+            });
+        });
+    };
+    DevicePluginWeb.prototype.getBatteryInfo = function () {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
+            var battery, e_1;
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        ua = navigator.userAgent;
-                        uaFields = this.parseUa(ua);
                         battery = {};
                         _a.label = 1;
                     case 1:
@@ -929,17 +1131,8 @@ var DevicePluginWeb = /** @class */ (function (_super) {
                         e_1 = _a.sent();
                         return [3 /*break*/, 4];
                     case 4: return [2 /*return*/, Promise.resolve({
-                            model: uaFields.model,
-                            platform: 'web',
-                            appVersion: '',
-                            appBuild: '',
-                            operatingSystem: uaFields.operatingSystem,
-                            osVersion: uaFields.osVersion,
-                            manufacturer: navigator.vendor,
-                            isVirtual: false,
                             batteryLevel: battery.level,
-                            isCharging: battery.charging,
-                            uuid: this.getUid()
+                            isCharging: battery.charging
                         })];
                 }
             });
@@ -1175,12 +1368,13 @@ var FilesystemPluginWeb = /** @class */ (function (_super) {
      */
     FilesystemPluginWeb.prototype.writeFile = function (options) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
-            var path, data, occupiedEntry, encoding, parentPath, parentEntry, subDirIndex, parentArgPath, now, pathObj;
+            var path, data, doRecursive, occupiedEntry, encoding, parentPath, parentEntry, subDirIndex, parentArgPath, now, pathObj;
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         path = this.getPath(options.directory, options.path);
                         data = options.data;
+                        doRecursive = options.recursive;
                         return [4 /*yield*/, this.dbRequest('get', [path])];
                     case 1:
                         occupiedEntry = _a.sent();
@@ -1195,7 +1389,7 @@ var FilesystemPluginWeb = /** @class */ (function (_super) {
                         subDirIndex = parentPath.indexOf('/', 1);
                         if (!(subDirIndex !== -1)) return [3 /*break*/, 4];
                         parentArgPath = parentPath.substr(subDirIndex);
-                        return [4 /*yield*/, this.mkdir({ path: parentArgPath, directory: options.directory, recursive: true })];
+                        return [4 /*yield*/, this.mkdir({ path: parentArgPath, directory: options.directory, recursive: doRecursive })];
                     case 3:
                         _a.sent();
                         _a.label = 4;
@@ -1213,7 +1407,9 @@ var FilesystemPluginWeb = /** @class */ (function (_super) {
                         return [4 /*yield*/, this.dbRequest('put', [pathObj])];
                     case 5:
                         _a.sent();
-                        return [2 /*return*/, {}];
+                        return [2 /*return*/, {
+                                uri: pathObj.path
+                            }];
                 }
             });
         });
@@ -1225,7 +1421,7 @@ var FilesystemPluginWeb = /** @class */ (function (_super) {
      */
     FilesystemPluginWeb.prototype.appendFile = function (options) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
-            var path, data, parentPath, now, ctime, occupiedEntry, parentEntry, parentArgPath, pathObj;
+            var path, data, parentPath, now, ctime, occupiedEntry, parentEntry, subDirIndex, parentArgPath, pathObj;
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -1243,7 +1439,9 @@ var FilesystemPluginWeb = /** @class */ (function (_super) {
                     case 2:
                         parentEntry = _a.sent();
                         if (!(parentEntry === undefined)) return [3 /*break*/, 4];
-                        parentArgPath = parentPath.substr(parentPath.indexOf('/', 1));
+                        subDirIndex = parentPath.indexOf('/', 1);
+                        if (!(subDirIndex !== -1)) return [3 /*break*/, 4];
+                        parentArgPath = parentPath.substr(subDirIndex);
                         return [4 /*yield*/, this.mkdir({ path: parentArgPath, directory: options.directory, recursive: true })];
                     case 3:
                         _a.sent();
@@ -1307,17 +1505,12 @@ var FilesystemPluginWeb = /** @class */ (function (_super) {
      */
     FilesystemPluginWeb.prototype.mkdir = function (options) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
-            var path, createIntermediateDirectories, recursive, doRecursive, parentPath, depth, parentEntry, occupiedEntry, parentArgPath, now, pathObj;
+            var path, doRecursive, parentPath, depth, parentEntry, occupiedEntry, parentArgPath, now, pathObj;
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         path = this.getPath(options.directory, options.path);
-                        createIntermediateDirectories = options.createIntermediateDirectories;
-                        if (options.createIntermediateDirectories !== undefined) {
-                            console.warn('createIntermediateDirectories is deprecated, use recursive');
-                        }
-                        recursive = options.recursive;
-                        doRecursive = (createIntermediateDirectories || recursive);
+                        doRecursive = options.recursive;
                         parentPath = path.substr(0, path.lastIndexOf('/'));
                         depth = (path.match(/\//g) || []).length;
                         return [4 /*yield*/, this.dbRequest('get', [parentPath])];
@@ -1888,6 +2081,13 @@ var WebPlugin = /** @class */ (function () {
             this.removeWindowListener(this.windowListeners[eventName]);
         }
     };
+    WebPlugin.prototype.removeAllListeners = function () {
+        this.listeners = {};
+        for (var listener in this.windowListeners) {
+            this.removeWindowListener(this.windowListeners[listener]);
+        }
+        this.windowListeners = {};
+    };
     WebPlugin.prototype.notifyListeners = function (eventName, data) {
         var listeners = this.listeners[eventName];
         if (listeners) {
@@ -1976,6 +2176,15 @@ var LocalNotificationsPluginWeb = /** @class */ (function (_super) {
         _this.pending = [];
         return _this;
     }
+    LocalNotificationsPluginWeb.prototype.createChannel = function (channel) {
+        throw new Error('Feature not available in the browser. ' + channel.id);
+    };
+    LocalNotificationsPluginWeb.prototype.deleteChannel = function (channel) {
+        throw new Error('Feature not available in the browser. ' + channel.id);
+    };
+    LocalNotificationsPluginWeb.prototype.listChannels = function () {
+        throw new Error('Feature not available in the browser');
+    };
     LocalNotificationsPluginWeb.prototype.sendPending = function () {
         var _this = this;
         var toRemove = [];
@@ -2017,7 +2226,7 @@ var LocalNotificationsPluginWeb = /** @class */ (function (_super) {
             notifications.push(_this.sendNotification(notification));
         });
         return Promise.resolve({
-            notifications: notifications.map(function (_) { return { id: '' }; })
+            notifications: options.notifications.map(function (notification) { return { id: '' + notification.id }; })
         });
     };
     LocalNotificationsPluginWeb.prototype.getPending = function () {
@@ -2038,7 +2247,20 @@ var LocalNotificationsPluginWeb = /** @class */ (function (_super) {
         return Promise.resolve();
     };
     LocalNotificationsPluginWeb.prototype.areEnabled = function () {
-        throw new Error('Method not implemented.');
+        return Promise.resolve({
+            value: Notification.permission === 'granted'
+        });
+    };
+    LocalNotificationsPluginWeb.prototype.requestPermission = function () {
+        return new Promise(function (resolve) {
+            Notification.requestPermission(function (result) {
+                var granted = true;
+                if (result === 'denied' || result === 'default') {
+                    granted = false;
+                }
+                resolve({ granted: granted });
+            });
+        });
     };
     LocalNotificationsPluginWeb.prototype.requestPermissions = function () {
         return new Promise(function (resolve, reject) {
@@ -2097,7 +2319,7 @@ var ModalsPluginWeb = /** @class */ (function (_super) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
             var val;
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
-                val = window.prompt(options.message, options.inputPlaceholder || '');
+                val = window.prompt(options.message, options.inputText || '');
                 return [2 /*return*/, Promise.resolve({
                         value: val,
                         cancelled: val === null
@@ -2121,41 +2343,28 @@ var ModalsPluginWeb = /** @class */ (function (_super) {
             var _this = this;
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
                 return [2 /*return*/, new Promise(function (resolve, _reject) { return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, function () {
-                        var controller, items, actionSheetElement;
+                        var actionSheet;
+                        var _this = this;
                         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
-                            switch (_a.label) {
-                                case 0:
-                                    controller = document.querySelector('ion-action-sheet-controller');
-                                    if (!controller) {
-                                        controller = document.createElement('ion-action-sheet-controller');
-                                        document.body.appendChild(controller);
-                                    }
-                                    return [4 /*yield*/, controller.componentOnReady()];
-                                case 1:
-                                    _a.sent();
-                                    items = options.options.map(function (o, i) {
-                                        return {
-                                            text: o.title,
-                                            role: o.style && o.style.toLowerCase() || '',
-                                            icon: o.icon || '',
-                                            handler: function () {
-                                                resolve({
-                                                    index: i
-                                                });
-                                            }
-                                        };
-                                    });
-                                    return [4 /*yield*/, controller.create({
-                                            title: options.title,
-                                            buttons: items
-                                        })];
-                                case 2:
-                                    actionSheetElement = _a.sent();
-                                    return [4 /*yield*/, actionSheetElement.present()];
-                                case 3:
-                                    _a.sent();
-                                    return [2 /*return*/];
+                            actionSheet = document.querySelector('pwa-action-sheet');
+                            if (!actionSheet) {
+                                actionSheet = document.createElement('pwa-action-sheet');
+                                document.body.appendChild(actionSheet);
                             }
+                            actionSheet.header = options.title;
+                            actionSheet.cancelable = false;
+                            actionSheet.options = options.options;
+                            actionSheet.addEventListener('onSelection', function (e) { return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, function () {
+                                var selection;
+                                return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
+                                    selection = e.detail;
+                                    resolve({
+                                        index: selection
+                                    });
+                                    return [2 /*return*/];
+                                });
+                            }); });
+                            return [2 /*return*/];
                         });
                     }); })];
             });
@@ -2513,9 +2722,9 @@ var ToastPluginWeb = /** @class */ (function (_super) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
             var duration, toast;
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
-                duration = 3000;
+                duration = 2000;
                 if (options.duration) {
-                    duration = options.duration === 'long' ? 5000 : 3000;
+                    duration = options.duration === 'long' ? 3500 : 2000;
                 }
                 toast = document.createElement('pwa-toast');
                 toast.duration = duration;
@@ -2541,7 +2750,7 @@ var Toast = new ToastPluginWeb();
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br><br><footer>\r\n    2021 <br> \r\n    Ciano, Todos os Direitos Reservados (v 1.0.3)\r\n</footer>"
+module.exports = "<br><br>\r\n<footer>\r\n    <div>\r\n        <span style=\"margin-top: 1px;\"> © 2021 ReinerX, Todos os Direitos Reservados (v 1.1.0)\r\n        </span>\r\n        <br>\r\n        <fa-icon class=\"instagram\" [icon]=\"['fab', 'instagram']\" (click)=\"externalHandle('https://www.instagram.com/rmf_rpg/')\"></fa-icon>\r\n        <fa-icon class=\"youtube\" [icon]=\"['fab', 'youtube']\" (click)=\"externalHandle('https://www.youtube.com/channel/UCYMA8YMr1_AMkx-pONmN0Ww')\"></fa-icon>\r\n    </div>\r\n</footer>"
 
 /***/ }),
 
@@ -2563,7 +2772,7 @@ module.exports = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"sta
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "footer {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  background-color: #a0dffc;\n  color: black;\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb290ZXIvQzpcXFVzZXJzXFxsaGNjb1xcRG9jdW1lbnRzXFxEZXNlbnZvbHZpbWVudG9cXFRDQ1xcRnJvbnRlbmRcXFJNRi1Nb2JpbGUvc3JjXFxhcHBcXGNvbXBvbmVudHNcXGZvb3RlclxcZm9vdGVyLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jb21wb25lbnRzL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxlQUFBO0VBQ0EsT0FBQTtFQUNBLFNBQUE7RUFDQSxXQUFBO0VBQ0EseUJBQUE7RUFDQSxZQUFBO0VBQ0Esa0JBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImZvb3RlciB7XHJcbiAgICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgICBsZWZ0OiAwO1xyXG4gICAgYm90dG9tOiAwO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTYwLCAyMjMsIDI1Mik7XHJcbiAgICBjb2xvcjogYmxhY2s7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiB9IiwiZm9vdGVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBsZWZ0OiAwO1xuICBib3R0b206IDA7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjYTBkZmZjO1xuICBjb2xvcjogYmxhY2s7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn0iXX0= */"
+module.exports = "footer {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  background-color: #47555c;\n  color: white;\n  text-align: center;\n}\n\n.instagram {\n  cursor: pointer;\n  color: #f13197;\n  font-size: 23px;\n}\n\n.youtube {\n  cursor: pointer;\n  color: #dc0505;\n  font-size: 23px;\n  margin-left: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb290ZXIvQzpcXFVzZXJzXFxsaGNjb1xcRG9jdW1lbnRzXFxEZXNlbnZvbHZpbWVudG9cXFRDQ1xcRnJvbnRlbmRcXFJNRi1Nb2JpbGUvc3JjXFxhcHBcXGNvbXBvbmVudHNcXGZvb3RlclxcZm9vdGVyLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jb21wb25lbnRzL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxlQUFBO0VBQ0EsT0FBQTtFQUNBLFNBQUE7RUFDQSxXQUFBO0VBQ0EseUJBQUE7RUFDQSxZQUFBO0VBQ0Esa0JBQUE7QUNDSjs7QURFQTtFQUNJLGVBQUE7RUFDQSxjQUFBO0VBQ0EsZUFBQTtBQ0NKOztBREVBO0VBQ0ksZUFBQTtFQUNBLGNBQUE7RUFDQSxlQUFBO0VBQ0EsaUJBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImZvb3RlciB7XHJcbiAgICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgICBsZWZ0OiAwO1xyXG4gICAgYm90dG9tOiAwO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoNzEsIDg1LCA5Mik7XHJcbiAgICBjb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4uaW5zdGFncmFtIHtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgIGNvbG9yOiByZ2IoMjQxLCA0OSwgMTUxKTtcclxuICAgIGZvbnQtc2l6ZTogMjNweDtcclxufVxyXG5cclxuLnlvdXR1YmUge1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgY29sb3I6IHJnYigyMjAsIDUsIDUpO1xyXG4gICAgZm9udC1zaXplOiAyM3B4O1xyXG4gICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbn1cclxuIiwiZm9vdGVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBsZWZ0OiAwO1xuICBib3R0b206IDA7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNDc1NTVjO1xuICBjb2xvcjogd2hpdGU7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLmluc3RhZ3JhbSB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgY29sb3I6ICNmMTMxOTc7XG4gIGZvbnQtc2l6ZTogMjNweDtcbn1cblxuLnlvdXR1YmUge1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGNvbG9yOiAjZGMwNTA1O1xuICBmb250LXNpemU6IDIzcHg7XG4gIG1hcmdpbi1sZWZ0OiAxMHB4O1xufSJdfQ== */"
 
 /***/ }),
 
@@ -2585,6 +2794,9 @@ var FooterComponent = /** @class */ (function () {
     function FooterComponent() {
     }
     FooterComponent.prototype.ngOnInit = function () {
+    };
+    FooterComponent.prototype.externalHandle = function (link) {
+        window.open(link, "_blank");
     };
     FooterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -2615,6 +2827,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _footer_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer.component */ "./src/app/components/footer/footer.component.ts");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm5/angular-fontawesome.js");
+
 
 
 
@@ -2628,7 +2842,8 @@ var FooterModule = /** @class */ (function () {
             declarations: [_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
-                _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"]
+                _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"],
+                _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_5__["FontAwesomeModule"],
             ],
             exports: [_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]],
             entryComponents: [_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]]
@@ -2832,9 +3047,12 @@ var HomePage = /** @class */ (function () {
             template: __webpack_require__(/*! raw-loader!./home.page.html */ "./node_modules/raw-loader/index.js!./src/app/home/home.page.html"),
             styles: [__webpack_require__(/*! ./home.page.scss */ "./src/app/home/home.page.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["MenuController"],
-            _services_user_user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"], _services_storage_service_service__WEBPACK_IMPORTED_MODULE_6__["StorageService"],
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"], _services_utils_fundo_service__WEBPACK_IMPORTED_MODULE_7__["FundoService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["MenuController"],
+            _services_user_user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"],
+            _services_storage_service_service__WEBPACK_IMPORTED_MODULE_6__["StorageService"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"],
+            _services_utils_fundo_service__WEBPACK_IMPORTED_MODULE_7__["FundoService"]])
     ], HomePage);
     return HomePage;
 }());

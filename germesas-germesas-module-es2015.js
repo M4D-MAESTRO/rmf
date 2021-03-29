@@ -264,7 +264,7 @@ RadioButtonModule = __decorate([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br><br><footer>\r\n    2021 <br> \r\n    Ciano, Todos os Direitos Reservados (v 1.0.3)\r\n</footer>"
+module.exports = "<br><br>\r\n<footer>\r\n    <div>\r\n        <span style=\"margin-top: 1px;\"> © 2021 ReinerX, Todos os Direitos Reservados (v 1.1.0)\r\n        </span>\r\n        <br>\r\n        <fa-icon class=\"instagram\" [icon]=\"['fab', 'instagram']\" (click)=\"externalHandle('https://www.instagram.com/rmf_rpg/')\"></fa-icon>\r\n        <fa-icon class=\"youtube\" [icon]=\"['fab', 'youtube']\" (click)=\"externalHandle('https://www.youtube.com/channel/UCYMA8YMr1_AMkx-pONmN0Ww')\"></fa-icon>\r\n    </div>\r\n</footer>"
 
 /***/ }),
 
@@ -275,7 +275,7 @@ module.exports = "<br><br><footer>\r\n    2021 <br> \r\n    Ciano, Todos os Dire
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-menu-button></ion-menu-button>\r\n    </ion-buttons>\r\n    <ion-title>\r\n      Gerencie suas mesas\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content fullscreen>\r\n  <ion-list>\r\n    <ion-list-header>\r\n      <h1>Lista de mesas participante</h1>\r\n    </ion-list-header>\r\n\r\n    <ion-item class=\"item\" *ngFor=\"let mesa of mesas\">\r\n      <ion-avatar slot=\"start\">\r\n        <img [src]=\"setImg(mesa.tipoRPG)\" alt=\"rpg\" />\r\n      </ion-avatar>\r\n      <ion-label style=\"opacity: 1; cursor: pointer;\">\r\n        <h3>Mesa: <span class=\"mestre\">{{mesa.idMesa}}</span> </h3>\r\n        <h2>Mestre <span class=\"mestre\">{{mesa.apelidoMestre}}</span> </h2>\r\n        <h3>Data de criação: <ion-datetime displayFormat=\"DD/MM/YYYY\" value={{mesa.dataDeCriacao}} disabled=\"true\">\r\n          </ion-datetime>\r\n        </h3>\r\n        <p>{{mesa.descricaoRPG}}</p>\r\n        <ion-button size=\"small\" (click)=\"acessar(mesa)\">Acessar</ion-button>\r\n\r\n      </ion-label>\r\n\r\n\r\n\r\n    </ion-item>\r\n  </ion-list>\r\n\r\n  <div *ngIf=\"mesas.length === 0\">\r\n    <h3 class=\"vazio\">Poxa, você não está em nenhuma mesa.</h3>\r\n    <p class=\"vazio\">Crie uma nova, ou junte-se à uma com seus amigos!</p>\r\n  </div>\r\n\r\n  <ion-button expand=\"block\" placeholder=\"Crie uma nova mesa!\" (click)=\"novaMesa()\">Nova mesa</ion-button>\r\n  <ion-button expand=\"block\" placeholder=\"Crie uma nova mesa!\" (click)=\"juntar()\">Juntar-se à mesa</ion-button>\r\n\r\n  <app-invitation-form (notifyParent)=\"getNotification($event)\" *ngIf=\"showForm\"></app-invitation-form>\r\n  <br><br>\r\n</ion-content>\r\n\r\n<app-load-spinner [loading]=\"loading\"></app-load-spinner>\r\n\r\n<p-toast position=\"top-center\" life=\"5000\"></p-toast>\r\n\r\n<app-footer></app-footer>"
+module.exports = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-menu-button></ion-menu-button>\r\n    </ion-buttons>\r\n    <ion-title>\r\n      Gerencie suas mesas\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content [style.background-image]=\"'url(' + img + ')'\" [style.background-size]=\"'cover'\"\r\n  [style.background-repeat]=\"'no-repeat'\">\r\n\r\n  <ion-list *ngIf=\"mesas?.length != 0\">\r\n    <ion-list-header>\r\n      <h1 class=\"header-principal\">Lista de mesas participante</h1>\r\n    </ion-list-header>\r\n    <ion-item class=\"item\" *ngFor=\"let mesa of mesas\">\r\n      <ion-avatar slot=\"start\">\r\n        <img [src]=\"setImg(mesa.tipoRPG)\" alt=\"rpg\" />\r\n      </ion-avatar>\r\n      <ion-label style=\"opacity: 1; cursor: pointer;\">\r\n        <h3>Mesa: <span class=\"mestre\">{{mesa.idMesa}}</span> </h3>\r\n        <h2>Mestre <span class=\"mestre\">{{mesa.apelidoMestre}}</span> </h2>\r\n        <h3>Data de criação: <ion-datetime displayFormat=\"DD/MM/YYYY\" value={{mesa.dataDeCriacao}} disabled=\"true\">\r\n          </ion-datetime>\r\n        </h3>\r\n        <p style=\"color:white\">{{mesa.descricaoRPG}}</p>\r\n        <ion-button color=\"tertiary\" size=\"small\" (click)=\"acessar(mesa)\">Acessar</ion-button>\r\n\r\n      </ion-label>\r\n    </ion-item>\r\n  </ion-list>\r\n\r\n  <div *ngIf=\"mesas?.length === 0\">\r\n    <h3 class=\"vazio\">Poxa, você não está em nenhuma mesa.</h3>\r\n    <p class=\"vazio\">Crie uma nova, ou junte-se à uma com seus amigos!</p>\r\n  </div>\r\n\r\n  <ion-button class=\"back\" color=\"success\" fill=\"outline\" expand=\"block\" placeholder=\"Crie uma nova mesa!\"\r\n    (click)=\"novaMesa()\">Nova mesa</ion-button>\r\n  <ion-button class=\"back\" color=\"primary\" fill=\"outline\" expand=\"block\" placeholder=\"Junte-se a uma mesa!\"\r\n    (click)=\"juntar()\">Juntar-se à mesa</ion-button>\r\n\r\n  <app-invitation-form (notifyParent)=\"getNotification($event)\" *ngIf=\"showForm\"></app-invitation-form>\r\n  <br><br>\r\n</ion-content>\r\n\r\n<app-load-spinner [loading]=\"loading\"></app-load-spinner>\r\n<ng-container *ngIf=\"secondLoading\">\r\n  <app-load-spinner [loading]=\"true\"></app-load-spinner>\r\n</ng-container>\r\n\r\n<p-toast position=\"top-center\" life=\"5000\"></p-toast>\r\n\r\n<app-footer></app-footer>"
 
 /***/ }),
 
@@ -286,7 +286,7 @@ module.exports = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"sta
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "footer {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  background-color: #a0dffc;\n  color: black;\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb290ZXIvQzpcXFVzZXJzXFxsaGNjb1xcRG9jdW1lbnRzXFxEZXNlbnZvbHZpbWVudG9cXFRDQ1xcRnJvbnRlbmRcXFJNRi1Nb2JpbGUvc3JjXFxhcHBcXGNvbXBvbmVudHNcXGZvb3RlclxcZm9vdGVyLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jb21wb25lbnRzL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxlQUFBO0VBQ0EsT0FBQTtFQUNBLFNBQUE7RUFDQSxXQUFBO0VBQ0EseUJBQUE7RUFDQSxZQUFBO0VBQ0Esa0JBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImZvb3RlciB7XHJcbiAgICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgICBsZWZ0OiAwO1xyXG4gICAgYm90dG9tOiAwO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTYwLCAyMjMsIDI1Mik7XHJcbiAgICBjb2xvcjogYmxhY2s7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiB9IiwiZm9vdGVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBsZWZ0OiAwO1xuICBib3R0b206IDA7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjYTBkZmZjO1xuICBjb2xvcjogYmxhY2s7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn0iXX0= */"
+module.exports = "footer {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  background-color: #47555c;\n  color: white;\n  text-align: center;\n}\n\n.instagram {\n  cursor: pointer;\n  color: #f13197;\n  font-size: 23px;\n}\n\n.youtube {\n  cursor: pointer;\n  color: #dc0505;\n  font-size: 23px;\n  margin-left: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb290ZXIvQzpcXFVzZXJzXFxsaGNjb1xcRG9jdW1lbnRzXFxEZXNlbnZvbHZpbWVudG9cXFRDQ1xcRnJvbnRlbmRcXFJNRi1Nb2JpbGUvc3JjXFxhcHBcXGNvbXBvbmVudHNcXGZvb3RlclxcZm9vdGVyLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jb21wb25lbnRzL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxlQUFBO0VBQ0EsT0FBQTtFQUNBLFNBQUE7RUFDQSxXQUFBO0VBQ0EseUJBQUE7RUFDQSxZQUFBO0VBQ0Esa0JBQUE7QUNDSjs7QURFQTtFQUNJLGVBQUE7RUFDQSxjQUFBO0VBQ0EsZUFBQTtBQ0NKOztBREVBO0VBQ0ksZUFBQTtFQUNBLGNBQUE7RUFDQSxlQUFBO0VBQ0EsaUJBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImZvb3RlciB7XHJcbiAgICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgICBsZWZ0OiAwO1xyXG4gICAgYm90dG9tOiAwO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoNzEsIDg1LCA5Mik7XHJcbiAgICBjb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4uaW5zdGFncmFtIHtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgIGNvbG9yOiByZ2IoMjQxLCA0OSwgMTUxKTtcclxuICAgIGZvbnQtc2l6ZTogMjNweDtcclxufVxyXG5cclxuLnlvdXR1YmUge1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgY29sb3I6IHJnYigyMjAsIDUsIDUpO1xyXG4gICAgZm9udC1zaXplOiAyM3B4O1xyXG4gICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbn1cclxuIiwiZm9vdGVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBsZWZ0OiAwO1xuICBib3R0b206IDA7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNDc1NTVjO1xuICBjb2xvcjogd2hpdGU7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLmluc3RhZ3JhbSB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgY29sb3I6ICNmMTMxOTc7XG4gIGZvbnQtc2l6ZTogMjNweDtcbn1cblxuLnlvdXR1YmUge1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGNvbG9yOiAjZGMwNTA1O1xuICBmb250LXNpemU6IDIzcHg7XG4gIG1hcmdpbi1sZWZ0OiAxMHB4O1xufSJdfQ== */"
 
 /***/ }),
 
@@ -306,6 +306,9 @@ __webpack_require__.r(__webpack_exports__);
 
 let FooterComponent = class FooterComponent {
     ngOnInit() {
+    }
+    externalHandle(link) {
+        window.open(link, "_blank");
     }
 };
 FooterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -335,6 +338,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
 /* harmony import */ var _footer_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer.component */ "./src/app/components/footer/footer.component.ts");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm2015/angular-fontawesome.js");
+
 
 
 
@@ -347,7 +352,8 @@ FooterModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         declarations: [_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]],
         imports: [
             _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"]
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"],
+            _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_5__["FontAwesomeModule"],
         ],
         exports: [_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]],
         entryComponents: [_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]]
@@ -431,7 +437,7 @@ GermesasPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "ion-datetime {\n  color: black;\n  opacity: 1;\n  --opacity: 1;\n}\n\n.vazio {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-pack: center;\n          justify-content: center;\n  flex-wrap: wrap;\n  text-align: center;\n}\n\n.mestre {\n  color: #02485a;\n}\n\nion-content {\n  --background: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2VybWVzYXMvQzpcXFVzZXJzXFxsaGNjb1xcRG9jdW1lbnRzXFxEZXNlbnZvbHZpbWVudG9cXFRDQ1xcRnJvbnRlbmRcXFJNRi1Nb2JpbGUvc3JjXFxhcHBcXGdlcm1lc2FzXFxnZXJtZXNhcy5wYWdlLnNjc3MiLCJzcmMvYXBwL2dlcm1lc2FzL2dlcm1lc2FzLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFlBQUE7RUFDQSxVQUFBO0VBQ0EsWUFBQTtBQ0NKOztBREVBO0VBQ0ksb0JBQUE7RUFBQSxhQUFBO0VBQ0Esd0JBQUE7VUFBQSx1QkFBQTtFQUNBLGVBQUE7RUFDQSxrQkFBQTtBQ0NKOztBREVBO0VBQ0ksY0FBQTtBQ0NKOztBREVBO0VBQ0ksa0JBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL2dlcm1lc2FzL2dlcm1lc2FzLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1kYXRldGltZXtcclxuICAgIGNvbG9yOiBibGFjaztcclxuICAgIG9wYWNpdHk6IDE7XHJcbiAgICAtLW9wYWNpdHk6IDE7XHJcbiB9XHJcbiBcclxuLnZhemlve1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgZmxleC13cmFwOiB3cmFwO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4ubWVzdHJle1xyXG4gICAgY29sb3I6IHJnYigyLCA3MiwgOTApO1xyXG59XHJcblxyXG5pb24tY29udGVudCB7XHJcbiAgICAtLWJhY2tncm91bmQ6IG5vbmU7XHJcbiAgfSIsImlvbi1kYXRldGltZSB7XG4gIGNvbG9yOiBibGFjaztcbiAgb3BhY2l0eTogMTtcbiAgLS1vcGFjaXR5OiAxO1xufVxuXG4udmF6aW8ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZmxleC13cmFwOiB3cmFwO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5tZXN0cmUge1xuICBjb2xvcjogIzAyNDg1YTtcbn1cblxuaW9uLWNvbnRlbnQge1xuICAtLWJhY2tncm91bmQ6IG5vbmU7XG59Il19 */"
+module.exports = "ion-datetime {\n  color: black;\n  opacity: 1;\n  --opacity: 1;\n}\n\n.vazio {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-pack: center;\n          justify-content: center;\n  flex-wrap: wrap;\n  text-align: center;\n}\n\n.mestre {\n  color: #3197b1;\n}\n\nion-content {\n  --background: none;\n}\n\nion-list {\n  background: none !important;\n}\n\nion-item {\n  --background: linear-gradient(60deg, #1f160d, #2e1612, #291218, #342436);\n  color: white;\n  --border-color: white;\n}\n\nion-list-header {\n  --background: linear-gradient(60deg, #1f160d, #2e1612, #291218, #342436);\n}\n\nion-datetime {\n  color: white;\n}\n\n.back {\n  border: 1px groove rgba(129, 79, 196, 0.28);\n  border-radius: 13px;\n  background: linear-gradient(60deg, #2e2115, #522b24, #5f2f3c, #634966);\n}\n\nion-list-header {\n  --border-style: solid;\n  --border-color: white;\n  --border-width: 100%;\n}\n\n.header-principal {\n  color: white;\n  border-bottom: 2px solid white;\n}\n\nion-list ion-button {\n  --background-hover-opacity: 1;\n  --background-hover: #634966;\n}\n\nion-list ion-item {\n  --background-hover-opacity: 1;\n  --background-hover: #634966;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2VybWVzYXMvQzpcXFVzZXJzXFxsaGNjb1xcRG9jdW1lbnRzXFxEZXNlbnZvbHZpbWVudG9cXFRDQ1xcRnJvbnRlbmRcXFJNRi1Nb2JpbGUvc3JjXFxhcHBcXGdlcm1lc2FzXFxnZXJtZXNhcy5wYWdlLnNjc3MiLCJzcmMvYXBwL2dlcm1lc2FzL2dlcm1lc2FzLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFlBQUE7RUFDQSxVQUFBO0VBQ0EsWUFBQTtBQ0NKOztBREVBO0VBQ0ksb0JBQUE7RUFBQSxhQUFBO0VBQ0Esd0JBQUE7VUFBQSx1QkFBQTtFQUNBLGVBQUE7RUFDQSxrQkFBQTtBQ0NKOztBREVBO0VBQ0ksY0FBQTtBQ0NKOztBREVBO0VBQ0ksa0JBQUE7QUNDSjs7QURFQTtFQUNJLDJCQUFBO0FDQ0o7O0FERUE7RUFDSSx3RUFBQTtFQUNBLFlBQUE7RUFDQSxxQkFBQTtBQ0NKOztBREVBO0VBQ0ksd0VBQUE7QUNDSjs7QURFQTtFQUNJLFlBQUE7QUNDSjs7QURFQTtFQUNJLDJDQUFBO0VBQ0EsbUJBQUE7RUFDQSxzRUFBQTtBQ0NKOztBREVBO0VBQ0kscUJBQUE7RUFDQSxxQkFBQTtFQUNBLG9CQUFBO0FDQ0o7O0FERUE7RUFDSSxZQUFBO0VBQ0EsOEJBQUE7QUNDSjs7QURHSTtFQUNJLDZCQUFBO0VBQ0EsMkJBQUE7QUNBUjs7QURFSTtFQUNJLDZCQUFBO0VBQ0EsMkJBQUE7QUNBUiIsImZpbGUiOiJzcmMvYXBwL2dlcm1lc2FzL2dlcm1lc2FzLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1kYXRldGltZSB7XHJcbiAgICBjb2xvcjogYmxhY2s7XHJcbiAgICBvcGFjaXR5OiAxO1xyXG4gICAgLS1vcGFjaXR5OiAxO1xyXG59XHJcblxyXG4udmF6aW8ge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgZmxleC13cmFwOiB3cmFwO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4ubWVzdHJlIHtcclxuICAgIGNvbG9yOiByZ2IoNDksIDE1MSwgMTc3KTtcclxufVxyXG5cclxuaW9uLWNvbnRlbnQge1xyXG4gICAgLS1iYWNrZ3JvdW5kOiBub25lO1xyXG59XHJcblxyXG5pb24tbGlzdCB7XHJcbiAgICBiYWNrZ3JvdW5kOiBub25lICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbmlvbi1pdGVtIHtcclxuICAgIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDYwZGVnLCAjMWYxNjBkLCAjMmUxNjEyLCAjMjkxMjE4LCAjMzQyNDM2KTtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIC0tYm9yZGVyLWNvbG9yOiB3aGl0ZTtcclxufVxyXG5cclxuaW9uLWxpc3QtaGVhZGVyIHtcclxuICAgIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDYwZGVnLCAjMWYxNjBkLCAjMmUxNjEyLCAjMjkxMjE4LCAjMzQyNDM2KTtcclxufVxyXG5cclxuaW9uLWRhdGV0aW1lIHtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxufVxyXG5cclxuLmJhY2sge1xyXG4gICAgYm9yZGVyOiAxcHggZ3Jvb3ZlIHJnYmEoMTI5LCA3OSwgMTk2LCAwLjI4KTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDEzcHg7XHJcbiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoNjBkZWcsICMyZTIxMTUsICM1MjJiMjQsICM1ZjJmM2MsICM2MzQ5NjYpO1xyXG59XHJcblxyXG5pb24tbGlzdC1oZWFkZXIge1xyXG4gICAgLS1ib3JkZXItc3R5bGU6IHNvbGlkO1xyXG4gICAgLS1ib3JkZXItY29sb3I6IHdoaXRlO1xyXG4gICAgLS1ib3JkZXItd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5oZWFkZXItcHJpbmNpcGFsIHtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIGJvcmRlci1ib3R0b206IDJweCBzb2xpZCB3aGl0ZTtcclxufVxyXG5cclxuaW9uLWxpc3Qge1xyXG4gICAgaW9uLWJ1dHRvbiB7XHJcbiAgICAgICAgLS1iYWNrZ3JvdW5kLWhvdmVyLW9wYWNpdHk6IDE7XHJcbiAgICAgICAgLS1iYWNrZ3JvdW5kLWhvdmVyOiAjNjM0OTY2O1xyXG4gICAgfVxyXG4gICAgaW9uLWl0ZW0ge1xyXG4gICAgICAgIC0tYmFja2dyb3VuZC1ob3Zlci1vcGFjaXR5OiAxO1xyXG4gICAgICAgIC0tYmFja2dyb3VuZC1ob3ZlcjogIzYzNDk2NjtcclxuICAgIH1cclxufVxyXG4iLCJpb24tZGF0ZXRpbWUge1xuICBjb2xvcjogYmxhY2s7XG4gIG9wYWNpdHk6IDE7XG4gIC0tb3BhY2l0eTogMTtcbn1cblxuLnZhemlvIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGZsZXgtd3JhcDogd3JhcDtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4ubWVzdHJlIHtcbiAgY29sb3I6ICMzMTk3YjE7XG59XG5cbmlvbi1jb250ZW50IHtcbiAgLS1iYWNrZ3JvdW5kOiBub25lO1xufVxuXG5pb24tbGlzdCB7XG4gIGJhY2tncm91bmQ6IG5vbmUgIWltcG9ydGFudDtcbn1cblxuaW9uLWl0ZW0ge1xuICAtLWJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCg2MGRlZywgIzFmMTYwZCwgIzJlMTYxMiwgIzI5MTIxOCwgIzM0MjQzNik7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgLS1ib3JkZXItY29sb3I6IHdoaXRlO1xufVxuXG5pb24tbGlzdC1oZWFkZXIge1xuICAtLWJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCg2MGRlZywgIzFmMTYwZCwgIzJlMTYxMiwgIzI5MTIxOCwgIzM0MjQzNik7XG59XG5cbmlvbi1kYXRldGltZSB7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cblxuLmJhY2sge1xuICBib3JkZXI6IDFweCBncm9vdmUgcmdiYSgxMjksIDc5LCAxOTYsIDAuMjgpO1xuICBib3JkZXItcmFkaXVzOiAxM3B4O1xuICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoNjBkZWcsICMyZTIxMTUsICM1MjJiMjQsICM1ZjJmM2MsICM2MzQ5NjYpO1xufVxuXG5pb24tbGlzdC1oZWFkZXIge1xuICAtLWJvcmRlci1zdHlsZTogc29saWQ7XG4gIC0tYm9yZGVyLWNvbG9yOiB3aGl0ZTtcbiAgLS1ib3JkZXItd2lkdGg6IDEwMCU7XG59XG5cbi5oZWFkZXItcHJpbmNpcGFsIHtcbiAgY29sb3I6IHdoaXRlO1xuICBib3JkZXItYm90dG9tOiAycHggc29saWQgd2hpdGU7XG59XG5cbmlvbi1saXN0IGlvbi1idXR0b24ge1xuICAtLWJhY2tncm91bmQtaG92ZXItb3BhY2l0eTogMTtcbiAgLS1iYWNrZ3JvdW5kLWhvdmVyOiAjNjM0OTY2O1xufVxuaW9uLWxpc3QgaW9uLWl0ZW0ge1xuICAtLWJhY2tncm91bmQtaG92ZXItb3BhY2l0eTogMTtcbiAgLS1iYWNrZ3JvdW5kLWhvdmVyOiAjNjM0OTY2O1xufSJdfQ== */"
 
 /***/ }),
 
@@ -454,6 +460,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_storage_service_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/storage-service.service */ "./src/app/services/storage-service.service.ts");
 /* harmony import */ var _components_criacoes_nova_mesa_nova_mesa_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/criacoes/nova-mesa/nova-mesa.component */ "./src/app/components/criacoes/nova-mesa/nova-mesa.component.ts");
 /* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! primeng/api */ "./node_modules/primeng/fesm2015/primeng-api.js");
+/* harmony import */ var _services_utils_fundo_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../services/utils/fundo.service */ "./src/app/services/utils/fundo.service.ts");
+
 
 
 
@@ -464,25 +472,41 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let GermesasPage = class GermesasPage {
-    constructor(router, menu, mesaService, mesaRegistro, storageService, modalController, toastService) {
+    constructor(router, menu, mesaService, mesaRegistro, storageService, modalController, plataform, fundoService, toastService) {
         this.router = router;
         this.menu = menu;
         this.mesaService = mesaService;
         this.mesaRegistro = mesaRegistro;
         this.storageService = storageService;
         this.modalController = modalController;
+        this.plataform = plataform;
+        this.fundoService = fundoService;
         this.toastService = toastService;
-        this.mesas = [];
+        this.img = '';
+        this.mesas = undefined;
         this.imagens = ['./assets/imgs/brutal-helm.png',
             './assets/imgs/cyborg-face.png',
             './assets/imgs/steampunk-goggles.png',
             './assets/imgs/raise-zombie.png'];
         this.loading = true;
         this.showForm = false;
+        this.secondLoading = true;
     }
     ngOnInit() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            yield this.plataform.ready()
+                .then(() => {
+                if (this.plataform.width() <= 700)
+                    this.fundoService.setCurrentPlataform('mobile');
+                else
+                    this.fundoService.setCurrentPlataform('pc');
+                this.img = this.fundoService.changeImg();
+            });
+            this.loading = true;
             this.consultar();
+            yield this.delay(3000);
+            this.secondLoading = false;
+            this.loading = false;
         });
     }
     setImg(opcao) {
@@ -529,6 +553,9 @@ let GermesasPage = class GermesasPage {
             return yield modal.present();
         });
     }
+    delay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
     consultar() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
             this.loading = true;
@@ -563,6 +590,8 @@ GermesasPage.ctorParameters = () => [
     { type: _services_utils_mesa_registro_service__WEBPACK_IMPORTED_MODULE_5__["MesaRegistroService"] },
     { type: _services_storage_service_service__WEBPACK_IMPORTED_MODULE_6__["StorageService"] },
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["Platform"] },
+    { type: _services_utils_fundo_service__WEBPACK_IMPORTED_MODULE_9__["FundoService"] },
     { type: primeng_api__WEBPACK_IMPORTED_MODULE_8__["MessageService"] }
 ];
 GermesasPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -575,6 +604,8 @@ GermesasPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         _services_mesas_mesas_service__WEBPACK_IMPORTED_MODULE_4__["MesasService"], _services_utils_mesa_registro_service__WEBPACK_IMPORTED_MODULE_5__["MesaRegistroService"],
         _services_storage_service_service__WEBPACK_IMPORTED_MODULE_6__["StorageService"],
         _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"],
+        _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["Platform"],
+        _services_utils_fundo_service__WEBPACK_IMPORTED_MODULE_9__["FundoService"],
         primeng_api__WEBPACK_IMPORTED_MODULE_8__["MessageService"]])
 ], GermesasPage);
 

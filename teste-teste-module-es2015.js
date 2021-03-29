@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-menu-button></ion-menu-button>\r\n    </ion-buttons>\r\n    <ion-title>\r\n      Testes\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <!--<ficha-medieval-cronicas></ficha-medieval-cronicas> -->\r\n  <!-- <app-criar-componente></app-criar-componente> -->\r\n  <!--<app-ficha [idFicha]=\"idFicha\"></app-ficha>-->\r\n  <!--<app-nova-mesa></app-nova-mesa>-->\r\n  <app-invitation-form></app-invitation-form>\r\n  <!--<app-paginacao></app-paginacao>-->\r\n</ion-content>"
+module.exports = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-menu-button></ion-menu-button>\r\n    </ion-buttons>\r\n    <ion-title>\r\n      Testes\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <app-item-store-ataque></app-item-store-ataque>\r\n</ion-content>"
 
 /***/ }),
 
@@ -33,6 +33,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_utils_listas_listas_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/utils/listas/listas.module */ "./src/app/components/utils/listas/listas.module.ts");
 /* harmony import */ var _components_criacoes_nova_mesa_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/criacoes/nova-mesa.module */ "./src/app/components/criacoes/nova-mesa.module.ts");
 /* harmony import */ var _components_criacoes_invitation_form_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/criacoes/invitation-form.module */ "./src/app/components/criacoes/invitation-form.module.ts");
+/* harmony import */ var _components_utils_item_store_ataque_item_store_ataque_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/utils/item-store-ataque/item-store-ataque.module */ "./src/app/components/utils/item-store-ataque/item-store-ataque.module.ts");
+
 
 
 
@@ -64,7 +66,8 @@ TestePageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _components_utils_paginacao_paginacao_module__WEBPACK_IMPORTED_MODULE_8__["PaginacaoModule"],
             _components_utils_listas_listas_module__WEBPACK_IMPORTED_MODULE_9__["ListasModule"],
             _components_criacoes_nova_mesa_module__WEBPACK_IMPORTED_MODULE_10__["NovaMesaModule"],
-            _components_criacoes_invitation_form_module__WEBPACK_IMPORTED_MODULE_11__["InvitationFormModule"]
+            _components_criacoes_invitation_form_module__WEBPACK_IMPORTED_MODULE_11__["InvitationFormModule"],
+            _components_utils_item_store_ataque_item_store_ataque_module__WEBPACK_IMPORTED_MODULE_12__["ItemStoreAtaqueModule"],
         ],
         declarations: [_teste_page__WEBPACK_IMPORTED_MODULE_5__["TestePage"]]
     })
