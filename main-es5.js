@@ -1071,7 +1071,8 @@ var FundoModule = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "API_CONFIG", function() { return API_CONFIG; });
 var API_CONFIG = {
-    baseUrl: "http://localhost:5000/",
+    //baseUrl: "http://localhost:5000/",
+    baseUrl: "https://www.rmf-api.com/",
     bucketBaseUrl: "aqui ficará o caminho base para acessar as imagens no S3 da Amazon"
 };
 
