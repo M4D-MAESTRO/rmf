@@ -562,6 +562,7 @@ let CapituloComponent = class CapituloComponent {
         this.novo = false;
     }
     getNotification(evt) {
+        evt = Number.parseInt(evt);
         if (this.paginaAtual != evt) {
             this.paginaAtual = evt;
             this.consultar();
@@ -1024,6 +1025,7 @@ let FaccoesComponent = class FaccoesComponent {
         this.novo = false;
     }
     getNotification(evt) {
+        evt = Number.parseInt(evt);
         if (this.paginaAtual != evt) {
             this.paginaAtual = evt;
             this.consultar();
@@ -1536,6 +1538,7 @@ let MapaComponent = class MapaComponent {
         this.novo = false;
     }
     getNotification(evt) {
+        evt = Number.parseInt(evt);
         if (this.paginaAtual != evt) {
             this.paginaAtual = evt;
             this.consultar();
@@ -2008,6 +2011,7 @@ let MissaoComponent = class MissaoComponent {
         this.novo = false;
     }
     getNotification(evt) {
+        evt = Number.parseInt(evt);
         if (this.paginaAtual != evt) {
             this.paginaAtual = evt;
             this.consultar();
@@ -2133,10 +2137,12 @@ let FaccoesService = class FaccoesService {
     setStaticID(id) {
         this.staticID = id;
     }
-    findPageByCriador(page = '0', linesPerPage = '10') {
+    findPageByCriador(page = '0', linesPerPage = '20') {
+        const orderBy = 'nome';
         const params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]()
             .set('idCriador', this.storage.getLocalUserId())
             .set('page', page)
+            .set('orderBy', orderBy)
             .set('linesPerPage', linesPerPage);
         return this.http.get(`${src_app_config_api_config__WEBPACK_IMPORTED_MODULE_4__["API_CONFIG"].baseUrl}faccao/criador`, {
             params,
@@ -2208,10 +2214,12 @@ let CapituloService = class CapituloService {
     setStaticID(id) {
         this.staticID = id;
     }
-    findPageByCriador(page = '0', linesPerPage = '10') {
+    findPageByCriador(page = '0', linesPerPage = '20') {
+        const orderBy = 'titulo';
         const params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]()
             .set('idCriador', this.storage.getLocalUserId())
             .set('page', page)
+            .set('orderBy', orderBy)
             .set('linesPerPage', linesPerPage);
         return this.http.get(`${src_app_config_api_config__WEBPACK_IMPORTED_MODULE_4__["API_CONFIG"].baseUrl}capitulo/criador`, {
             params,
@@ -2283,10 +2291,12 @@ let MissaoService = class MissaoService {
     setStaticID(id) {
         this.staticID = id;
     }
-    findPageByCriador(page = '0', linesPerPage = '10') {
+    findPageByCriador(page = '0', linesPerPage = '20') {
+        const orderBy = 'nome';
         const params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]()
             .set('idCriador', this.storage.getLocalUserId())
             .set('page', page)
+            .set('orderBy', orderBy)
             .set('linesPerPage', linesPerPage);
         return this.http.get(`${src_app_config_api_config__WEBPACK_IMPORTED_MODULE_4__["API_CONFIG"].baseUrl}missao/criador`, {
             params,
@@ -2358,10 +2368,12 @@ let MapaService = class MapaService {
     setStaticID(id) {
         this.staticID = id;
     }
-    findPageByCriador(page = '0', linesPerPage = '10') {
+    findPageByCriador(page = '0', linesPerPage = '20') {
+        const orderBy = 'nome';
         const params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]()
             .set('idCriador', this.storage.getLocalUserId())
             .set('page', page)
+            .set('orderBy', orderBy)
             .set('linesPerPage', linesPerPage);
         return this.http.get(`${src_app_config_api_config__WEBPACK_IMPORTED_MODULE_4__["API_CONFIG"].baseUrl}mapa/criador`, {
             params,

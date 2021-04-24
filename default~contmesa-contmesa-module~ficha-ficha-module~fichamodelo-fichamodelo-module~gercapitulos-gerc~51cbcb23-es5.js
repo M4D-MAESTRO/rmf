@@ -641,7 +641,7 @@ var DialogModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ng-container *ngIf=\"isModal\">\r\n  <ion-content>\r\n    <p-dataView #dv [value]=\"objs\" [paginator]=\"true\" [rows]=\"10\" [totalRecords]=\"totalRecords\" [lazy]=\"true\"\r\n      [pageLinks]=\"paginaTotal\" paginatorPosition=\"both\" filterBy=\"nome\" [sortField]=\"sortField\" [sortOrder]=\"sortOrder\"\r\n      (onLazyLoad)=\"loadData($event)\" [emptyMessage]=\"emptyMessage\">\r\n      <p-header>\r\n        <div class=\"ui-helper-clearfix\">\r\n          <div class=\"ui-g\">\r\n\r\n            <div class=\"ui-g-12 ui-md-4\">\r\n              <p-dropdown [options]=\"sortOptions\" [(ngModel)]=\"sortKey\" placeholder=\"Sort By\"\r\n                (onChange)=\"onSortChange($event)\" [style]=\"{'min-width':'140px'}\" [disabled]=\"true\"></p-dropdown>\r\n            </div>\r\n\r\n            <div class=\"ui-g-6 ui-md-4 filter-container\">\r\n              <div style=\"position:relative\">\r\n                <input [disabled]=\"true\" type=\"search\" pInputText placeholder=\"Filtrar por nome\"\r\n                  (input)=\"dv.filter($event.target.value, 'contains')\">\r\n              </div>\r\n            </div>\r\n\r\n          </div>\r\n        </div>\r\n      </p-header>\r\n      <ng-template let-obj pTemplate=\"listItem\">\r\n        <div class=\"ui-g-12\">\r\n          <div class=\"car-details\" (click)=\"copy($event, obj)\">\r\n            <div>\r\n              <img class=\"img-border\" [src]=\"obj.imgURL || defaultImg\">\r\n              <div class=\"ui-g\">\r\n                <div class=\"ui-g-12\">Código: <b>{{ obj.id }}</b></div>\r\n                <div class=\"ui-g-12\"><b>{{ obj.nome?.substring(0,20).concat('...') }}</b></div>\r\n                <div class=\"ui-g-12\"><b>{{ obj.descricao?.substring(0,20).concat('...') }}</b></div>\r\n                <div class=\"ui-g-12\"><b>{{ getTipo(obj) }}</b></div>\r\n              </div>\r\n            </div>\r\n            <button *ngIf=\"add\" style=\"min-width: 20px;\" pButton type=\"button\" icon=\"pi pi-angle-double-right\"\r\n              (click)=\"selectObj($event, obj)\"></button>\r\n          </div>\r\n        </div>\r\n      </ng-template>\r\n    </p-dataView>\r\n\r\n    <p-dialog header=\"Car Details\" [(visible)]=\"displayDialog\" [responsive]=\"true\" showEffect=\"fade\" [modal]=\"true\"\r\n      [style]=\"{width: '225px'}\" (onAfterHide)=\"onDialogHide()\">\r\n      <div class=\"ui-g\" *ngIf=\"selectedCar\">\r\n        <div class=\"ui-g-12\" style=\"text-align:center\">\r\n          <img src=\"assets/showcase/images/demo/car/{{selectedCar.brand}}.png\">\r\n        </div>\r\n        <div class=\"ui-g-4\">Vin: </div>\r\n        <div class=\"ui-g-8\">{{selectedCar.vin}}</div>\r\n\r\n        <div class=\"ui-g-4\">Brand: </div>\r\n        <div class=\"ui-g-8\">{{selectedCar.brand}}</div>\r\n\r\n        <div class=\"ui-g-4\">Year: </div>\r\n        <div class=\"ui-g-8\">{{selectedCar.year}}</div>\r\n\r\n        <div class=\"ui-g-4\">Color: </div>\r\n        <div class=\"ui-g-8\">{{selectedCar.color}}</div>\r\n      </div>\r\n    </p-dialog>\r\n    <ion-button *ngIf=\"closeBTN\" class=\"btn\" expand=\"block\" fill=\"solid\" type=\"submit\" color=\"danger\" (click)=\"close()\">\r\n      Fechar</ion-button>\r\n  </ion-content>\r\n</ng-container>\r\n\r\n<ng-container *ngIf=\"!isModal\">\r\n  <p-dataView #dv [value]=\"objs\" [paginator]=\"true\" [rows]=\"10\" [totalRecords]=\"totalRecords\" [lazy]=\"true\"\r\n    [pageLinks]=\"paginaTotal\" paginatorPosition=\"both\" filterBy=\"nome\" [sortField]=\"sortField\" [sortOrder]=\"sortOrder\"\r\n    (onLazyLoad)=\"loadData($event)\" [emptyMessage]=\"emptyMessage\">\r\n    <p-header>\r\n      <div class=\"ui-helper-clearfix\">\r\n        <div class=\"ui-g\">\r\n\r\n          <div class=\"ui-g-12 ui-md-4\">\r\n            <p-dropdown [options]=\"sortOptions\" [(ngModel)]=\"sortKey\" placeholder=\"Sort By\"\r\n              (onChange)=\"onSortChange($event)\" [style]=\"{'min-width':'140px'}\" [disabled]=\"true\"></p-dropdown>\r\n          </div>\r\n\r\n          <div class=\"ui-g-6 ui-md-4 filter-container\">\r\n            <div style=\"position:relative\">\r\n              <input [disabled]=\"true\" type=\"search\" pInputText placeholder=\"Filtrar por nome\"\r\n                (input)=\"dv.filter($event.target.value, 'contains')\">\r\n            </div>\r\n          </div>\r\n\r\n        </div>\r\n      </div>\r\n    </p-header>\r\n    <ng-template let-obj pTemplate=\"listItem\">\r\n      <div class=\"ui-g-12\">\r\n        <div class=\"car-details\" (click)=\"copy($event, obj)\">\r\n          <div>\r\n            <img [src]=\"obj.imgURL || defaultImg\">\r\n            <div class=\"ui-g\">\r\n              <div class=\"ui-g-12\">Código: <b>{{ obj.id }}</b></div>\r\n              <div class=\"ui-g-12\"><b>{{ obj.nome?.substring(0,20).concat('...') }}</b></div>\r\n              <div class=\"ui-g-12\"><b>{{ obj.descricao?.substring(0,20).concat('...') }}</b></div>\r\n              <div class=\"ui-g-12\"><b>{{ getTipo(obj) }}</b></div>\r\n            </div>\r\n          </div>\r\n          <button *ngIf=\"add\" style=\"min-width: 20px;\" pButton type=\"button\" icon=\"pi pi-angle-double-right\"\r\n            (click)=\"selectObj($event, obj)\"></button>\r\n        </div>\r\n      </div>\r\n    </ng-template>\r\n  </p-dataView>\r\n  <p-dialog header=\"Car Details\" [(visible)]=\"displayDialog\" [responsive]=\"true\" showEffect=\"fade\" [modal]=\"true\"\r\n    [style]=\"{width: '225px'}\" (onAfterHide)=\"onDialogHide()\">\r\n    <div class=\"ui-g\" *ngIf=\"selectedCar\">\r\n      <div class=\"ui-g-12\" style=\"text-align:center\">\r\n        <img src=\"assets/showcase/images/demo/car/{{selectedCar.brand}}.png\">\r\n      </div>\r\n      <div class=\"ui-g-4\">Vin: </div>\r\n      <div class=\"ui-g-8\">{{selectedCar.vin}}</div>\r\n\r\n      <div class=\"ui-g-4\">Brand: </div>\r\n      <div class=\"ui-g-8\">{{selectedCar.brand}}</div>\r\n\r\n      <div class=\"ui-g-4\">Year: </div>\r\n      <div class=\"ui-g-8\">{{selectedCar.year}}</div>\r\n\r\n      <div class=\"ui-g-4\">Color: </div>\r\n      <div class=\"ui-g-8\">{{selectedCar.color}}</div>\r\n    </div>\r\n  </p-dialog>\r\n  <ion-button *ngIf=\"closeBTN\" class=\"btn\" expand=\"block\" fill=\"solid\" type=\"submit\" color=\"danger\" (click)=\"close()\">\r\n    Fechar</ion-button>\r\n</ng-container>\r\n<p-toast position=\"top-center\" life=\"3000\"></p-toast>\r\n<app-load-spinner [loading]=\"loading\"></app-load-spinner>"
+module.exports = "\r\n<ng-container *ngIf=\"isModal\">\r\n  <div id=\"anchor\"></div>\r\n  <ion-content>\r\n    <p-dataView #dv [value]=\"objs\" [paginator]=\"true\" [rows]=\"linhasPorPagina\" [totalRecords]=\"totalRecords\" [lazy]=\"true\"\r\n      [pageLinks]=\"paginaTotal\" paginatorPosition=\"both\" filterBy=\"nome\" [sortField]=\"sortField\" [sortOrder]=\"sortOrder\"\r\n      (onLazyLoad)=\"loadData($event)\" [emptyMessage]=\"emptyMessage\">\r\n      <p-header>\r\n        <div class=\"ui-helper-clearfix\">\r\n          <div class=\"ui-g\">\r\n\r\n            <div class=\"ui-g-12 ui-md-4\">\r\n              <p-dropdown [options]=\"sortOptions\" [(ngModel)]=\"sortKey\" placeholder=\"Sort By\"\r\n                (onChange)=\"onSortChange($event)\" [style]=\"{'min-width':'140px'}\" [disabled]=\"true\"></p-dropdown>\r\n            </div>\r\n\r\n            <div class=\"ui-g-6 ui-md-4 filter-container\">\r\n              <div style=\"position:relative\">\r\n                <input [disabled]=\"true\" type=\"search\" pInputText placeholder=\"Filtrar por nome\"\r\n                  (input)=\"dv.filter($event.target.value, 'contains')\">\r\n              </div>\r\n            </div>\r\n\r\n          </div>\r\n        </div>\r\n      </p-header>\r\n      <ng-template let-obj pTemplate=\"listItem\">\r\n        <div class=\"ui-g-12\">\r\n          <div class=\"car-details\" (click)=\"copy($event, obj)\">\r\n            <div>\r\n              <img class=\"img-border\" [src]=\"obj.imgURL || defaultImg\">\r\n              <div class=\"ui-g\">\r\n                <div class=\"ui-g-12\">Código: <b>{{ obj.id }}</b></div>\r\n                <div class=\"ui-g-12\"><b>{{ obj.nome?.substring(0,20).concat('...') }}</b></div>\r\n                <div class=\"ui-g-12\"><b>{{ obj.descricao?.substring(0,20).concat('...') }}</b></div>\r\n                <div class=\"ui-g-12\"><b>{{ getTipo(obj) }}</b></div>\r\n              </div>\r\n            </div>\r\n            <button *ngIf=\"add\" style=\"min-width: 20px;\" pButton type=\"button\" icon=\"pi pi-angle-double-right\"\r\n              (click)=\"selectObj($event, obj)\"></button>\r\n          </div>\r\n        </div>\r\n      </ng-template>\r\n    </p-dataView>\r\n\r\n    <p-dialog header=\"Car Details\" [(visible)]=\"displayDialog\" [responsive]=\"true\" showEffect=\"fade\" [modal]=\"true\"\r\n      [style]=\"{width: '225px'}\" (onAfterHide)=\"onDialogHide()\">\r\n      <div class=\"ui-g\" *ngIf=\"selectedCar\">\r\n        <div class=\"ui-g-12\" style=\"text-align:center\">\r\n          <img src=\"assets/showcase/images/demo/car/{{selectedCar.brand}}.png\">\r\n        </div>\r\n        <div class=\"ui-g-4\">Vin: </div>\r\n        <div class=\"ui-g-8\">{{selectedCar.vin}}</div>\r\n\r\n        <div class=\"ui-g-4\">Brand: </div>\r\n        <div class=\"ui-g-8\">{{selectedCar.brand}}</div>\r\n\r\n        <div class=\"ui-g-4\">Year: </div>\r\n        <div class=\"ui-g-8\">{{selectedCar.year}}</div>\r\n\r\n        <div class=\"ui-g-4\">Color: </div>\r\n        <div class=\"ui-g-8\">{{selectedCar.color}}</div>\r\n      </div>\r\n    </p-dialog>\r\n    <ion-button *ngIf=\"closeBTN\" class=\"btn\" expand=\"block\" fill=\"solid\" type=\"submit\" color=\"danger\" (click)=\"close()\">\r\n      Fechar</ion-button>\r\n  </ion-content>\r\n</ng-container>\r\n\r\n<ng-container *ngIf=\"!isModal\">\r\n  <div id=\"anchor\"></div>\r\n  <p-dataView #dv [value]=\"objs\" [paginator]=\"true\" [rows]=\"linhasPorPagina\" [totalRecords]=\"totalRecords\" [lazy]=\"true\"\r\n    [pageLinks]=\"paginaTotal\" paginatorPosition=\"both\" filterBy=\"nome\" [sortField]=\"sortField\" [sortOrder]=\"sortOrder\"\r\n    (onLazyLoad)=\"loadData($event)\" [emptyMessage]=\"emptyMessage\">\r\n    <p-header>\r\n      <div class=\"ui-helper-clearfix\">\r\n        <div class=\"ui-g\">\r\n\r\n          <div class=\"ui-g-12 ui-md-4\">\r\n            <p-dropdown [options]=\"sortOptions\" [(ngModel)]=\"sortKey\" placeholder=\"Sort By\"\r\n              (onChange)=\"onSortChange($event)\" [style]=\"{'min-width':'140px'}\" [disabled]=\"true\"></p-dropdown>\r\n          </div>\r\n\r\n          <div class=\"ui-g-6 ui-md-4 filter-container\">\r\n            <div style=\"position:relative\">\r\n              <input [disabled]=\"true\" type=\"search\" pInputText placeholder=\"Filtrar por nome\"\r\n                (input)=\"dv.filter($event.target.value, 'contains')\">\r\n            </div>\r\n          </div>\r\n\r\n        </div>\r\n      </div>\r\n    </p-header>\r\n    <ng-template let-obj pTemplate=\"listItem\">\r\n      <div class=\"ui-g-12\">\r\n        <div class=\"car-details\" (click)=\"copy($event, obj)\">\r\n          <div>\r\n            <img [src]=\"obj.imgURL || defaultImg\">\r\n            <div class=\"ui-g\">\r\n              <div class=\"ui-g-12\">Código: <b>{{ obj.id }}</b></div>\r\n              <div class=\"ui-g-12\"><b>{{ obj.nome?.substring(0,20).concat('...') }}</b></div>\r\n              <div class=\"ui-g-12\"><b>{{ obj.descricao?.substring(0,20).concat('...') }}</b></div>\r\n              <div class=\"ui-g-12\"><b>{{ getTipo(obj) }}</b></div>\r\n            </div>\r\n          </div>\r\n          <button *ngIf=\"add\" style=\"min-width: 20px;\" pButton type=\"button\" icon=\"pi pi-angle-double-right\"\r\n            (click)=\"selectObj($event, obj)\"></button>\r\n        </div>\r\n      </div>\r\n    </ng-template>\r\n  </p-dataView>\r\n  <p-dialog header=\"Car Details\" [(visible)]=\"displayDialog\" [responsive]=\"true\" showEffect=\"fade\" [modal]=\"true\"\r\n    [style]=\"{width: '225px'}\" (onAfterHide)=\"onDialogHide()\">\r\n    <div class=\"ui-g\" *ngIf=\"selectedCar\">\r\n      <div class=\"ui-g-12\" style=\"text-align:center\">\r\n        <img src=\"assets/showcase/images/demo/car/{{selectedCar.brand}}.png\">\r\n      </div>\r\n      <div class=\"ui-g-4\">Vin: </div>\r\n      <div class=\"ui-g-8\">{{selectedCar.vin}}</div>\r\n\r\n      <div class=\"ui-g-4\">Brand: </div>\r\n      <div class=\"ui-g-8\">{{selectedCar.brand}}</div>\r\n\r\n      <div class=\"ui-g-4\">Year: </div>\r\n      <div class=\"ui-g-8\">{{selectedCar.year}}</div>\r\n\r\n      <div class=\"ui-g-4\">Color: </div>\r\n      <div class=\"ui-g-8\">{{selectedCar.color}}</div>\r\n    </div>\r\n  </p-dialog>\r\n  <ion-button *ngIf=\"closeBTN\" class=\"btn\" expand=\"block\" fill=\"solid\" type=\"submit\" color=\"danger\" (click)=\"close()\">\r\n    Fechar</ion-button>\r\n</ng-container>\r\n<p-toast position=\"top-center\" life=\"3000\"></p-toast>\r\n<app-load-spinner [loading]=\"loading\"></app-load-spinner>"
 
 /***/ }),
 
@@ -668,9 +668,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaginacaoComponent", function() { return PaginacaoComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var src_app_services_utils_paginacao_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/utils/paginacao.service */ "./src/app/services/utils/paginacao.service.ts");
-/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! primeng/api */ "./node_modules/primeng/fesm5/primeng-api.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/api */ "./node_modules/primeng/fesm5/primeng-api.js");
+/* harmony import */ var src_app_services_utils_paginacao_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/utils/paginacao.service */ "./src/app/services/utils/paginacao.service.ts");
 
 
 
@@ -678,10 +679,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var PaginacaoComponent = /** @class */ (function () {
-    function PaginacaoComponent(service, toast, modalController) {
+    function PaginacaoComponent(service, toast, modalController, scroll) {
         this.service = service;
         this.toast = toast;
         this.modalController = modalController;
+        this.scroll = scroll;
         this.objs = [];
         this.add = false;
         this.paginaAtual = 0;
@@ -693,8 +695,10 @@ var PaginacaoComponent = /** @class */ (function () {
         this.imgURLJson = '';
         this.closeBTN = false;
         this.isModal = false;
+        this.linhasPorPagina = 20;
         this.defaultImg = "assets/imgs/dice.png";
         this.loading = false;
+        this.pageYoffset = 0;
         this.notifyParent = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.getSelectedObj = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         if (this.service.getConfiguration().use) {
@@ -712,8 +716,14 @@ var PaginacaoComponent = /** @class */ (function () {
             this.isModal = aux.isModal;
         }
     }
+    PaginacaoComponent.prototype.onScroll = function (event) {
+        this.pageYoffset = window.pageYOffset;
+    };
     PaginacaoComponent.prototype.sendNotification = function () {
         this.notifyParent.emit(this.paginaAtual.toString());
+    };
+    PaginacaoComponent.prototype.smoothScroll = function () {
+        document.querySelector('#anchor').scrollIntoView();
     };
     PaginacaoComponent.prototype.selectObj = function (event, obj) {
         /* this.selectedObj = obj;
@@ -756,6 +766,7 @@ var PaginacaoComponent = /** @class */ (function () {
          } else {*/
         this.service.getPromisse().subscribe(function (res) {
             _this.pagina = res;
+            // console.log(this.pagina);
             _this.paginaTotal = _this.pagina.totalPages;
             _this.totalRecords = _this.pagina.totalElements;
             _this.loadContent();
@@ -806,7 +817,8 @@ var PaginacaoComponent = /** @class */ (function () {
         this.selectedObj = null;
     };
     PaginacaoComponent.prototype.loadData = function (event) {
-        var pageNumber = event.first / 10 || 0;
+        var first = event.first, rows = event.rows;
+        var pageNumber = (first / rows) || 0;
         this.paginaAtual = pageNumber;
         var flag = this.service.getInternalLoad();
         if (flag == true) {
@@ -814,6 +826,7 @@ var PaginacaoComponent = /** @class */ (function () {
         }
         this.sendNotification();
         this.consultar();
+        this.smoothScroll();
     };
     PaginacaoComponent.prototype.clear = function (dv) {
     };
@@ -864,9 +877,10 @@ var PaginacaoComponent = /** @class */ (function () {
         this.modalController.dismiss(this.objToModal);
     };
     PaginacaoComponent.ctorParameters = function () { return [
-        { type: src_app_services_utils_paginacao_service__WEBPACK_IMPORTED_MODULE_2__["PaginacaoService"] },
-        { type: primeng_api__WEBPACK_IMPORTED_MODULE_3__["MessageService"] },
-        { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ModalController"] }
+        { type: src_app_services_utils_paginacao_service__WEBPACK_IMPORTED_MODULE_5__["PaginacaoService"] },
+        { type: primeng_api__WEBPACK_IMPORTED_MODULE_4__["MessageService"] },
+        { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"] },
+        { type: _angular_common__WEBPACK_IMPORTED_MODULE_2__["ViewportScroller"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('objs'),
@@ -913,6 +927,16 @@ var PaginacaoComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Boolean)
     ], PaginacaoComponent.prototype, "isModal", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('linhasPorPagina'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
+    ], PaginacaoComponent.prototype, "linhasPorPagina", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('window:scroll', ['$event']),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", void 0)
+    ], PaginacaoComponent.prototype, "onScroll", null);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
     ], PaginacaoComponent.prototype, "notifyParent", void 0);
@@ -926,9 +950,10 @@ var PaginacaoComponent = /** @class */ (function () {
             template: __webpack_require__(/*! raw-loader!./paginacao.component.html */ "./node_modules/raw-loader/index.js!./src/app/components/utils/paginacao/paginacao.component.html"),
             styles: [__webpack_require__(/*! ./paginacao.component.scss */ "./src/app/components/utils/paginacao/paginacao.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_utils_paginacao_service__WEBPACK_IMPORTED_MODULE_2__["PaginacaoService"],
-            primeng_api__WEBPACK_IMPORTED_MODULE_3__["MessageService"],
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ModalController"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_utils_paginacao_service__WEBPACK_IMPORTED_MODULE_5__["PaginacaoService"],
+            primeng_api__WEBPACK_IMPORTED_MODULE_4__["MessageService"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"],
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["ViewportScroller"]])
     ], PaginacaoComponent);
     return PaginacaoComponent;
 }());

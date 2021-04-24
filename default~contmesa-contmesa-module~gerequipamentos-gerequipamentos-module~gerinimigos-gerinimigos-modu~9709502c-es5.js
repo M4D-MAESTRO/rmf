@@ -465,10 +465,12 @@ var NpcService = /** @class */ (function () {
     };
     NpcService.prototype.findPageByCriador = function (page, linesPerPage) {
         if (page === void 0) { page = '0'; }
-        if (linesPerPage === void 0) { linesPerPage = '10'; }
+        if (linesPerPage === void 0) { linesPerPage = '20'; }
+        var orderBy = 'ficha.fichaModelo.nome';
         var params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]()
             .set('idCriador', this.storage.getLocalUserId())
             .set('page', page)
+            .set('orderBy', orderBy)
             .set('linesPerPage', linesPerPage);
         return this.http.get(src_app_config_api_config__WEBPACK_IMPORTED_MODULE_3__["API_CONFIG"].baseUrl + "npc/criador", {
             params: params,

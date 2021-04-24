@@ -623,6 +623,7 @@ var CapituloComponent = /** @class */ (function () {
         this.novo = false;
     };
     CapituloComponent.prototype.getNotification = function (evt) {
+        evt = Number.parseInt(evt);
         if (this.paginaAtual != evt) {
             this.paginaAtual = evt;
             this.consultar();
@@ -1130,6 +1131,7 @@ var FaccoesComponent = /** @class */ (function () {
         this.novo = false;
     };
     FaccoesComponent.prototype.getNotification = function (evt) {
+        evt = Number.parseInt(evt);
         if (this.paginaAtual != evt) {
             this.paginaAtual = evt;
             this.consultar();
@@ -1700,6 +1702,7 @@ var MapaComponent = /** @class */ (function () {
         this.novo = false;
     };
     MapaComponent.prototype.getNotification = function (evt) {
+        evt = Number.parseInt(evt);
         if (this.paginaAtual != evt) {
             this.paginaAtual = evt;
             this.consultar();
@@ -2227,6 +2230,7 @@ var MissaoComponent = /** @class */ (function () {
         this.novo = false;
     };
     MissaoComponent.prototype.getNotification = function (evt) {
+        evt = Number.parseInt(evt);
         if (this.paginaAtual != evt) {
             this.paginaAtual = evt;
             this.consultar();
@@ -2380,10 +2384,12 @@ var FaccoesService = /** @class */ (function () {
     };
     FaccoesService.prototype.findPageByCriador = function (page, linesPerPage) {
         if (page === void 0) { page = '0'; }
-        if (linesPerPage === void 0) { linesPerPage = '10'; }
+        if (linesPerPage === void 0) { linesPerPage = '20'; }
+        var orderBy = 'nome';
         var params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]()
             .set('idCriador', this.storage.getLocalUserId())
             .set('page', page)
+            .set('orderBy', orderBy)
             .set('linesPerPage', linesPerPage);
         return this.http.get(src_app_config_api_config__WEBPACK_IMPORTED_MODULE_4__["API_CONFIG"].baseUrl + "faccao/criador", {
             params: params,
@@ -2458,10 +2464,12 @@ var CapituloService = /** @class */ (function () {
     };
     CapituloService.prototype.findPageByCriador = function (page, linesPerPage) {
         if (page === void 0) { page = '0'; }
-        if (linesPerPage === void 0) { linesPerPage = '10'; }
+        if (linesPerPage === void 0) { linesPerPage = '20'; }
+        var orderBy = 'titulo';
         var params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]()
             .set('idCriador', this.storage.getLocalUserId())
             .set('page', page)
+            .set('orderBy', orderBy)
             .set('linesPerPage', linesPerPage);
         return this.http.get(src_app_config_api_config__WEBPACK_IMPORTED_MODULE_4__["API_CONFIG"].baseUrl + "capitulo/criador", {
             params: params,
@@ -2536,10 +2544,12 @@ var MissaoService = /** @class */ (function () {
     };
     MissaoService.prototype.findPageByCriador = function (page, linesPerPage) {
         if (page === void 0) { page = '0'; }
-        if (linesPerPage === void 0) { linesPerPage = '10'; }
+        if (linesPerPage === void 0) { linesPerPage = '20'; }
+        var orderBy = 'nome';
         var params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]()
             .set('idCriador', this.storage.getLocalUserId())
             .set('page', page)
+            .set('orderBy', orderBy)
             .set('linesPerPage', linesPerPage);
         return this.http.get(src_app_config_api_config__WEBPACK_IMPORTED_MODULE_4__["API_CONFIG"].baseUrl + "missao/criador", {
             params: params,
@@ -2614,10 +2624,12 @@ var MapaService = /** @class */ (function () {
     };
     MapaService.prototype.findPageByCriador = function (page, linesPerPage) {
         if (page === void 0) { page = '0'; }
-        if (linesPerPage === void 0) { linesPerPage = '10'; }
+        if (linesPerPage === void 0) { linesPerPage = '20'; }
+        var orderBy = 'nome';
         var params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]()
             .set('idCriador', this.storage.getLocalUserId())
             .set('page', page)
+            .set('orderBy', orderBy)
             .set('linesPerPage', linesPerPage);
         return this.http.get(src_app_config_api_config__WEBPACK_IMPORTED_MODULE_4__["API_CONFIG"].baseUrl + "mapa/criador", {
             params: params,

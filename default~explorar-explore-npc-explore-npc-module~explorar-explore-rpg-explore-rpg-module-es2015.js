@@ -307,10 +307,12 @@ let NpcService = class NpcService {
         });
         return response;
     }
-    findPageByCriador(page = '0', linesPerPage = '10') {
+    findPageByCriador(page = '0', linesPerPage = '20') {
+        const orderBy = 'ficha.fichaModelo.nome';
         const params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]()
             .set('idCriador', this.storage.getLocalUserId())
             .set('page', page)
+            .set('orderBy', orderBy)
             .set('linesPerPage', linesPerPage);
         return this.http.get(`${src_app_config_api_config__WEBPACK_IMPORTED_MODULE_3__["API_CONFIG"].baseUrl}npc/criador`, {
             params,
